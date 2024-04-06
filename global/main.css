@@ -72,10 +72,10 @@ body {
 }
 
 main .main-SlideShow {
-  height: 300px;
-  background-color: red;
+  height: 350px;
+  /* background-color: red;
   background-image: url("img/Trangchu/slideshow/slide1.webp");
-  background-size: 100% 100%;
+  background-size: 100% 100%; */
 }
 
 main .main-SlideShow-Icon {

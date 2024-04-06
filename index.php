@@ -38,14 +38,14 @@ require_once "global/env.php";
                 <div class="col-xl-5">
                     <div class="d-flex text-center justify-content-end gap-5">
                         <div class="">
-                            <a href="#">
+                            <a href="###">
                                 <div class="bi bi-person fs-3 text-white"></div>
                                 <div class="text-white fw-normal">Tài khoản của tôi</div>
                             </a>
                         </div>
 
                         <div class="">
-                            <a href="#">
+                            <a href="###">
                                 <div class="bi bi-cart fs-3 text-white"></div>
                                 <div class="text-white fw-normal">Giỏ hàng</div>
                             </a>
@@ -63,15 +63,15 @@ require_once "global/env.php";
                 <ul style="color:var(--cl-Text-W)" class="row justify-content-center h-100 text-center gap-4">
                     <li class="col-xl-1 nav-hover h-100 align-content-center">
                         <span class="bi bi-phone fs-5"></span>
-                        <a href="#" class="fw-semibold text-white">Điện thoại</a>
+                        <a href="###" class="fw-semibold text-white">Điện thoại</a>
                     </li>
                     <li class="col-xl-1 nav-hover h-100 align-content-center">
                         <span class="bi bi-laptop fs-5"></span>
-                        <a href="#" class="fw-semibold text-white">Laptop</a>
+                        <a href="###" class="fw-semibold text-white">Laptop</a>
                     </li>
                     <li class="col-xl-1 nav-hover h-100 align-content-center">
                         <span class="bi bi-tablet fs-5"></span>
-                        <a href="#" class="fw-semibold text-white">Tablet</a>
+                        <a href="###" class="fw-semibold text-white">Tablet</a>
                     </li>
                 </ul>
             </div>
@@ -81,21 +81,25 @@ require_once "global/env.php";
         <!-- Main -->
         <main>
             <!-- Banner trang chủ -->
-            <a href="#">
+            <a href="###">
                 <div class="container-fluid m-auto" id="main-Banner-TrangChu"></div>
             </a>
 
             <!-- Slide show sản phẩm và tin tức -->
             <div class="container m-auto row py-2 ps-2 shadow-lg mt-2 rounded-2 justify-content-between">
-                <div class="col-xl-9 main-SlideShow position-relative rounded-2">
+                <div class="col-xl-9 main-SlideShow position-relative rounded-2 border">
+                    <a href="###">
+                        <img src="img/Trangchu/slideshow/slide1.webp" alt="" width="100%" height="100%">
+                    </a>
+
                    <a href="###" class="text-black">
-                     <div class="main-SlideShow-Icon position-absolute top-50" style="right: 10;">
+                     <div class="main-SlideShow-Icon position-absolute top-50 translate-middle-y" style="right: 10;">
                          <i class="fa-solid fa-chevron-right position-absolute" style="left: 40%; top:35%"></i>
                      </div>
                    </a >
 
                     <a href="###" class="text-black">
-                        <div class="main-SlideShow-Icon position-absolute top-50" style="left: 10;">
+                        <div class="main-SlideShow-Icon position-absolute top-50 translate-middle-y" style="left: 10;">
                             <i class="fa-solid fa-chevron-left position-absolute" style="left: 40%; top:35%"></i>
                         </div>
                     </a>
@@ -104,19 +108,19 @@ require_once "global/env.php";
                 <!-- Tin tức -->
                 <div class="col-xl-3 px-2">
                     <div class="shadow-lg rounded-2 p-2" style="background-color: white;">
-                        <div class=" pb-2 text-secondary fw-bold"><a href="#" class="text-secondary">Tin Tức</a></div>
+                        <div class=" pb-2 text-secondary fw-bold"><a href="###" class="text-secondary">Tin Tức</a></div>
                         <div class="">
-                            <a href="#"><img src="img/Trangchu/tinkhuyenmai/Tin1.webp" alt="" width="100%" height="100px"></a>
+                            <a href="###"><img src="img/Trangchu/tinkhuyenmai/Tin1.webp" alt="" width="100%" height="100px"></a>
                         </div>
                         <div class="my-2"></div>
                         <div class="">
-                            <a href="#"><img src="img/Trangchu/tinkhuyenmai/tin2.webp" alt="" width="100%" height="100px"></a>
+                            <a href="###"><img src="img/Trangchu/tinkhuyenmai/tin2.webp" alt="" width="100%" height="100px"></a>
                         </div>
 
                         <div class="d-flex flex-column gap-2 mt-3 main-tintuc">
                             <p><a href="###">Xem thêm</a></p>
-                            <p><a href="#" class="text-black fw-light">Trải nghiệm Redmi A3 hiệu năng tốt - giá rẻ bất ngờ tại FPT Shop</a></p>
-                            <p><a href="#" class="text-black fw-light">TUẦN LỄ LAPTOP ACER - FPT Shop ưu đãi đến 9 triệu, bảo hành 2 năm</a></p>
+                            <p><a href="###" class="text-black fw-light">Trải nghiệm Redmi A3 hiệu năng tốt - giá rẻ bất ngờ tại FPT Shop</a></p>
+                            <p><a href="###" class="text-black fw-light">TUẦN LỄ LAPTOP ACER - FPT Shop ưu đãi đến 9 triệu, bảo hành 2 năm</a></p>
                         </div>
                     </div>
                 </div>
