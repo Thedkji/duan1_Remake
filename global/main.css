@@ -1,0 +1,69 @@
+/* Ghi chú */
+/* 
+M : vừa
+L : to
+XL : to vừa
+XXL : to nhất
+
+bg:background
+
+fs:font-size
+
+cl:color
+
+Color : {
+    W : white,
+    B : black
+}
+*/
+/* biến css */
+:root{
+    /* color background*/
+    --bg-Color-Main : #CD1818;
+    --bg-Color-Submain-M : #333333;
+    --bg-Color-Submain-L : black;
+    /* font-size */
+    --fs-XXL : 20px;
+    --fs-XL : 18px;
+    --fs-L : 16px;
+    --fs-M : 14px;
+    /* color text */
+    --cl-Text-W : white;  
+    --cl-Text-B : black;
+    /* color hover */
+}
+
+/* Định nghĩa cho placeholder */
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+    opacity: 50%;
+}
+
+/* Định nghĩa cho thẻ a */
+a{
+    text-decoration: none !important;
+    color: var(--cl-Text-W) !important;
+}
+
+/* Định nghĩa cho tất cả */
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+
+body{
+    background-color: var() !important;
+}
+
+#main_TrangChu{
+    height: 300px;
+    background-image: url("img/Trangchu/baner_trangchu.webp");
+    background-size: 100% 100%;
+}
+
+.nav-hover:hover{
+    background-color: var(--bg-Color-Submain-M);
+}
