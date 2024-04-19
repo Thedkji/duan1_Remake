@@ -1,25 +1,21 @@
 <?php
-// Sử dụng namespace của RouteCollector từ thư viện Phroute
 use Phroute\Phroute\RouteCollector;
 
-// Lấy URL từ tham số GET 'url' hoặc gán mặc định là '/' nếu không có
-$url = !isset($_GET['url']) ? '/' : $_GET['url'];
+$url = !isset($_GET['url']) ? '': $_GET['url'];
 
-// Khởi tạo một đối tượng RouteCollector để quản lý tuyến đường (định tuyến)
-$route = new RouteCollector();
+$route = new RouteCollector;
 
-// Định nghĩa một tuyến đường cho yêu cầu GET đến URL "/"
-$route->get("/", function(){
-    // Chuyển hướng người dùng đến trang "index.php"
-    header("location:index.php");
+// route
+$route->get('/',function(){
+    require_once "app/views/client/trang_chu/main.php";
 });
 
-// Khởi tạo một đối tượng Dispatcher với dữ liệu định tuyến từ RouteCollector
+
+
+// Khởi tạo một đối tượng Dispatcher từ thư viện Phroute và sử dụng dữ liệu định tuyến từ đối tượng Route
 $dispatcher = new Phroute\Phroute\Dispatcher($route->getData());
 
-// Gọi phương thức dispatch() để xử lý yêu cầu dựa trên phương thức HTTP và URL
+// Thực thi phương thức dispatch để xác định và gọi controller phù hợp dựa trên method HTTP và URL được yêu cầu
 $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], $url);
 
-// Xuất kết quả (response) ra màn hình
-echo $response;
 ?>
