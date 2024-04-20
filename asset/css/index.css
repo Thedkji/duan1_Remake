@@ -1,0 +1,101 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto";
+}
+
+body {
+  background-color: #F8FAFC;
+}
+
+/* variable */
+/* màu chữ */
+/* cỡ chữ */
+header {
+  background-color: white;
+  box-shadow: 0 0px 12px rgba(16, 118, 202, 0.4);
+  /* Hiển thị border của các item trong grid */
+  /* 
+   .header__grid__item {
+     border: 1px solid red;
+   }
+  */
+}
+header .header__grid {
+  display: grid;
+  grid-template-columns: 200px 500px 1.5fr 1fr;
+  padding: 0 100px;
+  min-height: 80px;
+}
+header .header__grid > a:first-child {
+  background-image: url("../global/img/logo/logo-trungtran-ngang-nen-trang-a2x-100_1680001630.jpg");
+  background-size: 85% 55%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header .header__grid > a:first-child .header__grid__item {
+  height: 100%;
+}
+header .header__grid__item:nth-child(2) nav {
+  height: 100%;
+}
+header .header__grid__item:nth-child(2) .nav__ul {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+header .header__grid__item:nth-child(2) .nav__ul li > a {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+}
+header .header__grid__item:nth-child(2) .nav__ul li > a:hover {
+  color: #10419b;
+}
+header .header__grid__item:nth-child(3) {
+  align-content: center;
+}
+header .header__grid__item:nth-child(3) div {
+  width: 90%;
+  height: 50%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+header .header__grid__item:nth-child(3) div input {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding-left: 10px;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0px 0px 6px rgb(90, 148, 249);
+}
+header .header__grid__item:nth-child(3) div input:focus {
+  outline: none;
+}
+header .header__grid__item:nth-child(3) div .fa-solid {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+header .header__grid__item:last-child {
+  align-content: center;
+}
+header .header__grid__item:last-child div {
+  text-align: end;
+}
+header .header__grid__item:last-child div i {
+  font-size: 35px;
+  margin-right: 32px;
+}
+
+/*# sourceMappingURL=index.css.map */
