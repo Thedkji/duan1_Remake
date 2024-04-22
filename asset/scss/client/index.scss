@@ -5,9 +5,17 @@
   text-decoration: none;
   list-style: none;
   font-family: "Roboto";
+  line-height: 1.5;
 }
 body{
     background-color: #F8FAFC;
+}
+.container{
+    padding: 0 100px;
+}
+.container-fluid{
+    width: 100%;
+    height: auto;
 }
 /* variable */
 $color-Bolder-Blue: #10419b;
@@ -27,6 +35,11 @@ $font-Size-M: 16px;
 $font-Size-XM: 18px;
 $font-Size-L: 20px;
 $font-Size-XL: 22px;
+
+// line heigth
+$line-Heigth-M : 1.5;
+$line-Heigth-L : 2.5;
+
 
 // Hàm tái sử dụng (mixin)
 

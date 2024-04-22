@@ -22,8 +22,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
+    <div class="container-fluid">
+        <header class="container">
 
             <div class="header__grid">
                 <a href="###">
@@ -54,14 +54,15 @@
                 <div class="header__grid__item">
                     <div>
                         <a href="###">
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="far fa-heart"></i>
                         </a>
                         <a href="###">
                             <i class="bi bi-cart"></i>
                         </a>
                         <a href="###">
-                            <i class="fa-regular fa-user"></i>
+                            <i class="far fa-user"></i>
                         </a>
+
                     </div>
                 </div>
             </div>

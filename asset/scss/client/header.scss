@@ -1,11 +1,13 @@
 header {
   background-color: $color-White;
+  position: sticky;
+  top: 0;
+  margin-bottom: 30px;
   @include Box_Shadow("sm");
 
   .header__grid {
     display: grid;
     grid-template-columns: 200px 500px 1.5fr 1fr;
-    padding: 0 100px;
     min-height: 80px;
   }
 
@@ -98,4 +100,9 @@ header {
       }
     }
   }
+}
+
+// reponsive
+@media (max-width : 430px){
+  
 }
