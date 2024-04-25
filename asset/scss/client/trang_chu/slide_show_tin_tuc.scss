@@ -1,0 +1,91 @@
+.slide_show_tin_tuc {
+  width: 100%;
+  border: 1px solid red;
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: 631px 631px;
+  grid-template-rows: 280px;
+  gap: 10px;
+
+  .slide_show {
+    max-width: 631px;
+    border: 1px solid red;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+    .slide_list {
+      width: max-content;
+      height: 100%;
+      // background-color: red;
+      display: flex;
+      transition: all 0.5s linear;
+
+      .item img {
+        max-width: 631px;
+        height: 100%;
+      }
+    }
+  }
+
+  .btn_Next_Pre {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .next button{
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 20px;
+      border: 0;
+      font-size: 30px;
+      background:0;
+      color: white;
+      opacity: 75%;
+    }
+
+    .pre button{
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      border-radius: 20px;
+      border: 0;
+      font-size: 30px;
+      background:0;
+      color: white;
+      opacity: 75%;
+    }
+  }
+
+  .dots{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    
+    ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:20px
+    }
+    ul li{
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 20px;
+      transition: 0.2s linear;
+    }
+
+    li.active{
+      width: 25px;
+      height: 8px;
+    }
+  }
+
+  .tin_tuc {
+    border: 1px solid red;
+  }
+}

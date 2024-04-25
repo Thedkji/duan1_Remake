@@ -1,7 +1,7 @@
 footer {
   background-color: $color-Bolder-Blue;
   border-radius: 10px 10px 0px 0px;
-  padding:30px 0px 0;
+  padding: 30px 0px 0;
 
   .info__footer {
     display: grid;
@@ -13,51 +13,47 @@ footer {
 
     // }
 
-    .info__footer__item:first-child{
+    .info__footer__item:first-child {
+      .logo > img {
+        width: 100%;
+      }
 
-        .logo>img{
-            width: 100%;
-          }
+      > p {
+        color: $color-T-White;
+        margin: 20px 0;
+        font-size: $font-Size-L;
+      }
 
-        >p{
-            color:$color-T-White;
-            margin: 20px 0;
-            font-size: $font-Size-L;
-        }
+      .logo__MXH i {
+        margin-right: 10px;
+        background-color: white;
+        padding: 6px 8px;
+        border-radius: 20px;
+      }
 
-        .logo__MXH i{
-            margin-right: 10px;
-            background-color: white;
-            padding: 6px 8px;
-            border-radius: 20px;
-        }
-
-        .logo__BCT{
-            margin-top: 30px;
-        }
+      .logo__BCT {
+        margin-top: 30px;
+      }
     }
-
 
     .info__footer__item:last-child {
-        color: $color-T-White;
-        display: flex;
-        justify-content: space-around;
+      color: $color-T-White;
+      display: flex;
+      justify-content: space-around;
 
-        h4{
-            margin-bottom: 20px;
-        }
-        
-       .info__footer__item__tt>p>a{
-            color: white;
-            font-size: $font-Size-XS;
-            line-height: $line-Heigth-L;
-        }
+      h4 {
+        margin-bottom: 20px;
+      }
+
+      .info__footer__item__tt > p > a {
+        color: white;
+        font-size: $font-Size-XS;
+        line-height: $line-Heigth-L;
+      }
     }
-
   }
 
-
-  .location_shop{
+  .location_shop {
     @include Box_Shadow("sm");
     margin-top: 10px;
     text-align: center;
@@ -65,9 +61,9 @@ footer {
     padding: 30px 0;
     font-size: $font-Size-XS;
 
-    div:first-child{
-        margin-bottom: 20px;
-        
+    div:first-child {
+      margin-bottom: 20px;
     }
   }
 }
+
