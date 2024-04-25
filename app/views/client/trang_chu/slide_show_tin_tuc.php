@@ -1,5 +1,6 @@
 <div class="slide_show_tin_tuc">
     <div class="slide_show">
+        <!-- slide show list chứa các ảnh -->
         <div class="slide_list">
             <div class="item">
                 <img src="asset/global/img/slide_show/acer-predator-2023-2024_1710316031.webp" alt="">
@@ -44,6 +45,38 @@
     </div>
 
     <div class="tin_tuc">
-        
+        <div class="tin_tuc_list">
+            <div class="tin_tuc_list_item tin_tuc_list_item-active">
+                <a href="###">
+                    <h4>Thông báo phục vụ tết nguyên đán giáp thìn 2024</h4>
+                    <p>
+                        <span>06/02/2024 -- </span>
+                        <span>575 views</span>
+                    </p>
+                </a>
+            </div>
+            <div class="tin_tuc_list_item">
+                <a href="###">
+                    <h4>Thông báo phục vụ tết nguyên đán giáp thìn 2024</h4>
+                    <p>
+                        <span>06/02/2024 -- </span>
+                        <span>575 views</span>
+                    </p>
+                </a>
+            </div>
+            <div class="tin_tuc_list_item">
+                <a href="###">
+                    <h4>Thông báo phục vụ tết nguyên đán giáp thìn 2024</h4>
+                    <p>
+                        <span>06/02/2024 -- </span>
+                        <span>575 views</span>
+                    </p>
+                </a>
+            </div>
+
+            <p class="tin_tuc_all">
+                <a href="###">Tất cả tin tức</a>
+            </p>
+        </div>
     </div>
 </div>

@@ -54,7 +54,7 @@ footer {
   }
 
   .location_shop {
-    @include Box_Shadow("sm");
+    @include Box_Shadow("s");
     margin-top: 10px;
     text-align: center;
     color: $color-T-White;

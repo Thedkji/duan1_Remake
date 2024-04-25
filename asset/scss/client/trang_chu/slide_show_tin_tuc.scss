@@ -1,15 +1,14 @@
 .slide_show_tin_tuc {
   width: 100%;
   border: 1px solid red;
-  padding: 0 100px;
+  padding: 0 110px;
   display: grid;
-  grid-template-columns: 631px 631px;
-  grid-template-rows: 280px;
-  gap: 10px;
+  grid-template-columns: 770px 435px;    //muốn thay đổi độ rộng ngắn của slideshow thì đổi ở đây 1
+  gap: 25px;
 
   .slide_show {
-    max-width: 631px;
-    border: 1px solid red;
+    max-width: 770px;  //xong đổi đây 2
+    // border: 1px solid red;
     position: relative;
     overflow: hidden;
     border-radius: 20px;
@@ -17,12 +16,12 @@
     .slide_list {
       width: max-content;
       height: 100%;
-      // background-color: red;
+      // border:1px solid red;
       display: flex;
       transition: all 0.5s linear;
 
       .item img {
-        max-width: 631px;
+        width: 770px;  //xong đổi đây 3
         height: 100%;
       }
     }
@@ -45,6 +44,7 @@
       background:0;
       color: white;
       opacity: 75%;
+      cursor: pointer;
     }
 
     .pre button{
@@ -57,6 +57,7 @@
       background:0;
       color: white;
       opacity: 75%;
+      cursor: pointer;
     }
   }
 
@@ -64,6 +65,7 @@
     position: absolute;
     bottom: 5px;
     width: 100%;
+    cursor: pointer;
     
     ul{
       display: flex;
@@ -84,8 +86,38 @@
       height: 8px;
     }
   }
-
   .tin_tuc {
-    border: 1px solid red;
+    // border: 1px solid red;
+    border-radius: 20px;
+    background-color: white;
+    @include Box_Shadow('s');
+    padding: 20px;
+    .tin_tuc_list_item{
+      padding: 10px;
+      background-color: #F9F9F9;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      a h4{
+        font-weight: 500;
+        color: rgb(67, 65, 65);
+      }
+      a p{
+        margin-top: 10px;
+        color: rgb(171, 167, 167);
+        font-size: 14px;
+      }
+    }
+
+    .tin_tuc_list_item-active{
+      border: 1px solid $color-Light-Blue;
+      box-shadow: 3px 3px 7px $color-LightS-Blue;
+      opacity: 100%;
+    }
+
+    .tin_tuc_all{
+      a{
+        color: $color-LightS-Blue;
+      }
+    }
   }
 }

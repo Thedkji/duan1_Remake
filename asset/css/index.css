@@ -31,7 +31,7 @@ header {
   top: 0;
   z-index: 100;
   margin-bottom: 30px;
-  box-shadow: 0 0px 12px rgba(16, 118, 202, 0.4);
+  box-shadow: 0 0px 12px rgb(174, 173, 173);
   /* Hiển thị border của các item trong grid */
   /* 
    .header__grid__item {
@@ -114,15 +114,13 @@ header .header__grid__item:last-child div i {
 .slide_show_tin_tuc {
   width: 100%;
   border: 1px solid red;
-  padding: 0 100px;
+  padding: 0 110px;
   display: grid;
-  grid-template-columns: 631px 631px;
-  grid-template-rows: 280px;
-  gap: 10px;
+  grid-template-columns: 770px 435px;
+  gap: 25px;
 }
 .slide_show_tin_tuc .slide_show {
-  max-width: 631px;
-  border: 1px solid red;
+  max-width: 770px;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
@@ -134,7 +132,7 @@ header .header__grid__item:last-child div i {
   transition: all 0.5s linear;
 }
 .slide_show_tin_tuc .slide_show .slide_list .item img {
-  max-width: 631px;
+  width: 770px;
   height: 100%;
 }
 .slide_show_tin_tuc .btn_Next_Pre {
@@ -154,6 +152,7 @@ header .header__grid__item:last-child div i {
   background: 0;
   color: white;
   opacity: 75%;
+  cursor: pointer;
 }
 .slide_show_tin_tuc .btn_Next_Pre .pre button {
   width: 40px;
@@ -165,11 +164,13 @@ header .header__grid__item:last-child div i {
   background: 0;
   color: white;
   opacity: 75%;
+  cursor: pointer;
 }
 .slide_show_tin_tuc .dots {
   position: absolute;
   bottom: 5px;
   width: 100%;
+  cursor: pointer;
 }
 .slide_show_tin_tuc .dots ul {
   display: flex;
@@ -189,7 +190,179 @@ header .header__grid__item:last-child div i {
   height: 8px;
 }
 .slide_show_tin_tuc .tin_tuc {
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  padding: 20px;
+}
+.slide_show_tin_tuc .tin_tuc .tin_tuc_list_item {
+  padding: 10px;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.slide_show_tin_tuc .tin_tuc .tin_tuc_list_item a h4 {
+  font-weight: 500;
+  color: rgb(67, 65, 65);
+}
+.slide_show_tin_tuc .tin_tuc .tin_tuc_list_item a p {
+  margin-top: 10px;
+  color: rgb(171, 167, 167);
+  font-size: 14px;
+}
+.slide_show_tin_tuc .tin_tuc .tin_tuc_list_item-active {
+  border: 1px solid #2874fe;
+  box-shadow: 3px 3px 7px #13a7fd;
+  opacity: 100%;
+}
+.slide_show_tin_tuc .tin_tuc .tin_tuc_all a {
+  color: #13a7fd;
+}
+
+.hot__Sale {
+  width: 100%;
   border: 1px solid red;
+  padding-inline: 115px;
+  margin-block: 30px;
+}
+.hot__Sale .sale__product__item {
+  padding: 10px;
+}
+.hot__Sale .tieude__sale {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.hot__Sale .tieude__sale h2 {
+  color: #f26522;
+}
+.hot__Sale .sale__products {
+  max-width: 100%;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 220px);
+  padding: 20px;
+  gap: 30px;
+  max-height: 390px;
+}
+.hot__Sale .sale__products .sale__product__item .banner__sale {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.hot__Sale .sale__products .sale__product__item .banner__sale div:first-child {
+  background-color: #FF9700;
+  color: white;
+  padding-right: 30px;
+  font-size: 14px;
+  position: relative;
+  margin-block: 10px;
+  padding-left: 5px;
+}
+.hot__Sale .sale__products .sale__product__item .banner__sale div:first-child::after {
+  content: "";
+  display: block;
+  width: 15%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  right: -8px;
+  top: 0px;
+  transform: rotate(45deg);
+}
+.hot__Sale .sale__products .sale__product__item .banner__sale div:last-child {
+  background-color: #f26522;
+  color: white;
+  width: 18%;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  padding: 10px 0;
+}
+.hot__Sale .sale__products .sale__product__item .img__sale {
+  margin-bottom: 40px;
+}
+.hot__Sale .sale__products .sale__product__item .img__sale img {
+  width: 90%;
+  height: 100px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+.hot__Sale .sale__products .sale__product__item .tenpro__sale {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hot__Sale .sale__products .sale__product__item .tenpro__sale a {
+  color: black;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Số lượng dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hot__Sale .sale__products .sale__product__item .price__sale {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.hot__Sale .sale__products .sale__product__item .price__sale span:first-child {
+  font-size: 18px;
+  color: #f26522;
+  font-weight: bold;
+}
+.hot__Sale .sale__products .sale__product__item .price__sale span:last-child {
+  text-decoration: line-through;
+  color: rgb(124, 121, 121);
+}
+.hot__Sale .sale__products .sale__product__item .phienban__sale {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+}
+.hot__Sale .sale__products .sale__product__item .thongso {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #EFEFEF;
+}
+.hot__Sale .sale__products .sale__product__item .thongso .item {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.hot__Sale .sale__products .sale__product__item .thongso__muahang {
+  display: none;
+}
+.hot__Sale .sale__products .sale__product__item .thongso__muahang .muahang {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+.hot__Sale .sale__products .sale__product__item .thongso__muahang .muahang button {
+  padding: 5px;
+  border: none;
+}
+.hot__Sale .sale__products .sale__product__item .thongso__muahang .muahang button:first-child {
+  font-size: 16px;
+  background-image: linear-gradient(to right, #f0d903, #ff8250);
+}
+.hot__Sale .sale__products .sale__product__item .thongso__muahang .muahang button:first-child a {
+  color: white;
+}
+.hot__Sale .sale__products .sale__product__item .thongso__muahang .muahang button:last-child {
+  background-color: #f26522;
+}
+.hot__Sale .sale__products .sale__product__item .thongso__muahang .muahang button:last-child a {
+  color: white;
 }
 
 main {
@@ -237,7 +410,7 @@ footer .info__footer .info__footer__item:last-child .info__footer__item__tt > p 
   line-height: 2.5;
 }
 footer .location_shop {
-  box-shadow: 0 0px 12px rgba(16, 118, 202, 0.4);
+  box-shadow: 0 0 5px rgb(174, 173, 173);
   margin-top: 10px;
   text-align: center;
   color: white;
