@@ -1,3 +1,7 @@
+main{
+    margin: 30px 0;
+    padding-inline: 100px;
+}
 @import "slide_show_tin_tuc.scss";
 @import "hot_sale.scss";
 @import "laptop_theo_nhucau.scss";
@@ -6,8 +10,4 @@
 @import "acer.scss";
 @import "leonovo.scss";
 @import "phukien.scss";
-
-main{
-    margin: 30px 0;
-    padding-inline: 100px;
-}
+@import "mini_info.scss";

@@ -112,6 +112,11 @@ header .header__grid__item:last-child div i {
   margin-right: 32px;
 }
 
+main {
+  margin: 30px 0;
+  padding-inline: 100px;
+}
+
 .slide_show_tin_tuc {
   width: 100%;
   border: 1px solid red;
@@ -1125,9 +1130,70 @@ header .header__grid__item:last-child div i {
   color: white;
 }
 
-main {
-  margin: 30px 0;
-  padding-inline: 100px;
+.mini_info {
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  background-color: white;
+  border-radius: 10px;
+  padding: 50px;
+}
+.mini_info .mongmuon__cuahang {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.mini_info .mongmuon__cuahang h2 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+.mini_info .mongmuon__cuahang p {
+  font-weight: 600;
+  opacity: 90%;
+}
+.mini_info .info__container {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.mini_info .info__container .info__container__item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  padding: 20px;
+  text-align: center;
+}
+.mini_info .info__container .info__container__item .logo {
+  margin-bottom: 20px;
+  height: 30%;
+}
+.mini_info .info__container .info__container__item .logo img {
+  width: 20%;
+}
+.mini_info .info__container .info__container__item .title {
+  height: 30%;
+  color: #f26522;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.mini_info .info__container .info__container__item .info__text {
+  height: 30%;
+  font-size: 14px;
+}
+.mini_info .uytin__cuahang {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  text-align: center;
+}
+.mini_info .uytin__cuahang div p:first-child {
+  color: #f26522;
+  font-size: 40px;
+  font-weight: bold;
+}
+.mini_info .uytin__cuahang div p:last-child {
+  color: rgb(124, 121, 121);
+  font-size: 14px;
+  font-weight: bold;
 }
 
 footer {

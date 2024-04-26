@@ -8,5 +8,6 @@
     require_once "acer.php";
     require_once "leonovo.php";
     require_once "phukien.php";
+    require_once "mini_info.php";
     ?>
 </main>

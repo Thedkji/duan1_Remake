@@ -1,0 +1,77 @@
+.mini_info {
+    @include Box_Shadow("s");
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+
+    // mongmuon__cuahang
+    .mongmuon__cuahang{
+        text-align: center;
+        margin-bottom: 20px;
+
+        h2{
+            margin-bottom: 10px;
+            font-size: $font-Size-XXL;
+        }
+        p{
+            font-weight: 600;
+            opacity: 90%;
+        }
+    }
+
+    // info__container
+    .info__container{
+        display: flex;
+        gap:40px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .info__container__item{
+            background-color: white;
+            border-radius: 10px;
+            @include Box_Shadow("s");
+            padding: 20px;
+            text-align: center;
+            .logo{
+                margin-bottom: 20px;
+                height: 30%;
+                img{
+                    width:20% ;
+                }
+            }
+
+            .title{
+                height: 30%;
+                color: $color-T-LightOrange;
+                font-weight: bold;
+                font-size: $font-Size-XL;
+                margin-bottom: 20px;
+            }
+
+            .info__text{
+                height: 30%;
+                font-size: $font-Size-XS;
+            }
+        }
+    }
+
+    //uytin__cuahang
+
+    .uytin__cuahang{
+        // border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        gap:10%;
+        text-align: center;
+
+        div p:first-child{
+            color: $color-T-LightOrange;
+            font-size: $font-Size-XXL;
+            font-weight: bold;
+        }
+        div p:last-child{
+            color: $color-T-LigthGray;
+            font-size: $font-Size-XS;
+            font-weight: bold;
+        }
+    }
+}
