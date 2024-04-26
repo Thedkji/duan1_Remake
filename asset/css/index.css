@@ -7,6 +7,7 @@
   list-style: none;
   font-family: "Roboto";
   line-height: 1.5;
+  transition: all 0.25s linear;
 }
 
 body {
@@ -118,6 +119,7 @@ header .header__grid__item:last-child div i {
   display: grid;
   grid-template-columns: 770px 435px;
   gap: 25px;
+  margin-bottom: 70px;
 }
 .slide_show_tin_tuc .slide_show {
   max-width: 770px;
@@ -224,6 +226,7 @@ header .header__grid__item:last-child div i {
   border: 1px solid red;
   padding-inline: 115px;
   margin-block: 30px;
+  margin-bottom: 70px;
 }
 .hot__Sale .sale__product__item {
   padding: 10px;
@@ -236,6 +239,9 @@ header .header__grid__item:last-child div i {
 .hot__Sale .tieude__sale h2 {
   color: #f26522;
 }
+.hot__Sale .tieude__sale a {
+  color: #2874fe;
+}
 .hot__Sale .sale__products {
   max-width: 100%;
   background-color: white;
@@ -243,9 +249,10 @@ header .header__grid__item:last-child div i {
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(5, 220px);
-  padding: 20px;
+  padding: 10px;
   gap: 30px;
-  max-height: 390px;
+  max-height: 377px;
+  position: relative;
 }
 .hot__Sale .sale__products .sale__product__item .banner__sale {
   display: flex;
@@ -362,6 +369,184 @@ header .header__grid__item:last-child div i {
   background-color: #f26522;
 }
 .hot__Sale .sale__products .sale__product__item .thongso__muahang .muahang button:last-child a {
+  color: white;
+}
+
+.laptop_theo_nhucau {
+  border: 1px solid red;
+  margin-bottom: 70px;
+  padding: 0px 110px;
+}
+.laptop_theo_nhucau h2 {
+  margin-bottom: 20px;
+}
+.laptop_theo_nhucau .list__sanpham__nhucau {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  max-height: 282px;
+}
+.laptop_theo_nhucau .list__sanpham__nhucau .list__sanpham__nhucau__item .img__sanpham__nhucau img {
+  width: 80%;
+  height: 120px;
+}
+.laptop_theo_nhucau .list__sanpham__nhucau .list__sanpham__nhucau__item .list__logo__nhucau {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px auto;
+}
+.laptop_theo_nhucau .list__sanpham__nhucau .list__sanpham__nhucau__item .tieude__sanpham__nhucau a {
+  color: black;
+  font-weight: 500;
+}
+.laptop_theo_nhucau .list__sanpham__nhucau .info__sanpham__nhucau {
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 10px;
+  padding: 15px;
+  display: none;
+}
+.laptop_theo_nhucau .list__sanpham__nhucau .info__sanpham__nhucau div:first-child {
+  background-color: #EFEFEF;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 80%;
+}
+
+.maytinh__xachtay {
+  border: 1px solid red;
+  padding: 10px 110px 0;
+}
+.maytinh__xachtay section:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.maytinh__xachtay section:first-child div {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.maytinh__xachtay section:first-child div a {
+  color: #2874fe;
+}
+.maytinh__xachtay section:first-child div ul {
+  display: flex;
+  gap: 25px;
+}
+.maytinh__xachtay section:first-child div ul li a {
+  color: rgb(124, 121, 121);
+}
+.maytinh__xachtay section:first-child div ul li a:hover {
+  color: #13a7fd;
+}
+.maytinh__xachtay .list__products {
+  max-width: 100%;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px;
+  max-height: 702px;
+  gap: 30px;
+  row-gap: 50px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.maytinh__xachtay .list__products .list__products__container {
+  max-height: 300px;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item {
+  padding: 20px;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .img__pro {
+  margin-bottom: 40px;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .img__pro img {
+  width: 90%;
+  height: 100px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .ten__pro {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .ten__pro a {
+  color: black;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Số lượng dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .price__pro {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .price__pro span:first-child {
+  font-size: 18px;
+  color: #f26522;
+  font-weight: bold;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .price__pro span:last-child {
+  text-decoration: line-through;
+  color: rgb(124, 121, 121);
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .phienban__pro {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .thongso {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #EFEFEF;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .thongso .item {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .thongso__muahang {
+  display: none;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .thongso__muahang .muahang {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .thongso__muahang .muahang button {
+  padding: 5px;
+  border: none;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child {
+  font-size: 16px;
+  background-image: linear-gradient(to right, #f0d903, #ff8250);
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child a {
+  color: white;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child {
+  background-color: #f26522;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child a {
   color: white;
 }
 

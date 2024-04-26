@@ -1,84 +1,62 @@
-.hot__Sale {
-    width: 100%;
+.maytinh__xachtay {
     border: 1px solid red;
-    padding-inline: 115px;
-    margin-block: 30px;
-    margin-bottom: 70px;
-    .sale__product__item {
-        padding: 10px;
-    }
+    padding: 10px 110px 0;
 
-    .tieude__sale {
+    section:first-child {
+        // border: 1px solid red;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 30px;
 
-        h2 {
-            color: $color-T-LightOrange;
-        }
 
-        a{
-            color: $color-Light-Blue;
+        div {
+            display: flex;
+            gap: 80px;
+            align-items: center;
+
+            a {
+                color: $color-Light-Blue;
+            }
+
+            ul {
+                display: flex;
+                gap: 25px;
+
+                li a {
+                    color: $color-T-LigthGray;
+
+                    &:hover{
+                       color: $color-LightS-Blue;
+
+                    }
+                }
+            }
         }
     }
 
-    .sale__products {
+
+    // section last child
+    .list__products {
         max-width: 100%;
         background-color: white;
         @include Box_Shadow("s");
         border-radius: 10px;
         display: grid;
-        grid-template-columns: repeat(5, 220px);
+        grid-template-columns: repeat(5, 1fr);
         padding: 10px;
+        max-height: 702px;
         gap: 30px;
-        max-height: 377px;
+        row-gap: 50px;
         position: relative; //tạo vùng để nâng lớp đè lên các phần tử khác
-        .sale__product__item {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        .list__products__container{
+            max-height: 300px;  //chiều cao tối thiểu của các item
+        .list__products__item {
             // border: 1px solid red;
-
-
-            // banner__sale
-            .banner__sale {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                margin-bottom: 20px;
-
-                div:first-child {
-                    background-color: $color-T-LightSOrange;
-                    color: $color-T-White;
-                    padding-right: 30px;
-                    font-size: $font-Size-XS;
-                    position: relative;
-                    margin-block: 10px;
-                    padding-left: 5px;
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        width: 15%;
-                        height: 100%;
-                        background-color: white;
-                        position: absolute;
-                        right: -8px;
-                        top: 0px;
-                        transform: rotate(45deg);
-                    }
-                }
-
-                div:last-child {
-                    background-color: $color-T-LightOrange;
-                    color: $color-T-White;
-                    width: 18%;
-                    text-align: center;
-                    font-size: $font-Size-XS;
-                    position: relative;
-                    padding: 10px 0;
-                }
-            }
-
-            // img__sale
-            .img__sale {
+            padding: 20px;
+            // img__pro
+            .img__pro {
                 margin-bottom: 40px;
 
                 img {
@@ -90,8 +68,8 @@
                 }
             }
 
-            // tenpro__sale
-            .tenpro__sale {
+            // ten__pro
+            .ten__pro {
                 width: 100%;
                 text-align: center;
                 margin-bottom: 20px;
@@ -103,8 +81,8 @@
                 }
             }
 
-            //price__sale
-            .price__sale {
+            //price__pro
+            .price__pro {
                 display: flex;
                 justify-content: space-around;
                 font-size: $font-Size-S;
@@ -123,8 +101,8 @@
                 }
             }
 
-            //phienban__sale
-            .phienban__sale {
+            //phienban__pro
+            .phienban__pro {
                 display: flex;
                 justify-content: space-around;
                 font-size: $font-Size-XS;
@@ -179,9 +157,11 @@
 
                 }
             }
-
+        }
             // 
         }
+
     }
 
+    // end section last child
 }

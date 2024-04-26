@@ -94,6 +94,7 @@ function Hover_Items_Product() {
             value.style.boxShadow = "0 0 5px rgb(174, 173, 173)";
             value.style.background = "white";
             value.style.borderRadius = "10px"
+
         })
 
         value.addEventListener('mouseout', () => {
@@ -107,6 +108,51 @@ function Hover_Items_Product() {
 
 }
 
+// Trang chủ - laptop_theo_nhucau
+function Hover_Items_NhuCau(){
+    let listSanPhamNhuCauItem = document.querySelectorAll('.list__sanpham__nhucau__item');
+    let infoSanPhamNhuCau = document.querySelectorAll('.info__sanpham__nhucau');
+
+    listSanPhamNhuCauItem.forEach((list,index)=>{
+        list.addEventListener('mouseover',()=>{
+            infoSanPhamNhuCau[index].style.display = "block";
+            infoSanPhamNhuCau[index].style.position = "relative";
+        })
+
+        list.addEventListener('mouseout',()=>{
+            infoSanPhamNhuCau[index].style.display = "none";
+        })
+    })
+}
+
+ // Trang chủ - maytinh_xachtay
+ function Hover_Items_MayTinh() {
+    let listProductsItem = document.querySelectorAll('.maytinh__xachtay .list__products__item');
+    let thongso__muahang = document.querySelectorAll('.maytinh__xachtay .thongso__muahang');
+
+    listProductsItem.forEach((value, index) => {
+        value.addEventListener('mouseover', () => {
+            thongso__muahang[index].style.display = "block";
+
+            value.style.boxShadow = "0 0 5px rgb(174, 173, 173)";
+            value.style.background = "white";
+            value.style.borderRadius = "10px";
+            value.style.position = "relative";
+            value.style.zIndex = "2";    //khi hover vào thì sẽ đè lên phần tử khác
+        })
+
+        value.addEventListener('mouseout', () => {
+            thongso__muahang[index].style.display = "none";
+
+            value.style.boxShadow = "none";
+            value.style.background = "none";
+            value.style.borderRadius = "none";
+            value.style.position = "static";
+        })
+    });
+
+}
+
 // Chạy các hàm
 // Trang chủ - slide_show_tintuc
 SlideShow();
@@ -115,3 +161,10 @@ HieuUngTinTuc();
 
 // Trang chủ - hot_sale
 Hover_Items_Product();
+
+// Trang chủ - laptop_theo_nhucau
+ Hover_Items_NhuCau();
+
+
+ // Trang chủ - maytinh_xachtay
+Hover_Items_MayTinh();
