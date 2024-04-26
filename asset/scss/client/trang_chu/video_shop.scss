@@ -1,0 +1,59 @@
+.video_shop {
+    margin-top: 80px;
+    border-radius: 10px;
+    // @include Box_Shadow("s");
+    // background-color: white;
+    padding: 30px;
+    h2{
+        margin-bottom: 30px;
+    }
+    .video__container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: minmax(200px, 400px);
+        gap: 20px;
+
+        .video__container__item:first-child {
+            iframe {
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .video__container__item:last-child {
+            // border: 1px solid red;
+            overflow-y: scroll;
+            border-radius: 10px;
+
+            .video {
+                display: flex;
+                align-items: start;
+                gap: 20px;
+                background-color: rgb(215, 213, 213);
+                border-radius: 10px;
+                padding: 10px;
+                max-height: 130px;
+                overflow: hidden;
+
+                font-size: $font-Size-XS;
+                margin-bottom: 20px;
+
+                img {
+                    width: 45%;
+                    border-radius: 10px;
+                }
+
+                div {
+                    margin-bottom: 10px;
+                    font-size: $font-Size-S;
+                    .title {
+                        font-size: 13px;
+                        font-weight: bold;
+                        @include Text_Hidden(2);
+                    }
+                }
+            }
+        }
+    }
+}

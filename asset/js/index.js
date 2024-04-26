@@ -79,8 +79,28 @@ function HieuUngTinTuc() {
 
 }
 
+//Trang chủ video_shop
+function ClickChuyenVideo(){
+    let linkvideo = document.querySelectorAll('.video_shop .video__container__item .video .title');
 
+    let src = document.querySelector('.video_shop .ifameMain');
 
+    let arrVideo = [
+        "https://www.youtube.com/embed/ywKp_kW-slY",
+        "https://www.youtube.com/embed/kCGYTXAtEWc",
+        "https://www.youtube.com/embed/FZrKPR8qS4Y",
+        "https://www.youtube.com/embed/k8fGr-zzkJY"
+    ]
+    console.log(src);
+    
+    linkvideo.forEach((link , i)=>{
+        link.addEventListener("click",()=>{
+            src.innerHTML = ` <iframe width="" height="" src="${arrVideo[i]}" title="Acer Nitro 16 Phoenix New FullBox: Siêu Phẩm trong Phân Khúc 24 Triệu!" frameborder="0"></iframe>`;
+        })
+    })
+}
+
+// Chạy hàm ở đây
 //  function Hover_Items_MayTinh() {
 //     let listProductsItem = document.querySelectorAll('.maytinh__xachtay .list__products__item');
 //     let thongso__muahang = document.querySelectorAll('.maytinh__xachtay .thongso__muahang');
@@ -112,5 +132,6 @@ function HieuUngTinTuc() {
 // Trang chủ - slide_show_tintuc
 SlideShow();
 HieuUngTinTuc();
+ClickChuyenVideo();
 
 

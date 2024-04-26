@@ -9,5 +9,7 @@
     require_once "leonovo.php";
     require_once "phukien.php";
     require_once "mini_info.php";
+    require_once "video_shop.php";
+
     ?>
 </main>
