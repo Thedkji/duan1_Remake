@@ -4,5 +4,9 @@
     require_once "hot_sale.php";
     require_once "laptop_theo_nhucau.php";
     require_once "maytinh_xachtay.php";
+    require_once "apple.php";
+    require_once "acer.php";
+    require_once "leonovo.php";
+    require_once "phukien.php";
     ?>
 </main>

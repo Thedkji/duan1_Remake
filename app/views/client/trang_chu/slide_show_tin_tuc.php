@@ -55,7 +55,7 @@
                     </p>
                 </a>
             </div>
-            <div class="tin_tuc_list_item">
+            <div class="tin_tuc_list_item ">
                 <a href="###">
                     <h4>Thông báo phục vụ tết nguyên đán giáp thìn 2024</h4>
                     <p>
@@ -64,7 +64,7 @@
                     </p>
                 </a>
             </div>
-            <div class="tin_tuc_list_item">
+            <div class="tin_tuc_list_item ">
                 <a href="###">
                     <h4>Thông báo phục vụ tết nguyên đán giáp thìn 2024</h4>
                     <p>

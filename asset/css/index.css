@@ -115,11 +115,10 @@ header .header__grid__item:last-child div i {
 .slide_show_tin_tuc {
   width: 100%;
   border: 1px solid red;
-  padding: 0 110px;
   display: grid;
-  grid-template-columns: 770px 435px;
-  gap: 25px;
-  margin-bottom: 70px;
+  grid-template-columns: 63% 37%;
+  margin-bottom: 80px;
+  max-height: 355px;
 }
 .slide_show_tin_tuc .slide_show {
   max-width: 770px;
@@ -197,6 +196,9 @@ header .header__grid__item:last-child div i {
   box-shadow: 0 0 5px rgb(174, 173, 173);
   padding: 20px;
 }
+.slide_show_tin_tuc .tin_tuc .tin_tuc_list {
+  max-height: 310px;
+}
 .slide_show_tin_tuc .tin_tuc .tin_tuc_list_item {
   padding: 10px;
   background-color: #F9F9F9;
@@ -212,6 +214,11 @@ header .header__grid__item:last-child div i {
   color: rgb(171, 167, 167);
   font-size: 14px;
 }
+.slide_show_tin_tuc .tin_tuc .tin_tuc_list_item:hover {
+  border: 1px solid #2874fe;
+  box-shadow: 3px 3px 7px #13a7fd;
+  opacity: 100%;
+}
 .slide_show_tin_tuc .tin_tuc .tin_tuc_list_item-active {
   border: 1px solid #2874fe;
   box-shadow: 3px 3px 7px #13a7fd;
@@ -224,9 +231,8 @@ header .header__grid__item:last-child div i {
 .hot__Sale {
   width: 100%;
   border: 1px solid red;
-  padding-inline: 115px;
   margin-block: 30px;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 .hot__Sale .sale__product__item {
   padding: 10px;
@@ -248,11 +254,19 @@ header .header__grid__item:last-child div i {
   box-shadow: 0 0 5px rgb(174, 173, 173);
   border-radius: 10px;
   display: grid;
-  grid-template-columns: repeat(5, 220px);
-  padding: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 40px;
   gap: 30px;
-  max-height: 377px;
+  max-height: 420px;
   position: relative;
+}
+.hot__Sale .sale__products .sale__product__item:hover {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 10px;
+}
+.hot__Sale .sale__products .sale__product__item:hover .thongso__muahang {
+  display: block;
 }
 .hot__Sale .sale__products .sale__product__item .banner__sale {
   display: flex;
@@ -355,7 +369,7 @@ header .header__grid__item:last-child div i {
   text-align: center;
 }
 .hot__Sale .sale__products .sale__product__item .thongso__muahang .muahang button {
-  padding: 5px;
+  padding: 7px;
   border: none;
 }
 .hot__Sale .sale__products .sale__product__item .thongso__muahang .muahang button:first-child {
@@ -374,8 +388,7 @@ header .header__grid__item:last-child div i {
 
 .laptop_theo_nhucau {
   border: 1px solid red;
-  margin-bottom: 70px;
-  padding: 0px 110px;
+  margin-bottom: 80px;
 }
 .laptop_theo_nhucau h2 {
   margin-bottom: 20px;
@@ -388,7 +401,10 @@ header .header__grid__item:last-child div i {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
-  max-height: 282px;
+  max-height: 280px;
+}
+.laptop_theo_nhucau .list__sanpham__nhucau .list__sanpham__nhucau__item:hover .info__sanpham__nhucau {
+  display: block;
 }
 .laptop_theo_nhucau .list__sanpham__nhucau .list__sanpham__nhucau__item .img__sanpham__nhucau img {
   width: 80%;
@@ -405,12 +421,16 @@ header .header__grid__item:last-child div i {
   font-weight: 500;
 }
 .laptop_theo_nhucau .list__sanpham__nhucau .info__sanpham__nhucau {
+  width: 80%;
+  margin: auto;
   margin-top: 20px;
   background-color: white;
   box-shadow: 0 0 5px rgb(174, 173, 173);
   border-radius: 10px;
   padding: 15px;
   display: none;
+  position: relative;
+  z-index: 2;
 }
 .laptop_theo_nhucau .list__sanpham__nhucau .info__sanpham__nhucau div:first-child {
   background-color: #EFEFEF;
@@ -422,7 +442,7 @@ header .header__grid__item:last-child div i {
 
 .maytinh__xachtay {
   border: 1px solid red;
-  padding: 10px 110px 0;
+  margin-bottom: 80px;
 }
 .maytinh__xachtay section:first-child {
   display: flex;
@@ -447,25 +467,32 @@ header .header__grid__item:last-child div i {
   color: #13a7fd;
 }
 .maytinh__xachtay .list__products {
-  max-width: 100%;
   background-color: white;
   box-shadow: 0 0 5px rgb(174, 173, 173);
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding: 10px;
-  max-height: 702px;
+  padding: 40px;
+  max-height: 722px;
   gap: 30px;
-  row-gap: 50px;
-  position: relative;
+  row-gap: 60px;
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 .maytinh__xachtay .list__products .list__products__container {
-  max-height: 300px;
+  max-height: 296px;
 }
 .maytinh__xachtay .list__products .list__products__container .list__products__item {
-  padding: 20px;
+  padding: 10px;
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item:hover {
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+}
+.maytinh__xachtay .list__products .list__products__container .list__products__item:hover .thongso__muahang {
+  display: block;
 }
 .maytinh__xachtay .list__products .list__products__container .list__products__item .img__pro {
   margin-bottom: 40px;
@@ -493,7 +520,7 @@ header .header__grid__item:last-child div i {
 }
 .maytinh__xachtay .list__products .list__products__container .list__products__item .price__pro {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 12px;
   align-items: center;
   margin-bottom: 20px;
@@ -533,7 +560,7 @@ header .header__grid__item:last-child div i {
   text-align: center;
 }
 .maytinh__xachtay .list__products .list__products__container .list__products__item .thongso__muahang .muahang button {
-  padding: 5px;
+  padding: 7px;
   border: none;
 }
 .maytinh__xachtay .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child {
@@ -550,8 +577,557 @@ header .header__grid__item:last-child div i {
   color: white;
 }
 
+.apple {
+  border: 1px solid red;
+  margin-bottom: 80px;
+}
+.apple section:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.apple section:first-child div {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.apple section:first-child div a {
+  color: #2874fe;
+}
+.apple section:first-child div ul {
+  display: flex;
+  gap: 25px;
+}
+.apple section:first-child div ul li a {
+  color: rgb(124, 121, 121);
+}
+.apple section:first-child div ul li a:hover {
+  color: #13a7fd;
+}
+.apple .list__products {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 40px;
+  max-height: 722px;
+  gap: 30px;
+  row-gap: 60px;
+  margin-top: 30px;
+}
+.apple .list__products .list__products__container {
+  max-height: 296px;
+}
+.apple .list__products .list__products__container .list__products__item {
+  padding: 10px;
+}
+.apple .list__products .list__products__container .list__products__item:hover {
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+}
+.apple .list__products .list__products__container .list__products__item:hover .thongso__muahang {
+  display: block;
+}
+.apple .list__products .list__products__container .list__products__item .img__pro {
+  margin-bottom: 40px;
+}
+.apple .list__products .list__products__container .list__products__item .img__pro img {
+  width: 90%;
+  height: 100px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+.apple .list__products .list__products__container .list__products__item .ten__pro {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.apple .list__products .list__products__container .list__products__item .ten__pro a {
+  color: black;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Số lượng dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.apple .list__products .list__products__container .list__products__item .price__pro {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.apple .list__products .list__products__container .list__products__item .price__pro span:first-child {
+  font-size: 18px;
+  color: #f26522;
+  font-weight: bold;
+}
+.apple .list__products .list__products__container .list__products__item .price__pro span:last-child {
+  text-decoration: line-through;
+  color: rgb(124, 121, 121);
+}
+.apple .list__products .list__products__container .list__products__item .phienban__pro {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+}
+.apple .list__products .list__products__container .list__products__item .thongso {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #EFEFEF;
+}
+.apple .list__products .list__products__container .list__products__item .thongso .item {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.apple .list__products .list__products__container .list__products__item .thongso__muahang {
+  display: none;
+}
+.apple .list__products .list__products__container .list__products__item .thongso__muahang .muahang {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+.apple .list__products .list__products__container .list__products__item .thongso__muahang .muahang button {
+  padding: 7px;
+  border: none;
+}
+.apple .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child {
+  font-size: 16px;
+  background-image: linear-gradient(to right, #f0d903, #ff8250);
+}
+.apple .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child a {
+  color: white;
+}
+.apple .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child {
+  background-color: #f26522;
+}
+.apple .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child a {
+  color: white;
+}
+
+.acer {
+  border: 1px solid red;
+  margin-bottom: 80px;
+}
+.acer section:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.acer section:first-child div {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.acer section:first-child div a {
+  color: #2874fe;
+}
+.acer section:first-child div ul {
+  display: flex;
+  gap: 25px;
+}
+.acer section:first-child div ul li a {
+  color: rgb(124, 121, 121);
+}
+.acer section:first-child div ul li a:hover {
+  color: #13a7fd;
+}
+.acer .list__products {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 40px;
+  max-height: 722px;
+  gap: 30px;
+  row-gap: 60px;
+  margin-top: 30px;
+}
+.acer .list__products .list__products__container {
+  max-height: 296px;
+}
+.acer .list__products .list__products__container .list__products__item {
+  padding: 10px;
+}
+.acer .list__products .list__products__container .list__products__item:hover {
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+}
+.acer .list__products .list__products__container .list__products__item:hover .thongso__muahang {
+  display: block;
+}
+.acer .list__products .list__products__container .list__products__item .img__pro {
+  margin-bottom: 40px;
+}
+.acer .list__products .list__products__container .list__products__item .img__pro img {
+  width: 90%;
+  height: 100px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+.acer .list__products .list__products__container .list__products__item .ten__pro {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.acer .list__products .list__products__container .list__products__item .ten__pro a {
+  color: black;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Số lượng dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.acer .list__products .list__products__container .list__products__item .price__pro {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.acer .list__products .list__products__container .list__products__item .price__pro span:first-child {
+  font-size: 18px;
+  color: #f26522;
+  font-weight: bold;
+}
+.acer .list__products .list__products__container .list__products__item .price__pro span:last-child {
+  text-decoration: line-through;
+  color: rgb(124, 121, 121);
+}
+.acer .list__products .list__products__container .list__products__item .phienban__pro {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+}
+.acer .list__products .list__products__container .list__products__item .thongso {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #EFEFEF;
+}
+.acer .list__products .list__products__container .list__products__item .thongso .item {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.acer .list__products .list__products__container .list__products__item .thongso__muahang {
+  display: none;
+}
+.acer .list__products .list__products__container .list__products__item .thongso__muahang .muahang {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+.acer .list__products .list__products__container .list__products__item .thongso__muahang .muahang button {
+  padding: 7px;
+  border: none;
+}
+.acer .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child {
+  font-size: 16px;
+  background-image: linear-gradient(to right, #f0d903, #ff8250);
+}
+.acer .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child a {
+  color: white;
+}
+.acer .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child {
+  background-color: #f26522;
+}
+.acer .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child a {
+  color: white;
+}
+
+.leonovo {
+  border: 1px solid red;
+  margin-bottom: 80px;
+}
+.leonovo section:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.leonovo section:first-child div {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.leonovo section:first-child div a {
+  color: #2874fe;
+}
+.leonovo section:first-child div ul {
+  display: flex;
+  gap: 25px;
+}
+.leonovo section:first-child div ul li a {
+  color: rgb(124, 121, 121);
+}
+.leonovo section:first-child div ul li a:hover {
+  color: #13a7fd;
+}
+.leonovo .list__products {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 40px;
+  max-height: 722px;
+  gap: 30px;
+  row-gap: 60px;
+  margin-top: 30px;
+}
+.leonovo .list__products .list__products__container {
+  max-height: 296px;
+}
+.leonovo .list__products .list__products__container .list__products__item {
+  padding: 10px;
+}
+.leonovo .list__products .list__products__container .list__products__item:hover {
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+}
+.leonovo .list__products .list__products__container .list__products__item:hover .thongso__muahang {
+  display: block;
+}
+.leonovo .list__products .list__products__container .list__products__item .img__pro {
+  margin-bottom: 40px;
+}
+.leonovo .list__products .list__products__container .list__products__item .img__pro img {
+  width: 90%;
+  height: 100px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+.leonovo .list__products .list__products__container .list__products__item .ten__pro {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.leonovo .list__products .list__products__container .list__products__item .ten__pro a {
+  color: black;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Số lượng dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.leonovo .list__products .list__products__container .list__products__item .price__pro {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.leonovo .list__products .list__products__container .list__products__item .price__pro span:first-child {
+  font-size: 18px;
+  color: #f26522;
+  font-weight: bold;
+}
+.leonovo .list__products .list__products__container .list__products__item .price__pro span:last-child {
+  text-decoration: line-through;
+  color: rgb(124, 121, 121);
+}
+.leonovo .list__products .list__products__container .list__products__item .phienban__pro {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+}
+.leonovo .list__products .list__products__container .list__products__item .thongso {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #EFEFEF;
+}
+.leonovo .list__products .list__products__container .list__products__item .thongso .item {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.leonovo .list__products .list__products__container .list__products__item .thongso__muahang {
+  display: none;
+}
+.leonovo .list__products .list__products__container .list__products__item .thongso__muahang .muahang {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+.leonovo .list__products .list__products__container .list__products__item .thongso__muahang .muahang button {
+  padding: 7px;
+  border: none;
+}
+.leonovo .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child {
+  font-size: 16px;
+  background-image: linear-gradient(to right, #f0d903, #ff8250);
+}
+.leonovo .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child a {
+  color: white;
+}
+.leonovo .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child {
+  background-color: #f26522;
+}
+.leonovo .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child a {
+  color: white;
+}
+
+.phukien {
+  border: 1px solid red;
+  margin-bottom: 80px;
+}
+.phukien section:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.phukien section:first-child div {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.phukien section:first-child div a {
+  color: #2874fe;
+}
+.phukien section:first-child div ul {
+  display: flex;
+  gap: 25px;
+}
+.phukien section:first-child div ul li a {
+  color: rgb(124, 121, 121);
+}
+.phukien section:first-child div ul li a:hover {
+  color: #13a7fd;
+}
+.phukien .list__products {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 40px;
+  max-height: 722px;
+  gap: 30px;
+  row-gap: 60px;
+  margin-top: 30px;
+}
+.phukien .list__products .list__products__container {
+  max-height: 296px;
+}
+.phukien .list__products .list__products__container .list__products__item {
+  padding: 10px;
+}
+.phukien .list__products .list__products__container .list__products__item:hover {
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+}
+.phukien .list__products .list__products__container .list__products__item:hover .thongso__muahang {
+  display: block;
+}
+.phukien .list__products .list__products__container .list__products__item .img__pro {
+  margin-bottom: 40px;
+}
+.phukien .list__products .list__products__container .list__products__item .img__pro img {
+  width: 90%;
+  height: 100px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+.phukien .list__products .list__products__container .list__products__item .ten__pro {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.phukien .list__products .list__products__container .list__products__item .ten__pro a {
+  color: black;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Số lượng dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.phukien .list__products .list__products__container .list__products__item .price__pro {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.phukien .list__products .list__products__container .list__products__item .price__pro span:first-child {
+  font-size: 18px;
+  color: #f26522;
+  font-weight: bold;
+}
+.phukien .list__products .list__products__container .list__products__item .price__pro span:last-child {
+  text-decoration: line-through;
+  color: rgb(124, 121, 121);
+}
+.phukien .list__products .list__products__container .list__products__item .phienban__pro {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+}
+.phukien .list__products .list__products__container .list__products__item .thongso {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #EFEFEF;
+}
+.phukien .list__products .list__products__container .list__products__item .thongso .item {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.phukien .list__products .list__products__container .list__products__item .thongso__muahang {
+  display: none;
+}
+.phukien .list__products .list__products__container .list__products__item .thongso__muahang .muahang {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+.phukien .list__products .list__products__container .list__products__item .thongso__muahang .muahang button {
+  padding: 7px;
+  border: none;
+}
+.phukien .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child {
+  font-size: 16px;
+  background-image: linear-gradient(to right, #f0d903, #ff8250);
+}
+.phukien .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:first-child a {
+  color: white;
+}
+.phukien .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child {
+  background-color: #f26522;
+}
+.phukien .list__products .list__products__container .list__products__item .thongso__muahang .muahang button:last-child a {
+  color: white;
+}
+
 main {
   margin: 30px 0;
+  padding-inline: 100px;
 }
 
 footer {

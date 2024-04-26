@@ -1,167 +1,183 @@
-.maytinh__xachtay {
-    border: 1px solid red;
-    padding: 10px 110px 0;
-
-    section:first-child {
-        // border: 1px solid red;
-        display: flex;
-        justify-content: space-between;
-
-
-        div {
-            display: flex;
-            gap: 80px;
-            align-items: center;
-
-            a {
-                color: $color-Light-Blue;
-            }
-
-            ul {
-                display: flex;
-                gap: 25px;
-
-                li a {
-                    color: $color-T-LigthGray;
-
-                    &:hover{
-                       color: $color-LightS-Blue;
-
-                    }
-                }
-            }
-        }
-    }
-
-
-    // section last child
-    .list__products {
-        max-width: 100%;
-        background-color: white;
-        @include Box_Shadow("s");
-        border-radius: 10px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        padding: 10px;
-        max-height: 702px;
-        gap: 30px;
-        row-gap: 50px;
-        position: relative; //tạo vùng để nâng lớp đè lên các phần tử khác
-        margin-top: 30px;
-        margin-bottom: 30px;
-
-        .list__products__container{
-            max-height: 300px;  //chiều cao tối thiểu của các item
-        .list__products__item {
+@mixin AllScssProducts(){
+        border: 1px solid red;
+        margin-bottom: 80px;
+        section:first-child {
             // border: 1px solid red;
-            padding: 20px;
-            // img__pro
-            .img__pro {
-                margin-bottom: 40px;
-
-                img {
-                    width: 90%;
-                    height: 100px;
-                    display: block;
-                    margin: auto;
-                    object-fit: cover;
-                }
-            }
-
-            // ten__pro
-            .ten__pro {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 20px;
-
+            display: flex;
+            justify-content: space-between;
+    
+    
+            div {
+                display: flex;
+                gap: 80px;
+                align-items: center;
+    
                 a {
-                    color: $color-T-Black;
-                    font-weight: 600;
-                    @include Text_Hidden(2);
+                    color: $color-Light-Blue;
                 }
-            }
-
-            //price__pro
-            .price__pro {
-                display: flex;
-                justify-content: space-around;
-                font-size: $font-Size-S;
-                align-items: center;
-                margin-bottom: 20px;
-
-                span:first-child {
-                    font-size: $font-Size-XM;
-                    color: $color-T-LightOrange;
-                    font-weight: bold;
-                }
-
-                span:last-child {
-                    text-decoration: line-through;
-                    color: $color-T-LigthGray;
-                }
-            }
-
-            //phienban__pro
-            .phienban__pro {
-                display: flex;
-                justify-content: space-around;
-                font-size: $font-Size-XS;
-                align-items: center;
-            }
-
-            //thông số
-            .thongso {
-                border-radius: 10px;
-                padding: 10px;
-                margin-top: 20px;
-                background-color: $color-LightGray;
-
-                .item {
-                    font-size: $font-Size-S;
-                    margin-bottom: 5px;
-                }
-            }
-
-            // thongso__muahang
-            .thongso__muahang {
-                display: none;
-
-                //mua hàng
-                .muahang {
-                    margin-top: 20px;
-                    display: grid;
-                    grid-template-columns: 1fr 2fr;
-                    text-align: center;
-
-                    button {
-                        padding: 5px;
-                        border: none;
-
-                        &:first-child {
-                            font-size: $font-Size-M;
-                            background-image: linear-gradient(to right, #f0d903, #ff8250);
-
-                            a {
-                                color: $color-T-White;
-                            }
-                        }
-
-                        &:last-child {
-                            background-color: $color-T-LightOrange;
-
-                            a {
-                                color: $color-T-White;
-                            }
+    
+                ul {
+                    display: flex;
+                    gap: 25px;
+    
+                    li a {
+                        color: $color-T-LigthGray;
+    
+                        &:hover {
+                            color: $color-LightS-Blue;
+    
                         }
                     }
-
                 }
             }
         }
-            // 
+    
+    
+        // section last child
+        .list__products {
+            background-color: white;
+            @include Box_Shadow("s");
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 40px;
+            max-height: 722px;
+            gap: 30px;
+            row-gap: 60px;
+            margin-top: 30px;
+    
+    
+            .list__products__container {
+                max-height: 296px; //chiều cao tối thiểu của các item
+    
+                .list__products__item {
+                    &:hover {
+                        position: relative;
+                        z-index: 2;
+                        border-radius: 10px;
+                        background-color: white;
+                        @include Box_Shadow("s");
+    
+                        .thongso__muahang {
+                            display: block;
+                        }
+                    }
+    
+                    // border: 1px solid red;
+                    padding: 10px;
+    
+                    // img__pro
+                    .img__pro {
+                        margin-bottom: 40px;
+    
+                        img {
+                            width: 90%;
+                            height: 100px;
+                            display: block;
+                            margin: auto;
+                            object-fit: cover;
+                        }
+                    }
+    
+                    // ten__pro
+                    .ten__pro {
+                        width: 100%;
+                        text-align: center;
+                        margin-bottom: 20px;
+    
+                        a {
+                            color: $color-T-Black;
+                            font-weight: 600;
+                            @include Text_Hidden(2);
+                        }
+                    }
+    
+                    //price__pro
+                    .price__pro {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: $font-Size-S;
+                        align-items: center;
+                        margin-bottom: 20px;
+    
+                        span:first-child {
+                            font-size: $font-Size-XM;
+                            color: $color-T-LightOrange;
+                            font-weight: bold;
+                        }
+    
+                        span:last-child {
+                            text-decoration: line-through;
+                            color: $color-T-LigthGray;
+                        }
+                    }
+    
+                    //phienban__pro
+                    .phienban__pro {
+                        display: flex;
+                        justify-content: space-around;
+                        font-size: $font-Size-XS;
+                        align-items: center;
+                    }
+    
+                    //thông số
+                    .thongso {
+                        border-radius: 10px;
+                        padding: 10px;
+                        margin-top: 20px;
+                        background-color: $color-LightGray;
+    
+                        .item {
+                            font-size: $font-Size-S;
+                            margin-bottom: 5px;
+                        }
+                    }
+    
+                    // thongso__muahang
+                    .thongso__muahang {
+                        display: none;
+    
+                        //mua hàng
+                        .muahang {
+                            margin-top: 20px;
+                            display: grid;
+                            grid-template-columns: 1fr 2fr;
+                            text-align: center;
+    
+                            button {
+                                padding: 7px;
+                                border: none;
+    
+                                &:first-child {
+                                    font-size: $font-Size-M;
+                                    background-image: linear-gradient(to right, #f0d903, #ff8250);
+    
+                                    a {
+                                        color: $color-T-White;
+                                    }
+                                }
+    
+                                &:last-child {
+                                    background-color: $color-T-LightOrange;
+    
+                                    a {
+                                        color: $color-T-White;
+                                    }
+                                }
+                            }
+    
+                        }
+                    }
+                }
+    
+                // 
+            }
+    
         }
+    
+        // end section last child
+}
 
-    }
-
-    // end section last child
+.maytinh__xachtay{
+    @include AllScssProducts();  //hàm này nằm ở maytinh_xachtay.scss
 }

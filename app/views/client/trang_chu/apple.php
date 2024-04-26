@@ -1,12 +1,12 @@
-<section class="maytinh__xachtay">
+<section class="apple">
     <section>
-        <h2>LAPTOP</h2>
+        <h2>APPLE</h2>
 
         <div>
             <ul>
-                <li><a href="###">Acer</a></li>
-                <li><a href="###">Dell</a></li>
-                <li><a href="###">Leonovo</a></li>
+                <li><a href="###">Macbook</a></li>
+                <li><a href="###">IMac</a></li>
+                <li><a href="###">Mac Mini</a></li>
                 <li><a href="###">Apple</a></li>
             </ul>
 

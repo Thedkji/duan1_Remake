@@ -1,12 +1,11 @@
 .slide_show_tin_tuc {
   width: 100%;
   border: 1px solid red;
-  padding: 0 110px;
   display: grid;
-  grid-template-columns: 770px 435px;    //muốn thay đổi độ rộng ngắn của slideshow thì đổi ở đây 1
-  gap: 25px;
-  margin-bottom: 70px;
-
+  grid-template-columns: 63% 37%;    //muốn thay đổi độ rộng ngắn của slideshow thì đổi ở đây 1
+  margin-bottom: 80px;
+  max-height: 355px;
+  
   .slide_show {
     max-width: 770px;  //xong đổi đây 2
     // border: 1px solid red;
@@ -93,6 +92,10 @@
     background-color: white;
     @include Box_Shadow('s');
     padding: 20px;
+
+    .tin_tuc_list{
+      max-height: 310px;
+    }
     .tin_tuc_list_item{
       padding: 10px;
       background-color: #F9F9F9;
@@ -106,6 +109,12 @@
         margin-top: 10px;
         color: rgb(171, 167, 167);
         font-size: 14px;
+      }
+
+      &:hover{
+        border: 1px solid $color-Light-Blue;
+        box-shadow: 3px 3px 7px $color-LightS-Blue;
+        opacity: 100%;
       }
     }
 

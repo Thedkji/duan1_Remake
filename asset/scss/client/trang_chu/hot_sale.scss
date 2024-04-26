@@ -1,9 +1,8 @@
 .hot__Sale {
     width: 100%;
     border: 1px solid red;
-    padding-inline: 115px;
     margin-block: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
     .sale__product__item {
         padding: 10px;
     }
@@ -28,14 +27,21 @@
         @include Box_Shadow("s");
         border-radius: 10px;
         display: grid;
-        grid-template-columns: repeat(5, 220px);
-        padding: 10px;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 40px;
         gap: 30px;
-        max-height: 377px;
+        max-height: 420px;
         position: relative; //tạo vùng để nâng lớp đè lên các phần tử khác
         .sale__product__item {
             // border: 1px solid red;
-
+            &:hover{
+                background-color: white;
+                box-shadow: 0 0 5px rgb(174, 173, 173);
+                border-radius: 10px;
+                .thongso__muahang{
+                    display: block;
+                }
+            }
 
             // banner__sale
             .banner__sale {
@@ -156,7 +162,7 @@
                     text-align: center;
 
                     button {
-                        padding: 5px;
+                        padding: 7px;
                         border: none;
 
                         &:first-child {

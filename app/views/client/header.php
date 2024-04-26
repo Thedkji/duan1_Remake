@@ -22,7 +22,6 @@
 </head>
 
 <body>
-    <div class="container-fluid">
         <header class="container">
 
             <div class="header__grid">

@@ -1,13 +1,14 @@
-<section class="maytinh__xachtay">
+<section class="phukien">
     <section>
-        <h2>LAPTOP</h2>
+        <h2>PHỤ KIỆN</h2>
 
         <div>
             <ul>
-                <li><a href="###">Acer</a></li>
-                <li><a href="###">Dell</a></li>
-                <li><a href="###">Leonovo</a></li>
-                <li><a href="###">Apple</a></li>
+                <li><a href="###">Chuột</a></li>
+                <li><a href="###">Bàn phím</a></li>
+                <li><a href="###">Lót chuột</a></li>
+                <li><a href="###">Tai nghe</a></li>
+                <li><a href="###">Sạc Laptop</a></li>
             </ul>
 
             <a href="###">
