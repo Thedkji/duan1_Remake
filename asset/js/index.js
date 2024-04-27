@@ -62,11 +62,11 @@ function SlideShow() {
 function HieuUngTinTuc() {
     let tin_tuc_list_item = document.querySelectorAll(".tin_tuc_list_item");
 
-    
+
     tin_tuc_list_item.forEach((value, index) => {
         value.addEventListener('mouseover', () => {
             console.log(index);
-            if(!index == 0){
+            if (!index == 0) {
                 tin_tuc_list_item[0].classList.remove('tin_tuc_list_item-active');
             }
         });
@@ -75,12 +75,13 @@ function HieuUngTinTuc() {
             tin_tuc_list_item[0].classList.add('tin_tuc_list_item-active');
         });
     });
-   
+
 
 }
+///////////////////////////////////////////////////
 
 //Trang chủ video_shop
-function ClickChuyenVideo(){
+function ClickChuyenVideo() {
     let linkvideo = document.querySelectorAll('.video_shop .video__container__item .video .title');
 
     let src = document.querySelector('.video_shop .ifameMain');
@@ -91,15 +92,79 @@ function ClickChuyenVideo(){
         "https://www.youtube.com/embed/FZrKPR8qS4Y",
         "https://www.youtube.com/embed/k8fGr-zzkJY"
     ]
-    console.log(src);
-    
-    linkvideo.forEach((link , i)=>{
-        link.addEventListener("click",()=>{
+    // console.log(src);
+
+    linkvideo.forEach((link, i) => {
+        link.addEventListener("click", () => {
             src.innerHTML = ` <iframe width="" height="" src="${arrVideo[i]}" title="Acer Nitro 16 Phoenix New FullBox: Siêu Phẩm trong Phân Khúc 24 Triệu!" frameborder="0"></iframe>`;
         })
     })
 }
+///////////////////////////////////////////////////
 
+// Trang chủ - hethong_showroom
+function SlideShow_ShowRoom() {
+    let item__list__slide = document.querySelector('.hethong__showroom .item__list__slide');
+    let img = document.querySelectorAll('.hethong__showroom .item__list__slide img');
+    let dots = document.querySelectorAll('.hethong__showroom .dots ul li');
+    // console.log(img);
+    // console.log(item__list__slide);
+
+    // SlideAuto();
+    let i = 0;
+    function SlideAuto() {
+        i++;
+        if (i > img.length - 1) {
+            i = 0;
+        }
+        let leftWidth = img[i].offsetLeft;
+        item__list__slide.style.transform = `translateX(-${leftWidth}px)`;
+
+        let dotsActive = document.querySelector('.hethong__showroom .dots ul li.active');
+        dotsActive.classList.remove('active');
+        dots[i].classList.add("active");
+    }
+
+    function Dots() {
+        dots.forEach((li, index) => {
+            li.addEventListener("click", () => {
+                let leftWidth = img[index].offsetLeft;
+                item__list__slide.style.transform = `translateX(-${leftWidth}px)`;
+
+                let dotsActive = document.querySelector('.hethong__showroom .dots ul li.active');
+                dotsActive.classList.remove('active');
+                dots[index].classList.add("active");
+
+                clearInterval(slideAuto);
+                let slideAuto = setInterval(SlideAuto, 8000);
+            })
+        });
+    }
+    Dots();
+
+    let slideAuto = setInterval(SlideAuto, 8000);
+}
+
+///////////////////////////////////////////////////
+function checkLocationUser() {
+    window.addEventListener('scroll', () => {
+        let check = window.scrollY;
+        let backDauTrang = document.querySelector('.lienhe .back_dautrang');
+        backDauTrang.style.display = "none";
+
+        if (check >= 297) {
+            backDauTrang.style.display = "block";
+            console.log(check);
+        } else {
+            backDauTrang.style.display = "none";
+
+        }
+    })
+}
+
+
+
+///////////////////////////////////////////////////
 // Chạy hàm ở đây
 //  function Hover_Items_MayTinh() {
 //     let listProductsItem = document.querySelectorAll('.maytinh__xachtay .list__products__item');
@@ -133,5 +198,7 @@ function ClickChuyenVideo(){
 SlideShow();
 HieuUngTinTuc();
 ClickChuyenVideo();
+SlideShow_ShowRoom();
+checkLocationUser();
 
 

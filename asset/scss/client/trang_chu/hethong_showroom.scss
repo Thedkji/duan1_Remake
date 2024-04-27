@@ -1,0 +1,113 @@
+.hethong__showroom {
+    background-color: $color-White;
+    @include Box_Shadow("s");
+    border-radius: 10px;
+    padding: 40px;
+
+    .hethong__showroom__item:first-child {
+        text-align: center;
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: $font-Size-XXL;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: $color-T-LigthGray;
+        }
+    }
+
+
+    .hethong__showroom__item:last-child {
+        display: flex;
+        // border: 1px solid red;
+        align-items: center;
+
+        .item:first-child {
+            // border: 1px solid black;
+            width: 50%;
+
+            .showroom {
+                margin-bottom: 20px;
+            }
+
+            .showroom div:first-child,
+            .phongbanhang div:first-child {
+                display: flex;
+                margin-bottom: 5px;
+                gap: 10px;
+                align-items: center;
+
+
+                span {
+                    background-color: $color-LightS-Blue;
+                    padding-inline: 10px;
+                    border-radius: 20px;
+                    color: $color-T-White;
+                }
+
+                .pbh_bg_orange {
+                    background-color: $color-T-LightOrange;
+                }
+            }
+
+            .showroom,
+            .phongbanhang {
+                div:last-child {
+                    margin-top: 20px;
+
+                    p {
+                        font-size: $font-Size-XS;
+                        color: $color-T-Gray;
+                        margin-bottom: 7px;
+
+                    }
+                }
+            }
+        }
+
+        .item:last-child {
+            width: 50%;
+            max-height: 100%;
+            // background-color: red;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+
+            .item__list__slide {
+                display: flex;
+                width: max-content;
+
+                // border:3px solid red;
+                img {
+                    max-width: 596.4px;
+                    max-height: 353.8px;
+
+                    object-fit: cover;
+                }
+            }
+
+            .dots {
+                position: absolute;
+                bottom: 10px;
+                right: 40px;
+                // transform: translateX(-50%);
+                ul {
+                    display: flex;
+                    gap:20px;
+                    li {
+                        width: 10px;
+                        height: 10px;
+                        background-color: rgb(234, 229, 229);
+                        border-radius: 10px;
+                        cursor: pointer;
+                    }
+                    .active{
+                        background-color:gray;
+                    }
+                }
+            }
+        }
+    }
+}

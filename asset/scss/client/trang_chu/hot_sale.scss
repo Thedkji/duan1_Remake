@@ -1,6 +1,6 @@
 .hot__Sale {
     width: 100%;
-    border: 1px solid red;
+    // border: 1px solid red;
     margin-block: 30px;
     margin-bottom: 80px;
     .sale__product__item {
@@ -28,9 +28,9 @@
         border-radius: 10px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        padding: 40px;
-        gap: 30px;
-        max-height: 420px;
+        padding: 25px;
+        gap: 10px;
+        max-height: 407px;
         position: relative; //tạo vùng để nâng lớp đè lên các phần tử khác
         .sale__product__item {
             // border: 1px solid red;

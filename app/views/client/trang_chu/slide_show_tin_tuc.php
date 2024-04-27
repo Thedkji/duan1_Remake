@@ -25,10 +25,10 @@
 
         <div class="btn_Next_Pre">
             <div class="pre">
-                <button><</button>
+                <button><i class="bi bi-chevron-compact-left"></i></button>
             </div>
             <div class="next">
-                <button>></button>
+                <button><i class="bi bi-chevron-compact-right"></i></button>
             </div>
         </div>
 

@@ -1,5 +1,5 @@
 @mixin AllScssProducts(){
-        border: 1px solid red;
+        // border: 1px solid red;
         margin-bottom: 80px;
         section:first-child {
             // border: 1px solid red;
@@ -42,7 +42,7 @@
             grid-template-columns: repeat(5, 1fr);
             padding: 40px;
             max-height: 722px;
-            gap: 30px;
+            gap: 5px;
             row-gap: 60px;
             margin-top: 30px;
     
@@ -64,7 +64,7 @@
                     }
     
                     // border: 1px solid red;
-                    padding: 10px;
+                    padding: 20px;
     
                     // img__pro
                     .img__pro {

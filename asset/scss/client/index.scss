@@ -7,6 +7,7 @@
   font-family: "Roboto";
   line-height: 1.5;
   transition: all 0.25s linear;
+  scroll-behavior: smooth;
 }
 
 
@@ -22,7 +23,9 @@ body {
   width: 100%;
   height: auto;
 }
-
+a{
+  color: #13a7fd;
+}
 /* variable */
 $color-Bolder-Blue: #10419b;
 $color-Light-Blue: #2874fe;
@@ -98,4 +101,5 @@ $line-Heigth-L : 2.5;
 // Trang chủ
 @import "trang_chu/main.scss";
 
+@import "lienhe.scss";
 @import "footer.scss";

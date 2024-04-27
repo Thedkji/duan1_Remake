@@ -1,6 +1,6 @@
 .slide_show_tin_tuc {
   width: 100%;
-  border: 1px solid red;
+  // border: 1px solid red;
   display: grid;
   grid-template-columns: 63% 37%;    //muốn thay đổi độ rộng ngắn của slideshow thì đổi ở đây 1
   margin-bottom: 80px;
@@ -98,9 +98,10 @@
     }
     .tin_tuc_list_item{
       padding: 10px;
+      min-height: 78px;
       background-color: #F9F9F9;
       border-radius: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       a h4{
         font-weight: 500;
         color: rgb(67, 65, 65);

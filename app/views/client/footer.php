@@ -86,5 +86,5 @@
 
 </body>
 </div>
-<script type="module" src="./asset/js/index.js?<?=time()?>"></script>
+<script src="./asset/js/index.js?<?=time()?>"></script>
 </html>

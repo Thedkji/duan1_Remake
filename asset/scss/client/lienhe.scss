@@ -1,0 +1,52 @@
+.lienhe {
+    text-align: center;
+
+    .lienhe__container {
+        position: fixed;
+        right: 0;
+        bottom: 50px;
+        width: 100px;
+        // background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        a {
+            color: white;
+        }
+
+        
+        // dùng chung để bo góc tròn các icon liên hệ
+        @mixin rouder() {
+            padding: 8px 12px;
+            border-radius: 30px;
+            margin: auto;
+            background-color: #0079F2
+        }
+        .back_dautrang {
+            @include rouder();
+        }
+
+        .lienhe_sdt {
+            @include rouder();
+            background-color: #6DB914;
+            padding: 10px 17px;
+            font-size: 26px;
+        }
+
+        .lienhe_zalo {
+            padding: 11px 6px !important;
+            border-radius: 40px;
+            @include rouder();
+            img{
+                width: 70%;
+            }
+        }
+
+        .lienhe_mess {
+            @include rouder();
+            padding: 10px 17px;
+            font-size: 26px;
+        }
+    }
+}
