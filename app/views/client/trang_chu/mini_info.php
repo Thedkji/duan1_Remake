@@ -12,7 +12,7 @@
                 <!-- item1 -->
                 <div class="info__container__item">
                     <div class="logo">
-                        <img src="./asset/global/img/logo/1.png" alt="">
+                        <img src="<?= Url('asset/global/img/logo/1.png') ?>" alt="">
                     </div>
 
                     <div class="title">
@@ -26,7 +26,7 @@
                 <!-- item2 -->
                 <div class="info__container__item">
                     <div class="logo">
-                        <img src="./asset/global/img/logo/2.png" alt="">
+                        <img src="<?= Url('asset/global/img/logo/2.png') ?>"  alt="">
                     </div>
 
                     <div class="title">
@@ -40,7 +40,7 @@
                 <!-- item3 -->
                 <div class="info__container__item">
                     <div class="logo">
-                        <img src="./asset/global/img/logo/3.png" alt="">
+                        <img src="<?= Url('asset/global/img/logo/3.png') ?>"  alt="">
                     </div>
 
                     <div class="title">

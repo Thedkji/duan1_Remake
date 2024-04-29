@@ -10,7 +10,7 @@
         <!-- item2 -->
         <div class="video__container__item">
                 <div class="video">
-                    <img src="./asset/global/img/video/1.png" alt="">
+                    <img src="<?=Url('asset/global/img/video/1.png')?>" alt="">
 
                     <div>
                         <div class="title">
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="video">
-                    <img src="./asset/global/img/video/2.png" alt="">
+                    <img src="<?=Url('asset/global/img/video/2.png')?>" alt="">
 
                     <div>
                         <div class="title">
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="video">
-                    <img src="./asset/global/img/video/3.jpg" alt="">
+                    <img src="<?=Url('asset/global/img/video/3.jpg')?>" alt="">
 
                     <div>
                         <div class="title">
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="video">
-                    <img src="./asset/global/img/video/4.jpg" alt="">
+                    <img src="<?=Url('asset/global/img/video/4.jpg')?>" alt="">
 
                     <div>
                         <div class="title">

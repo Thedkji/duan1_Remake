@@ -20,13 +20,11 @@ header {
  */
 
   //   header__grid__item đầu tiên
-  .header__grid > a:first-child {
+  .header__grid>a:first-child {
     // background-color: red;
-    @include Bg_Image(
-      "../global/img/logo/logo-trungtran-ngang-nen-trang-a2x-100_1680001630.jpg",
+    @include Bg_Image("../global/img/logo/logo-trungtran-ngang-nen-trang-a2x-100_1680001630.jpg",
       85%,
-      55%
-    );
+      55%);
 
     .header__grid__item {
       height: 100%;
@@ -38,6 +36,7 @@ header {
     nav {
       height: 100%;
     }
+
     .nav__ul {
       display: flex;
       gap: 25px;
@@ -45,10 +44,11 @@ header {
       height: 100%;
       justify-content: center;
 
-      li > a {
+      li>a {
         font-size: $font-Size-XM;
         font-weight: 500;
         color: $color-T-Gray;
+
         &:hover {
           color: $color-Bolder-Blue;
         }
@@ -59,6 +59,7 @@ header {
   //   header__grid__item thứ 3
   .header__grid__item:nth-child(3) {
     align-content: center;
+
     div {
       width: 90%; //Thay đổi w,h input
       height: 50%;
@@ -80,6 +81,7 @@ header {
           outline: none;
         }
       }
+
       .fa-solid {
         position: absolute;
         right: 6%;
@@ -93,13 +95,43 @@ header {
   //   header__grid__item cuối
   .header__grid__item:last-child {
     align-content: center;
+
     div {
       text-align: end;
+
       i {
         font-size: 35px;
         margin-right: 32px;
       }
     }
   }
+
 }
 
+.thongbao {
+  padding: 0 180px;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    .cirlce {
+      width: 15px;
+      height: 15px;
+      border-radius: 20px;
+      background-color: orange;
+      opacity: 90%;
+      animation: circleAnimation 1s infinite alternate-reverse;
+    }
+    p{
+      color: $color-T-LightOrange;
+    }
+
+    @keyframes circleAnimation {
+      from {
+        box-shadow: 0 0 5px 3px $color-T-LightYellow;
+      }
+    }
+  }
+
+}

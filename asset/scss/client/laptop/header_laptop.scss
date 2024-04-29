@@ -1,0 +1,99 @@
+#header_laptop {
+    a {
+        color: gray;
+    }
+
+    .title {
+        h2 {
+            margin: 20px 0;
+            font-size: $font-Size-XXL;
+        }
+
+        .sapxep_theoyeucau {
+            display: flex;
+            gap: 100px;
+            color: $color-Gray;
+            font-size: $font-Size-XS;
+            font-weight: bold;
+
+            div {
+                display: flex;
+                gap: 70px;
+
+            }
+        }
+    }
+
+    .filter_sanpham {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: minmax(auto, 230px) 2fr;
+
+        .filter {
+            .boloc {
+                position: relative;
+                margin-bottom: 20px;
+
+                .btn_loc {
+                    position: absolute;
+                    right: 0;
+                    padding: 5px 13px;
+                    border-radius: 15px;
+                    border: none;
+                    background-color: $color-Light-Blue;
+                    color: $color-T-White;
+                    cursor: pointer;
+                }
+            }
+
+            background-color: $color-White;
+            border-radius: 5px;
+            @include Box_Shadow("s");
+            padding: 10px;
+
+            .item {
+                margin-bottom: 20px;
+                background-color: #F8FAFC;
+                padding: 10px;
+                border-radius: 5px;
+                max-height: 50px;
+                transition: all 0.5s ease-in;
+                // border: 1px solid red;
+                overflow: hidden;
+                cursor: pointer;
+
+                .item_title {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .select {
+                    width: 100%;
+                    border: 0;
+                    font-size: $font-Size-XS;
+                    border-radius: 5px;
+                    font-weight: 500;
+                    margin-top: 20px;
+                    
+                    // transition: all 2s ease;
+
+                    .option {
+                        margin-bottom: 10px;
+                        padding: 10px 10px;
+
+                        &:hover {
+                            border-radius: 5px;
+                            background-color: #e7ebed;
+                        }
+
+                        input {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}

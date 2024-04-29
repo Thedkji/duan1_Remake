@@ -7,9 +7,15 @@ $route = new RouteCollector;
 
 // route
 $route->get('/',function(){
-    require_once "app/views/client/trang_chu/main.php";
+    // require_once "app/views/client/trang_chu/main.php";
+    header("Location:client/trang_chu");
 });
 
+// List client Trang chủ
+$route->get("client/trang_chu",[App\controllers\sanpham\SanPhamController::class,"ListTrangChu"]);
+
+// List client Laptop
+$route->get("client/laptop",[App\controllers\sanpham\SanPhamController::class,"Listlaptop"]);
 
 
 // Khởi tạo một đối tượng Dispatcher từ thư viện Phroute và sử dụng dữ liệu định tuyến từ đối tượng Route

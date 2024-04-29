@@ -46,9 +46,9 @@
         <!-- 2 -->
         <div class="item">
             <div class="item__list__slide">
-                <img src="./asset/global/img/slide_show/banner-footer-anh-trung_1683094141.webp" alt="">
-                <img src="./asset/global/img/slide_show/bg_m_1676951364.webp" alt="">
-                <img src="./asset/global/img/slide_show/footer-banner-duong-de-2_1683094084.webp" alt="">
+                <img src="<?= Url('asset/global/img/slide_show/banner-footer-anh-trung_1683094141.webp') ?>" alt="">
+                <img src="<?= Url('asset/global/img/slide_show/bg_m_1676951364.webp') ?>" alt="">
+                <img src="<?= Url('asset/global/img/slide_show/footer-banner-duong-de-2_1683094084.webp') ?>" alt="">
             </div>
 
             <div class="dots">

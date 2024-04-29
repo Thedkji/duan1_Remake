@@ -3,7 +3,7 @@
     <div class="container info__footer">
         <div class="info__footer__item">
             <div class="logo">
-                <img src="asset/global/img/logo/logo_fotter_1660702109_1663916089.png" alt="">
+                <img src="<?=Url('asset/global/img/logo/logo_fotter_1660702109_1663916089.png')?>" alt="">
             </div>
 
             <p>Theo dõi chúng tôi</p>
@@ -86,5 +86,4 @@
 
 </body>
 </div>
-<script src="./asset/js/index.js?<?=time()?>"></script>
 </html>

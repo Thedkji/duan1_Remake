@@ -154,7 +154,7 @@ function checkLocationUser() {
 
         if (check >= 297) {
             backDauTrang.style.display = "block";
-            console.log(check);
+            // console.log(check);
         } else {
             backDauTrang.style.display = "none";
 
@@ -164,34 +164,9 @@ function checkLocationUser() {
 
 
 
-///////////////////////////////////////////////////
-// Chạy hàm ở đây
-//  function Hover_Items_MayTinh() {
-//     let listProductsItem = document.querySelectorAll('.maytinh__xachtay .list__products__item');
-//     let thongso__muahang = document.querySelectorAll('.maytinh__xachtay .thongso__muahang');
 
-//     listProductsItem.forEach((value, index) => {
-//         value.addEventListener('mouseover', () => {
-//             thongso__muahang[index].style.display = "block";
 
-//             value.style.boxShadow = "0 0 5px rgb(174, 173, 173)";
-//             value.style.background = "white";
-//             value.style.borderRadius = "10px";
-//             value.style.position = "relative";
-//             value.style.zIndex = "2";    //khi hover vào thì sẽ đè lên phần tử khác
-//         })
 
-//         value.addEventListener('mouseout', () => {
-//             thongso__muahang[index].style.display = "none";
-
-//             value.style.boxShadow = "none";
-//             value.style.background = "none";
-//             value.style.borderRadius = "none";
-//             value.style.position = "static";
-//         })
-//     });
-
-// }
 
 // Chạy các hàm
 // Trang chủ - slide_show_tintuc
@@ -200,5 +175,7 @@ HieuUngTinTuc();
 ClickChuyenVideo();
 SlideShow_ShowRoom();
 checkLocationUser();
+
+
 
 

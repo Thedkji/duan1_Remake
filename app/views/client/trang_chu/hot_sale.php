@@ -17,7 +17,7 @@
 
             <div class="img__sale">
                 <a href="###">
-                    <img src="./asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp" alt="">
+                    <img src="<?=Url('asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp')?>" alt="">
                 </a>
             </div>
 
@@ -85,7 +85,7 @@
 
             <div class="img__sale">
                 <a href="###">
-                    <img src="./asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp" alt="">
+                    <img src="<?=Url('asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp')?>" alt="">
                 </a>
             </div>
 
@@ -153,7 +153,7 @@
 
             <div class="img__sale">
                 <a href="###">
-                    <img src="./asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp" alt="">
+                    <img src="<?=Url('asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp')?>" alt="">
                 </a>
             </div>
 
@@ -221,7 +221,7 @@
 
             <div class="img__sale">
                 <a href="###">
-                    <img src="./asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp" alt="">
+                    <img src="<?=Url('asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp')?>" alt="">
                 </a>
             </div>
 
@@ -289,7 +289,7 @@
 
             <div class="img__sale">
                 <a href="###">
-                    <img src="./asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp" alt="">
+                    <img src="<?=Url('asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp')?>" alt="">
                 </a>
             </div>
 

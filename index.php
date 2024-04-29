@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "./env.php";
 require_once "./app/views/client/header.php";
 
 require_once "./vendor/autoload.php";

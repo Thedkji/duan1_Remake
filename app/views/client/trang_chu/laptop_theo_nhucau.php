@@ -6,19 +6,19 @@
         <section class="list__sanpham__nhucau__item">
             <div class="img__sanpham__nhucau">
                 <a href="###">
-                    <img src="./asset/global/img/logo/dm1_1673947409.webp" alt="">
+                    <img src="<?= Url('asset/global/img/logo/dm1_1673947409.webp')?>" alt="">
                 </a>
             </div>
 
             <div class="list__logo__nhucau">
                 <div>
-                    <img src="./asset/global/img/logo/game1.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/game1.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/game2.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/game2.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/game3.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/game3.jpg') ?>" alt="">
                 </div>
             </div>
 
@@ -39,19 +39,19 @@
         <section class="list__sanpham__nhucau__item">
             <div class="img__sanpham__nhucau">
                 <a href="###">
-                    <img src="./asset/global/img/logo/dm2_1673947421.webp" alt="">
+                    <img src="<?= Url('asset/global/img/logo/dm1_1673947409.webp')?>" alt="">
                 </a>
             </div>
 
             <div class="list__logo__nhucau">
                 <div>
-                    <img src="./asset/global/img/logo/vanphong1.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/vanphong1.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/vanphong2.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/vanphong2.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/vanphong3.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/vanphong3.jpg') ?>" alt="">
                 </div>
             </div>
 
@@ -72,19 +72,19 @@
         <section class="list__sanpham__nhucau__item">
             <div class="img__sanpham__nhucau">
                 <a href="###">
-                    <img src="./asset/global/img/logo/dm3_1673947441.webp" alt="">
+                    <img src="<?= Url('asset/global/img/logo/dm1_1673947409.webp')?>" alt="">
                 </a>
             </div>
 
             <div class="list__logo__nhucau">
                 <div>
-                    <img src="./asset/global/img/logo/dohoa1.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/dohoa1.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/dohoa2.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/dohoa2.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/dohoa3.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/dohoa3.jpg') ?>" alt="">
                 </div>
             </div>
 
@@ -105,19 +105,19 @@
         <section class="list__sanpham__nhucau__item">
             <div class="img__sanpham__nhucau">
                 <a href="###">
-                    <img src="./asset/global/img/logo/dm4_1673947431.webp" alt="">
+                    <img src="<?= Url('asset/global/img/logo/dm1_1673947409.webp')?>" alt="">
                 </a>
             </div>
 
             <div class="list__logo__nhucau">
                 <div>
-                    <img src="./asset/global/img/logo/laptrinh1.jpg" alt="">
+                    <img src="<?=Url('asset/global/img/logo/laptrinh1.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/laptrinh2.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/laptrinh2.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/laptrinh3.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/laptrinh3.jpg') ?>" alt="">
                 </div>
             </div>
 
@@ -138,19 +138,19 @@
         <section class="list__sanpham__nhucau__item">
             <div class="img__sanpham__nhucau">
                 <a href="###">
-                    <img src="./asset/global/img/logo/dm5_1673947450.webp" alt="">
+                    <img src="<?= Url('asset/global/img/logo/dm1_1673947409.webp')?>" alt="">
                 </a>
             </div>
 
             <div class="list__logo__nhucau">
                 <div>
-                    <img src="./asset/global/img/logo/game1.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/game1.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/vanphong1.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/vanphong1.jpg') ?>" alt="">
                 </div>
                 <div>
-                    <img src="./asset/global/img/logo/dohoa1.jpg" alt="">
+                    <img src="<?= Url('asset/global/img/logo/dohoa1.jpg') ?>" alt="">
                 </div>
             </div>
 

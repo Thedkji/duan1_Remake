@@ -1,0 +1,62 @@
+<div class="video_shop">
+ <h2>VIDEO SẢN PHẨM</h2>
+
+ <div class="video__container">
+ <!-- item1 -->
+ <div class="video__container__item ifameMain">
+ <iframe width="" height="" src="https://www.youtube.com/embed/ywKp_kW-slY" title="Acer Nitro 16 Phoenix New FullBox: Siêu Phẩm trong Phân Khúc 24 Triệu!" frameborder="0"></iframe>
+ </div>
+
+ <!-- item2 -->
+ <div class="video__container__item">
+ <div class="video">
+ <img src="<?=Url('asset/global/img/video/1.png')?>" alt="">
+
+ <div>
+ <div class="title">
+ <a href="###">Macbook Air M2 Đã Sẵn Hàng!!!</a>
+ </div>
+ <div class="user">Trung trần</div>
+ <div class="date">29/08/2022</div>
+ </div>
+ </div>
+
+ <div class="video">
+ <img src="<?=Url('asset/global/img/video/2.png')?>" alt="">
+
+ <div>
+ <div class="title">
+ <a href="###">Acer Predator Helios Neo 16 2024 Đàu Tiên Tại Việt Nam</a>
+ </div>
+ <div class="user">Trung trần</div>
+ <div class="date">29/08/2022</div>
+ </div>
+ </div>
+
+ <div class="video">
+ <img src="<?=Url('asset/global/img/video/3.jpg')?>" alt="">
+
+ <div>
+ <div class="title">
+ <a href="###">Laptop nhập Mỹ có tốt hơn Laptop nhập Trung Quốc? Nguồn gốc Laptop cũ</a>
+ </div>
+ <div class="user">Trung trần</div>
+ <div class="date">29/08/2022</div>
+ </div>
+ </div>
+
+ <div class="video">
+ <img src="<?=Url('asset/global/img/video/4.jpg')?>" alt="">
+
+ <div>
+ <div class="title">
+ <a href="###">TỔNG HỢP LAPTOP MỎNG NHẸ ĐÁNG MUA NĂM 2023</a>
+ </div>
+ <div class="user">Trung trần</div>
+ <div class="date">29/08/2022</div>
+ </div>
+ </div>
+ </div>
+ <!--  -->
+ </div>
+</div>

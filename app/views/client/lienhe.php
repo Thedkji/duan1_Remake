@@ -1,3 +1,4 @@
+
 <section class="lienhe">
     <section class="lienhe__container">
         <div class="back_dautrang">
@@ -12,7 +13,7 @@
         </div>
         <div class="lienhe_zalo">
             <a href="###">
-               <img src="./asset/global/img/logo/zalo_home.png" alt="">
+                <img src="<?= Url('asset/global/img/logo/zalo_home.png')?> " alt="">
             </a>
         </div>
         <div class="lienhe_mess">
