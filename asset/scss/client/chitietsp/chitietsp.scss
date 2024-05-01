@@ -1,0 +1,82 @@
+#chitietsp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    @include Box_Shadow("s");
+    border-radius: 10px;
+    padding: 30px;
+
+    .item-chitietsp {
+        border: 1px solid red;
+    }
+    
+    .slide-container {
+        position: relative;
+        // background-color: $color-Bolder-Blue;
+        max-height: 250px;
+        .dots{
+            position: absolute;    
+            bottom: -15px;
+            text-align: center;
+            width: 100%;
+            ul{
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            ul li{
+                width: 10px;
+                height: 10px;
+                background-color: red;
+                border-radius: 10px;
+            }
+        }
+
+        .slide-sanpham {
+            width: 320px;
+            height: 250px;
+            // background-color: red;
+            margin: auto;
+            overflow: hidden;
+            margin-top: 50px;
+
+            .slide-list {
+                // background-color: $color-Bolder-Blue;
+                position: relative;
+                top: 0;
+                left: 0;
+                display: flex;
+                width: max-content;
+                align-items: center;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+        }
+        .nextpre {
+            position: absolute;
+            bottom:40%;
+            padding-inline:20px ;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 44px;
+            button{
+                width: 27px;
+                height: 50px;
+                border-radius: 5px;
+                border: 1px solid gray;
+                background-color: rgb(207, 205, 205);
+            }
+            .fa-angle-left,.fa-angle-right{
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+}

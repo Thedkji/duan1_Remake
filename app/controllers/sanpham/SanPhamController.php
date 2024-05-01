@@ -10,7 +10,11 @@ class SanPhamController extends BaseController{
     function Listlaptop(){
         // return $this->render("client.laptop.main");
         require_once "./app/views/client/laptop/main.php";
+    }
 
+    function ListChiTietSP(){
+        // return $this->render("client.laptop.main");
+        require_once "./app/views/client/chitietsp/main.php";
     }
 }
 ?>

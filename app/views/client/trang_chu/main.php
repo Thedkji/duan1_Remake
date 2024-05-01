@@ -10,8 +10,7 @@
     require_once "phukien.php";
     require_once "mini_info.php";
     require_once "video_shop.php";
-    require_once "hethong_showroom.php";
+    // require_once "hethong_showroom.php";
     ?>
-
 </main>
-<script src="<?= Url('asset/js/trang_chu.js?v=' . time()) ?>"></script>
+<script src="<?=Url('asset/js/trang_chu.js?v=').time()?>"></script>

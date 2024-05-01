@@ -1,4 +1,6 @@
 .hethong__showroom {
+    margin-inline:100px;
+    margin-block: 80px;
     background-color: $color-White;
     @include Box_Shadow("s");
     border-radius: 10px;

@@ -33,6 +33,8 @@ $color-LightS-Blue: #13a7fd;
 $color-White: white;
 $color-Gray: gray;
 $color-LightGray: #EFEFEF;
+$color-DarkGray: #869791;
+
 
 /* màu chữ */
 $color-T-Black: black;
@@ -102,7 +104,9 @@ $line-Heigth-L : 2.5;
 @import "trang_chu/main.scss";
 // Laptop
 @import "laptop/main.scss";
+// Chitietsp
+@import "chitietsp/main.scss";
 
-
+@import "hethong_showroom.scss";
 @import "lienhe.scss";
 @import "footer.scss";

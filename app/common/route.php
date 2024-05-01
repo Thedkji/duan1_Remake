@@ -17,6 +17,8 @@ $route->get("client/trang_chu",[App\controllers\sanpham\SanPhamController::class
 // List client Laptop
 $route->get("client/laptop",[App\controllers\sanpham\SanPhamController::class,"Listlaptop"]);
 
+// List client chitietsp
+$route->get("client/chitietsp",[App\controllers\sanpham\SanPhamController::class,"ListChiTietSP"]);
 
 // Khởi tạo một đối tượng Dispatcher từ thư viện Phroute và sử dụng dữ liệu định tuyến từ đối tượng Route
 $dispatcher = new Phroute\Phroute\Dispatcher($route->getData());

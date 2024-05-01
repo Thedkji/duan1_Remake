@@ -1,6 +1,6 @@
 <main>
     <?php
-        require_once "header_laptop.php";
+    require_once "header_laptop.php";
     ?>
 </main>
-<script src="<?= Url('asset/js/laptop.js?v='.time())?>"></script>
+<script src="<?=Url('asset/js/Laptop.js?v=').time()?>"></script>

@@ -11,7 +11,7 @@
 
         .sapxep_theoyeucau {
             display: flex;
-            gap: 100px;
+            gap: 110px;
             color: $color-Gray;
             font-size: $font-Size-XS;
             font-weight: bold;
@@ -27,9 +27,13 @@
     .filter_sanpham {
         margin-top: 30px;
         display: grid;
-        grid-template-columns: minmax(auto, 230px) 2fr;
+        grid-template-columns: 230px 2fr;
+        gap: 20px;
 
         .filter {
+            max-height: 36%;
+
+            // transition: max-height 0.25s linear;
             .boloc {
                 position: relative;
                 margin-bottom: 20px;
@@ -57,7 +61,6 @@
                 padding: 10px;
                 border-radius: 5px;
                 max-height: 50px;
-                transition: all 0.5s ease-in;
                 // border: 1px solid red;
                 overflow: hidden;
                 cursor: pointer;
@@ -65,17 +68,20 @@
                 .item_title {
                     display: flex;
                     justify-content: space-between;
+
+                    p {
+                        font-size: $font-Size-XS;
+                        font-weight: bold;
+                    }
                 }
 
                 .select {
                     width: 100%;
                     border: 0;
-                    font-size: $font-Size-XS;
+                    font-size: $font-Size-S;
                     border-radius: 5px;
                     font-weight: 500;
                     margin-top: 20px;
-                    
-                    // transition: all 2s ease;
 
                     .option {
                         margin-bottom: 10px;
@@ -95,5 +101,168 @@
 
             }
         }
+
+        // .sanpham
+        .sanpham {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            max-height: auto;
+            gap: 10px;
+            background-color: $color-White;
+            row-gap: 30px;
+
+            .list__products__container {
+                max-height: 296px; //chiều cao tối thiểu của các item
+
+                .list__products__item {
+                    border-radius: 10px 10px;
+                    border: 1px solid #e7ebed;
+
+                    &:hover {
+                        position: relative;
+                        z-index: 2;
+                        border-radius: 10px;
+                        background-color: white;
+                        @include Box_Shadow("s");
+
+                        .thongso__muahang {
+                            display: block;
+                        }
+                    }
+
+                    // border: 1px solid red;
+                    padding: 20px;
+
+                    // img__pro
+                    .img__pro {
+                        margin-bottom: 40px;
+
+                        img {
+                            width: 90%;
+                            height: 100px;
+                            display: block;
+                            margin: auto;
+                            object-fit: cover;
+                        }
+                    }
+
+                    // ten__pro
+                    .ten__pro {
+                        width: 100%;
+                        text-align: center;
+                        margin-bottom: 20px;
+
+                        a {
+                            color: $color-T-Black;
+                            font-weight: 600;
+                            @include Text_Hidden(2);
+                        }
+                    }
+
+                    //price__pro
+                    .price__pro {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: $font-Size-S;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        span:first-child {
+                            font-size: $font-Size-XM;
+                            color: $color-T-LightOrange;
+                            font-weight: bold;
+                        }
+
+                        span:last-child {
+                            text-decoration: line-through;
+                            color: $color-T-LigthGray;
+                        }
+                    }
+
+                    //phienban__pro
+                    .phienban__pro {
+                        display: flex;
+                        justify-content: space-around;
+                        font-size: $font-Size-XS;
+                        align-items: center;
+                    }
+
+                    //thông số
+                    .thongso {
+                        border-radius: 10px;
+                        padding: 10px;
+                        margin-top: 20px;
+                        background-color: $color-LightGray;
+
+                        .item {
+                            font-size: $font-Size-S;
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    // thongso__muahang
+                    .thongso__muahang {
+                        display: none;
+
+                        //mua hàng
+                        .muahang {
+                            margin-top: 20px;
+                            display: grid;
+                            grid-template-columns: 1fr 2fr;
+                            text-align: center;
+
+                            button {
+                                padding: 7px;
+                                border: none;
+
+                                &:first-child {
+                                    font-size: $font-Size-M;
+                                    background-image: linear-gradient(to right, #f0d903, #ff8250);
+
+                                    a {
+                                        color: $color-T-White;
+                                    }
+                                }
+
+                                &:last-child {
+                                    background-color: $color-T-LightOrange;
+
+                                    a {
+                                        color: $color-T-White;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                // 
+            }
+
+        }
+    }
+
+    .phan-trang {
+        // background-color: red;
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        padding: 30px;
+        padding-left: 20%;
+        justify-content: center;
+        // background-color: #f0d903;
+
+        .phan-trang-item {
+            width: 40px;
+            height: 40px;
+            background-color: $color-LightGray;
+            border-radius: 20px;
+            font-size: 16px;
+            color: $color-T-LigthGray;
+            align-content: center;
+            text-align: center;
+        }
+
     }
 }
