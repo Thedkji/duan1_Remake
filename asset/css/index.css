@@ -1486,45 +1486,53 @@ main {
 }
 
 #chitietsp {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: white;
   box-shadow: 0 0 5px rgb(174, 173, 173);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 30px;
 }
 #chitietsp .item-chitietsp {
   border: 1px solid red;
 }
-#chitietsp .slide-container {
+#chitietsp .sanpham {
+  padding: 30px;
+}
+#chitietsp .sanpham .slide-container {
   position: relative;
   max-height: 250px;
 }
-#chitietsp .slide-container .dots {
+#chitietsp .sanpham .slide-container .dots {
   position: absolute;
   bottom: -15px;
   text-align: center;
   width: 100%;
 }
-#chitietsp .slide-container .dots ul {
+#chitietsp .sanpham .slide-container .dots ul {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
-#chitietsp .slide-container .dots ul li {
+#chitietsp .sanpham .slide-container .dots ul li {
   width: 10px;
   height: 10px;
-  background-color: red;
+  background-color: rgb(205, 205, 205);
   border-radius: 10px;
+  cursor: pointer;
 }
-#chitietsp .slide-container .slide-sanpham {
+#chitietsp .sanpham .slide-container .dots li.active {
+  background-color: gray;
+}
+#chitietsp .sanpham .slide-container .slide-sanpham {
   width: 320px;
   height: 250px;
   margin: auto;
   overflow: hidden;
   margin-top: 50px;
 }
-#chitietsp .slide-container .slide-sanpham .slide-list {
+#chitietsp .sanpham .slide-container .slide-sanpham .slide-list {
   position: relative;
   top: 0;
   left: 0;
@@ -1533,11 +1541,11 @@ main {
   align-items: center;
   height: 100%;
 }
-#chitietsp .slide-container .slide-sanpham .slide-list img {
-  width: 100%;
+#chitietsp .sanpham .slide-container .slide-sanpham .slide-list img {
+  width: 320px;
   height: 100%;
 }
-#chitietsp .slide-container .nextpre {
+#chitietsp .sanpham .slide-container .nextpre {
   position: absolute;
   bottom: 40%;
   padding-inline: 20px;
@@ -1546,16 +1554,175 @@ main {
   justify-content: space-between;
   height: 44px;
 }
-#chitietsp .slide-container .nextpre button {
+#chitietsp .sanpham .slide-container .nextpre button {
   width: 27px;
   height: 50px;
   border-radius: 5px;
   border: 1px solid gray;
-  background-color: rgb(207, 205, 205);
+  background-color: rgb(230, 228, 228);
+  cursor: pointer;
 }
-#chitietsp .slide-container .nextpre .fa-angle-left, #chitietsp .slide-container .nextpre .fa-angle-right {
+#chitietsp .sanpham .slide-container .nextpre button:hover {
+  background-color: gray;
+}
+#chitietsp .sanpham .slide-container .nextpre .fa-angle-left,
+#chitietsp .sanpham .slide-container .nextpre .fa-angle-right {
   color: white;
   font-size: 20px;
+}
+#chitietsp .sanpham .info-icon {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 130px);
+  justify-content: space-evenly;
+  align-items: end;
+  text-align: center;
+}
+#chitietsp .sanpham .info-icon a {
+  color: rgb(124, 121, 121);
+}
+#chitietsp .sanpham .info-icon a p {
+  margin-top: 10px;
+}
+#chitietsp .sanpham .info-icon img {
+  width: 45%;
+}
+#chitietsp .info-sanpham {
+  padding: 30px;
+}
+#chitietsp .info-sanpham .info_gia {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+#chitietsp .info-sanpham .info_gia h2 {
+  color: #f26522;
+  font-size: 40px;
+}
+#chitietsp .info-sanpham .info_gia > p {
+  font-size: 18px;
+  text-decoration: line-through;
+  color: rgb(204, 198, 198);
+  font-weight: bold;
+}
+#chitietsp .info-sanpham .info_cauhinh {
+  margin-bottom: 20px;
+}
+#chitietsp .info-sanpham .info_cauhinh > p {
+  font-weight: bold;
+  font-size: 20px;
+}
+#chitietsp .info-sanpham .info_cauhinh .choncauhinh {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid rgb(204, 198, 198);
+  display: grid;
+  grid-template-columns: 70% 30%;
+  font-size: 14px;
+  margin-top: 10px;
+}
+#chitietsp .info-sanpham .info_cauhinh .choncauhinh:hover {
+  border: 1px solid #2874fe;
+  cursor: pointer;
+}
+#chitietsp .info-sanpham .info_cauhinh .choncauhinh .item div:first-child {
+  font-weight: normal;
+}
+#chitietsp .info-sanpham .info_cauhinh .choncauhinh .item div:last-child {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgb(124, 121, 121);
+}
+#chitietsp .info-sanpham .info_cauhinh .choncauhinh .gia {
+  text-align: end;
+}
+#chitietsp .info-sanpham .info_cauhinh .choncauhinh .gia p:first-child {
+  font-weight: bold;
+  font-size: 16px;
+  color: #f26522;
+}
+#chitietsp .info-sanpham .info_cauhinh .choncauhinh .gia p:last-child {
+  text-decoration: line-through;
+  color: rgb(124, 121, 121);
+}
+#chitietsp .info_uu_dai {
+  border-top: 2px solid rgb(236, 232, 232);
+  border-bottom: 2px solid rgb(236, 232, 232);
+  padding-block: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+#chitietsp .info_uu_dai .item {
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+}
+#chitietsp .info_uu_dai .item div:first-child {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  padding: 8px;
+  border-radius: 5px;
+  background-color: white;
+  color: #2874fe;
+  font-weight: bold;
+}
+#chitietsp .info_uu_dai h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #f26522;
+  font-size: 40px;
+}
+#chitietsp .info_uu_dai ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+#chitietsp .info_mua_hang {
+  border-bottom: 2px solid rgb(236, 232, 232);
+  padding-block: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+#chitietsp .info_mua_hang .item {
+  width: 100%;
+}
+#chitietsp .info_mua_hang .item div:first-child {
+  margin-bottom: 10px;
+  color: #2874fe;
+  font-weight: 500;
+}
+#chitietsp .info_mua_hang .item button {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  padding-block: 10px;
+  cursor: pointer;
+}
+#chitietsp .info_mua_hang .item button h3 {
+  font-size: 22px;
+}
+#chitietsp .info_mua_hang .item .mua_ngay {
+  background-color: #FF6700;
+}
+#chitietsp .info_mua_hang .item .tra_gop {
+  background-color: #2874fe;
+}
+#chitietsp .info_mua_hang .sosanh_tuvan {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+#chitietsp .info_mua_hang .sosanh_tuvan div {
+  border: 1px solid red;
 }
 
 .hethong__showroom {
