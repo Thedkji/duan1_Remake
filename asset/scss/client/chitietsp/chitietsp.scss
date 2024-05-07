@@ -8,7 +8,7 @@
     padding: 30px;
 
     .item-chitietsp {
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 
     .sanpham {
@@ -123,7 +123,6 @@
 
     .info-sanpham {
         padding: 30px;
-
         .info_gia {
             display: flex;
             align-items: center;
@@ -197,18 +196,20 @@
 
     .info_uu_dai {
         border-top: 2px solid rgb(236, 232, 232);
-        border-bottom: 2px solid rgb(236, 232, 232) ;
+        border-bottom: 2px solid rgb(236, 232, 232);
         padding-block: 40px;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap:20px;
-        .item{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .item {
             @include Box_Shadow('s');
             padding: 20px;
             border-radius: 5px;
             background-color: $color-White;
             position: relative;
-            div:first-child{
+
+            div:first-child {
                 position: absolute;
                 top: -20px;
                 left: 50%;
@@ -221,59 +222,207 @@
                 font-weight: bold;
             }
         }
-        h2{
+
+        h2 {
             margin-top: 20px;
             margin-bottom: 10px;
             color: $color-T-LightOrange;
             font-size: $font-Size-XXL;
         }
-        ul li{
+
+        ul li {
             margin-bottom: 5px;
             font-size: $font-Size-XS;
             font-weight: 500;
         }
     }
 
-    .info_mua_hang{
-        border-bottom: 2px solid rgb(236, 232, 232) ;
+    .info_mua_hang {
+        border-bottom: 2px solid rgb(236, 232, 232);
         padding-block: 20px;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap:20px;
-        text-align: center;
-        .item{
-            width: 100%;
-            div:first-child{
-                margin-bottom: 10px;
-                color: $color-Light-Blue;
-                font-weight: 500;
-            }
-            button{
+
+        .info_mua_hang_item:first-child {
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: $color-Light-Blue;
+            font-weight: 500;
+            margin-bottom: 10px;
+
+            button {
                 color: $color-T-White;
                 border: none;
                 border-radius: 5px;
                 padding: 10px;
                 padding-block: 10px;
                 cursor: pointer;
-                h3{
+                margin-top: 10px;
+
+                h3 {
                     font-size: $font-Size-XL;
                 }
             }
 
-            .mua_ngay{
+            .mua_ngay {
                 background-color: $color-T-LightXSOrange;
             }
-            .tra_gop{
+
+            .tra_gop {
                 background-color: $color-Light-Blue;
             }
+
         }
 
-        .sosanh_tuvan{
+        .info_mua_hang_item:last-child {
             display: grid;
-            grid-template-columns: 1fr 4fr;
-            div{
-                border: 1px solid red;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+
+            .so_sanh {
+                button {
+                    width: 100%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: 2px solid $color-Light-Blue;
+                    background-color: white;
+                    color: $color-Light-Blue;
+                    font-size: $font-Size-L;
+                    cursor: pointer;
+                }
             }
+
+            .sdt_tuvan {
+                position: relative;
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    border-radius: 6px;
+                    border: 2px solid $color-Light-Blue;
+                    background-color: white;
+                    color: $color-Light-Blue;
+                    font-size: $font-Size-L;
+                    outline: none;
+
+                    &::placeholder {
+                        font-size: $font-Size-XS;
+                    }
+                }
+
+                button {
+                    position: absolute;
+                    right: 7px;
+                    top: 50%;
+                    width: 18%;
+                    text-align: center;
+                    cursor: pointer;
+                    height: 78%;
+                    transform: translateY(-50%);
+                    color: $color-T-White;
+                    border: none;
+                    font-size: $font-Size-L;
+                    background-color: $color-Light-Blue;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .muatheo_combo {
+        margin-top: 20px;
+
+        p:first-child {
+            font-weight: 500;
+            font-size: $font-Size-XM;
+        }
+
+        ul {
+            margin-top: 20px;
+
+            li {
+                display: flex;
+                gap: 30px;
+                align-items: center;
+                margin-bottom: 20px;
+
+                div p {
+                    font-size: $font-Size-M !important;
+                    color: $color-T-Gray;
+                }
+
+                .gia_phukien {
+                    margin-top: 10px;
+
+                    span:first-child {
+                        margin-right: 30px;
+                        color: $color-T-LightOrange;
+                        font-weight: bold;
+                    }
+
+                    span:last-child {
+                        margin-right: 30px;
+                        color: $color-T-Gray;
+                        font-size: $font-Size-XS;
+                        text-decoration: line-through;
+                    }
+                }
+
+                input {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .image {
+                    width: 60px;
+                    height: 60px;
+                    // background-color: red;
+                    align-content: center;
+                    text-align: center;
+
+                    img {
+                        width: 90%;
+                        height: 55%;
+                        // background-color: red;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .thanh_tien {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        button {
+            background-color: $color-Light-Blue;
+            color: $color-T-White;
+            font-size: $font-Size-L;
+            border-radius: 6px;
+            font-weight: 500;
+            border: none;
+        }
+
+        .info_thanhtien {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+            div {
+                p:first-child {
+                    font-size: $font-Size-XS;
+                    text-decoration: line-through;
+                    color: $color-T-Gray;
+                }
+
+                p:last-child {
+                    font-weight: 500;
+                }
+            }
+
         }
     }
 }

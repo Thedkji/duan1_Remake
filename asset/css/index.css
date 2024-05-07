@@ -28,6 +28,10 @@ a {
   color: #13a7fd;
 }
 
+input[type=radio], input[type=checkbox], button {
+  cursor: pointer;
+}
+
 /* variable */
 /* màu chữ */
 /* cỡ chữ */
@@ -1494,9 +1498,6 @@ main {
   border-radius: 5px;
   padding: 30px;
 }
-#chitietsp .item-chitietsp {
-  border: 1px solid red;
-}
 #chitietsp .sanpham {
   padding: 30px;
 }
@@ -1687,42 +1688,464 @@ main {
 #chitietsp .info_mua_hang {
   border-bottom: 2px solid rgb(236, 232, 232);
   padding-block: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+}
+#chitietsp .info_mua_hang .info_mua_hang_item:first-child {
+  display: flex;
   text-align: center;
-}
-#chitietsp .info_mua_hang .item {
-  width: 100%;
-}
-#chitietsp .info_mua_hang .item div:first-child {
+  justify-content: space-between;
   margin-bottom: 10px;
   color: #2874fe;
   font-weight: 500;
+  margin-bottom: 10px;
 }
-#chitietsp .info_mua_hang .item button {
+#chitietsp .info_mua_hang .info_mua_hang_item:first-child button {
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px;
   padding-block: 10px;
   cursor: pointer;
+  margin-top: 10px;
 }
-#chitietsp .info_mua_hang .item button h3 {
+#chitietsp .info_mua_hang .info_mua_hang_item:first-child button h3 {
   font-size: 22px;
 }
-#chitietsp .info_mua_hang .item .mua_ngay {
+#chitietsp .info_mua_hang .info_mua_hang_item:first-child .mua_ngay {
   background-color: #FF6700;
 }
-#chitietsp .info_mua_hang .item .tra_gop {
+#chitietsp .info_mua_hang .info_mua_hang_item:first-child .tra_gop {
   background-color: #2874fe;
 }
-#chitietsp .info_mua_hang .sosanh_tuvan {
+#chitietsp .info_mua_hang .info_mua_hang_item:last-child {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
 }
-#chitietsp .info_mua_hang .sosanh_tuvan div {
-  border: 1px solid red;
+#chitietsp .info_mua_hang .info_mua_hang_item:last-child .so_sanh button {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #2874fe;
+  background-color: white;
+  color: #2874fe;
+  font-size: 20px;
+  cursor: pointer;
+}
+#chitietsp .info_mua_hang .info_mua_hang_item:last-child .sdt_tuvan {
+  position: relative;
+}
+#chitietsp .info_mua_hang .info_mua_hang_item:last-child .sdt_tuvan input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #2874fe;
+  background-color: white;
+  color: #2874fe;
+  font-size: 20px;
+  outline: none;
+}
+#chitietsp .info_mua_hang .info_mua_hang_item:last-child .sdt_tuvan input::placeholder {
+  font-size: 14px;
+}
+#chitietsp .info_mua_hang .info_mua_hang_item:last-child .sdt_tuvan button {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  width: 18%;
+  text-align: center;
+  cursor: pointer;
+  height: 78%;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  font-size: 20px;
+  background-color: #2874fe;
+  border-radius: 5px;
+}
+#chitietsp .muatheo_combo {
+  margin-top: 20px;
+}
+#chitietsp .muatheo_combo p:first-child {
+  font-weight: 500;
+  font-size: 18px;
+}
+#chitietsp .muatheo_combo ul {
+  margin-top: 20px;
+}
+#chitietsp .muatheo_combo ul li {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#chitietsp .muatheo_combo ul li div p {
+  font-size: 16px !important;
+  color: gray;
+}
+#chitietsp .muatheo_combo ul li .gia_phukien {
+  margin-top: 10px;
+}
+#chitietsp .muatheo_combo ul li .gia_phukien span:first-child {
+  margin-right: 30px;
+  color: #f26522;
+  font-weight: bold;
+}
+#chitietsp .muatheo_combo ul li .gia_phukien span:last-child {
+  margin-right: 30px;
+  color: gray;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+#chitietsp .muatheo_combo ul li input {
+  width: 20px;
+  height: 20px;
+}
+#chitietsp .muatheo_combo ul li .image {
+  width: 60px;
+  height: 60px;
+  align-content: center;
+  text-align: center;
+}
+#chitietsp .muatheo_combo ul li .image img {
+  width: 90%;
+  height: 55%;
+}
+#chitietsp .thanh_tien {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#chitietsp .thanh_tien button {
+  background-color: #2874fe;
+  color: white;
+  font-size: 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+}
+#chitietsp .thanh_tien .info_thanhtien {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+#chitietsp .thanh_tien .info_thanhtien div p:first-child {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: gray;
+}
+#chitietsp .thanh_tien .info_thanhtien div p:last-child {
+  font-weight: 500;
+}
+
+.thongsochinh {
+  margin-top: 40px;
+}
+.thongsochinh .title {
+  text-align: center;
+}
+.thongsochinh .thongso_container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 50px;
+}
+.thongsochinh .thongso_container .thongso_item {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+}
+.thongsochinh .thongso_container .thongso_item:first-child nav ul {
+  display: flex;
+  gap: 50px;
+  justify-content: start;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(180, 178, 178);
+}
+.thongsochinh .thongso_container .thongso_item:first-child nav ul .active {
+  color: #2874fe;
+  border-bottom: 2px solid #2874fe;
+}
+.thongsochinh .thongso_container .thongso_item:first-child nav ul li a {
+  font-size: 18px;
+  color: gray;
+  font-weight: bold;
+  padding-bottom: 2px;
+  padding-inline: 30px;
+}
+.thongsochinh .thongso_container .thongso_item:first-child nav ul li a:hover {
+  color: #2874fe;
+}
+.thongsochinh .thongso_container .thongso_item:first-child .hidden_content {
+  display: none;
+}
+.thongsochinh .thongso_container .thongso_item:first-child .binhluan {
+  text-align: center;
+}
+.thongsochinh .thongso_container .thongso_item:first-child .binhluan h4 {
+  color: #2874fe;
+}
+.thongsochinh .thongso_container .thongso_item:first-child .binhluan .chitiet_danhgia {
+  width: 60%;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  color: gray;
+}
+.thongsochinh .thongso_container .thongso_item:first-child .binhluan .chitiet_danhgia .chitiet_item:first-child .so_danhgia > span {
+  font-size: 40px;
+}
+.thongsochinh .thongso_container .thongso_item:first-child .binhluan .chitiet_danhgia .chitiet_item:last-child div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.thongsochinh .thongso_container .thongso_item:first-child .binhluan .chitiet_danhgia .chitiet_item:last-child div .thanhtientrinh {
+  width: 265px;
+  height: 18px;
+  background-color: #EBECED;
+  border-radius: 10px;
+}
+.thongsochinh .thongso_container .thongso_item:first-child .binhluan .chitiet_danhgia .chitiet_item:last-child div img {
+  width: 15px;
+  height: 15px;
+}
+.thongsochinh .thongso_container .thongso_item:first-child .btn_danhgia {
+  width: 350px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  border-radius: 7px;
+  background-color: #2874fe;
+  border: none;
+  font-weight: bold;
+}
+.thongsochinh .thongso_container .danhgia_khachhang {
+  text-align: start;
+  margin-top: 40px;
+  border-top: 1px solid rgb(180, 178, 178);
+  padding-block: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.thongsochinh .thongso_container .danhgia_khachhang .ten_ng_danhgia span:last-child {
+  font-weight: bold;
+}
+.thongsochinh .thongso_container .danhgia_khachhang .ngaygio_danhgia {
+  color: gray;
+}
+.thongsochinh .thongso_container .danhgia_khachhang .rep_binhluan {
+  border: 1px solid rgb(180, 178, 178);
+  padding: 15px;
+  border-radius: 5px;
+}
+.thongsochinh .thongso_container .danhgia_khachhang .rep_binhluan p:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+.thongsochinh .thongso_container .form_danhgia {
+  width: 70%;
+  padding: 20px;
+  border: 1px solid rgb(180, 178, 178);
+  text-align: start;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  z-index: 2;
+  display: none;
+}
+.thongsochinh .thongso_container .form_danhgia div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.thongsochinh .thongso_container .form_danhgia div:first-child button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+.thongsochinh .thongso_container .form_danhgia .title {
+  font-size: 20px;
+  color: #2874fe;
+  text-align: start;
+  margin-bottom: 10px;
+}
+.thongsochinh .thongso_container .form_danhgia input,
+.thongsochinh .thongso_container .form_danhgia textarea {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid rgb(180, 178, 178);
+  resize: none;
+}
+.thongsochinh .thongso_container .form_danhgia textarea {
+  padding-top: 10px;
+  height: 100px;
+}
+.thongsochinh .thongso_container .form_danhgia div {
+  margin-bottom: 20px;
+}
+.thongsochinh .thongso_container .form_danhgia .select_danhgia {
+  text-align: center;
+  margin-bottom: 0;
+}
+.thongsochinh .thongso_container .form_danhgia .btn_danhgia {
+  border-radius: 5px;
+  background-color: #2874fe;
+  color: white;
+  font-size: 20px;
+  border: none;
+  text-align: center;
+  width: 100% !important;
+}
+.thongsochinh .thongso_container .thongso_item:last-child {
+  padding: 0;
+}
+.thongsochinh .thongso_container .thongso_item:last-child p:first-child {
+  padding: 10px;
+  color: #2874fe;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.thongsochinh .thongso_container .thongso_item:last-child table td {
+  font-size: 14px;
+  padding: 30px;
+  font-weight: 500;
+}
+.thongsochinh .thongso_container .thongso_item:last-child table td:last-child {
+  color: gray;
+}
+.thongsochinh .thongso_container .thongso_item:last-child table tr {
+  padding-bottom: 40px;
+}
+.thongsochinh .thongso_container .thongso_item:last-child table .bg-gray {
+  background-color: #f1f3f5;
+}
+
+#sanphamlienquan {
+  margin-top: 80px;
+}
+#sanphamlienquan .title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#sanphamlienquan .slide_sanpham {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  padding-block: 20px;
+}
+#sanphamlienquan .slide_sanpham .slide_list {
+  display: flex;
+  width: max-content;
+  gap: 30px;
+  position: relative;
+  left: 35px;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item {
+  padding: 10px;
+  text-align: center;
+  width: 280px;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item:hover .img {
+  transform: translateY(-10px);
+}
+#sanphamlienquan .slide_sanpham .slide_list .item:hover .ten_sp {
+  color: #2874fe;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item .img {
+  width: 75%;
+  height: 140px;
+  margin: auto;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item .img img {
+  width: 100%;
+  height: 100%;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item .ten_sp {
+  margin-block: 10px;
+  font-weight: 400;
+  color: black;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item .gia_sp {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  margin: 10px;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item .gia_sp span:first-child {
+  color: #f26522;
+  font-weight: bold;
+  font-size: 16px;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item .gia_sp span:last-child {
+  color: gray;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item .btnmuahang {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item .btnmuahang button {
+  padding: 3px;
+  border: none;
+  background-color: #2874fe;
+  color: white;
+  border-radius: 5px;
+}
+#sanphamlienquan .slide_sanpham .slide_list .item .btnmuahang button:last-child {
+  background-color: white;
+  border: 1px solid #2874fe;
+  color: #2874fe;
+}
+#sanphamlienquan .slide_sanpham .nextpre {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#sanphamlienquan .slide_sanpham .nextpre button {
+  width: 30px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 22px;
+  color: white;
+  background-color: rgb(197, 196, 196);
+  font-weight: bold;
+}
+#sanphamlienquan .slide_sanpham .nextpre button:hover {
+  background-color: gray;
+}
+#sanphamlienquan .slide_sanpham .nextpre button:first-child {
+  margin-left: 10px;
+}
+#sanphamlienquan .slide_sanpham .nextpre button:last-child {
+  margin-right: 10px;
 }
 
 .hethong__showroom {

@@ -26,6 +26,9 @@ body {
 a{
   color: #13a7fd;
 }
+input[type='radio'],input[type='checkbox'],button{
+  cursor: pointer;
+}
 /* variable */
 $color-Bolder-Blue: #10419b;
 $color-Light-Blue: #2874fe;

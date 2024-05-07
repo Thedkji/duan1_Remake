@@ -1,0 +1,168 @@
+<section class="thongsochinh">
+    <h2 class="title">Thông Số Chính</h2>
+    <section class="thongso_container">
+        <section class="thongso_item">
+            <nav>
+                <ul>
+                    <li><a href="###" class="active">Đánh giá chi tiết</a></li>
+                    <li><a href="###">Video review</a></li>
+                    <li><a href="###">Bình luận</a></li>
+                </ul>
+            </nav>
+
+            <div class="danhgia_chitiet">
+                <h4>ACER PREDATOR HELIOS NEO 16 2024 Gaming Notebook</h4>
+            </div>
+
+            <div class="video_review hidden_content">
+                <h4>Video review</h4>
+            </div>
+
+            <div class="binhluan hidden_content">
+                <h4>Đánh giá của khách hàng</h4>
+                <div class="chitiet_danhgia">
+                    <div class="chitiet_item">
+                        <h2 class="so_danhgia"><span>5</span>/5</h2>
+                        <span>
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                        </span>
+                        <p>(1 đánh giá )</p>
+                    </div>
+
+                    <div class="chitiet_item">
+                        <div>
+                            <p>5</p>
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <div class="thanhtientrinh"></div>
+                            <p>1</p>
+                        </div>
+                        <div>
+                            <p>4</p>
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <div class="thanhtientrinh"></div>
+                            <p>0</p>
+                        </div>
+                        <div>
+                            <p>3</p>
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <div class="thanhtientrinh"></div>
+                            <p>0</p>
+                        </div>
+                        <div>
+                            <p>2</p>
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <div class="thanhtientrinh"></div>
+                            <p>0</p>
+                        </div>
+                        <div>
+                            <p>1</p>
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <div class="thanhtientrinh"></div>
+                            <p>0</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="btn_danhgia">ĐÁNH GIÁ</button>
+
+                <div class="danhgia_khachhang">
+                    <div class="ten_ng_danhgia">
+                        <span>
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                        </span>
+                        |
+                        <span>
+                            Đinh Phát
+                        </span>
+                    </div>
+
+                    <div class="ngaygio_danhgia">
+                        21:27:25 30/04/2024
+                    </div>
+
+                    <p class="noidung_binhluan">Sinh viên mua có đc sale không shop ?</p>
+
+                    <div class="rep_binhluan">
+                        <p>Admin</p>
+                        <p>dạ giá bên em đang chạy flash sale rồi, và mọi người đều được giá tốt như nhau nhé ạ</p>
+                    </div>
+                </div>
+
+                <div class="form_danhgia">
+                    <div>
+                        <p class="title">Đánh giá & Bình luận</p>
+                        <button>X</button>
+                    </div>
+                    <form action="###" method="post">
+                        <label for="">Họ tên</label>
+                        <div>
+                            <input type="text" placeholder="Họ và tên">
+                        </div>
+
+                        <label for="">Số điện thoại</label>
+                        <div>
+                            <input type="text" placeholder="Số điện thoại">
+                        </div>
+
+                        <label for="">Email</label>
+                        <div>
+                            <input type="text" placeholder="Email">
+                        </div>
+
+                        <div>
+                            <textarea name="" id="" placeholder="Nội dung đánh giá của bạn"></textarea>
+                        </div>
+
+                        <div class="select_danhgia">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                            <img src="<?= Url('asset/global/img/logo/star-fill.png') ?>" alt="">
+                        </div>
+
+                        <button type="submit" class="btn_danhgia">ĐÁNH GIÁ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="thongso_item">
+            <p>Thông số kỹ thuật</p>
+            <table>
+                <tr class="bg-gray">
+                    <td>CPU (Bộ vi xử lý)</td>
+                    <td>Intel Core i5 14500HX (14 nhân 20 luồng, xung nhịp có thể đạt tới 4.9GHz với turbo boost, 24MB Intel® Smart Cache)</td>
+                </tr>
+
+                <tr>
+                    <td>Ram (Bộ nhớ trong)</td>
+                    <td>16 GB DDR5 5600MHz, có thể nâng cấp được</td>
+                </tr>
+
+                <tr class="bg-gray">
+                    <td>Storage (Ổ cứng)</td>
+                    <td>1TB PCIe Gen4 x4 NVMe SSD, có 2 khe, có thể nâng cấp và lắp thêm được</td>
+                </tr>
+
+                <tr>
+                    <td>Màn hình</td>
+                    <td>16″ 2.5K+ (2560x1600) IPS, LCD, LED, màn nhám, chống lóa, không cảm ứng, tần số quét màn 240Hz, tỷ lệ khung hình 16:10, độ phủ màu 100%DCI-P3, độ sáng 500nits, tốc độ phản hồi có thể tới 3ms, NVIDIA® G-SYNC®, DDS 2.0</td>
+                </tr>
+
+                <tr class="bg-gray">
+                    <td>Card đồ họa</td>
+                    <td>Đồ họa UHD Intel® dành cho Bộ xử lý Intel® thế hệ thứ 14, NVIDIA® GeForce® RTX 4060 8GB GDDR6</td>
+                </tr>
+            </table>
+        </section>
+    </section>
+</section>

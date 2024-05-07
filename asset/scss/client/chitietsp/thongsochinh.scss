@@ -1,0 +1,239 @@
+.thongsochinh {
+    margin-top: 40px;
+    .title {
+        text-align: center;
+    }
+
+    .thongso_container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-top: 50px;
+
+        .thongso_item {
+            background-color: white;
+            @include Box_Shadow("s");
+            border-radius: 5px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .thongso_item:first-child {
+            nav {
+                ul {
+                    display: flex;
+                    gap: 50px;
+                    justify-content: start;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid rgb(180, 178, 178);
+
+                    .active {
+                        color: $color-Light-Blue;
+                        border-bottom: 2px solid $color-Light-Blue;
+                    }
+
+                    li a {
+                        font-size: $font-Size-XM;
+                        color: $color-T-Gray;
+                        font-weight: bold;
+                        padding-bottom: 2px;
+                        padding-inline: 30px;
+
+                        &:hover {
+                            color: $color-Light-Blue;
+                        }
+                    }
+                }
+            }
+
+            .hidden_content {
+                display: none;
+            }
+
+            .binhluan {
+                text-align: center;
+
+                h4 {
+                    color: $color-Light-Blue;
+                }
+
+                .chitiet_danhgia {
+                    width: 60%;
+                    margin: 20px auto 0;
+                    // background-color: red;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 30px;
+                    color: $color-T-Gray;
+
+                    .chitiet_item:first-child {
+                        .so_danhgia>span {
+                            font-size: 40px;
+                        }
+                    }
+
+                    .chitiet_item:last-child div {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin-bottom: 5px;
+
+                        .thanhtientrinh {
+                            width: 265px;
+                            height: 18px;
+                            background-color: #EBECED;
+                            border-radius: 10px;
+                        }
+
+                        img {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+
+            .btn_danhgia {
+                width: 350px;
+                margin-top: 20px;
+                padding: 10px;
+                font-size: $font-Size-L;
+                color: white;
+                border-radius: 7px;
+                background-color: $color-Light-Blue;
+                border: none;
+                font-weight: bold;
+            }
+        }
+
+        .danhgia_khachhang {
+            text-align: start;
+            margin-top: 40px;
+            border-top: 1px solid rgb(180, 178, 178);
+            padding-block: 10px;
+            font-size: $font-Size-XS;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .ten_ng_danhgia {
+                span:last-child {
+                    font-weight: bold;
+                }
+            }
+
+            .ngaygio_danhgia {
+                color: $color-Gray;
+            }
+
+            .rep_binhluan {
+                border: 1px solid rgb(180, 178, 178);
+                padding: 15px;
+                border-radius: 5px;
+
+                p:first-child {
+                    font-size: $font-Size-L;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .form_danhgia {
+            width: 70%;
+            padding: 20px;
+            border: 1px solid rgb(180, 178, 178);
+            text-align: start;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 10%;
+            left: 40%;
+            background-color: white;
+            @include Box_Shadow("s");
+            z-index: 2;
+            display: none;
+            div:first-child {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                align-items: center;
+                button{
+                    background-color: red;
+                    color: $color-T-White;
+                    border: none;
+                    border-radius: 5px;
+                    width: 30px;
+                    height: 30px;
+                    font-size: $font-Size-L;
+                }
+            }
+            .title {
+                font-size: $font-Size-L;
+                color: $color-Light-Blue;
+                text-align: start;
+                margin-bottom: 10px;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                height: 50px;
+                border-radius: 5px;
+                padding-left: 10px;
+                outline: none;
+                border: 1px solid rgb(180, 178, 178);
+                resize: none;
+            }
+
+            textarea {
+                padding-top: 10px;
+                height: 100px;
+            }
+
+            div {
+                margin-bottom: 20px;
+            }
+
+            .select_danhgia {
+                text-align: center;
+                margin-bottom: 0;
+
+            }
+
+            .btn_danhgia {
+                border-radius: 5px;
+                background-color: $color-Light-Blue;
+                color: $color-T-White;
+                font-size: $font-Size-L;
+                border: none;
+                text-align: center;
+                width: 100% !important;
+            }
+        }
+
+        .thongso_item:last-child{
+            padding: 0;
+            p:first-child{
+                padding: 10px;
+                color: $color-Light-Blue;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            table{
+                td{
+                    font-size: $font-Size-XS;
+                    padding: 30px;
+                    font-weight: 500;
+                }
+                td:last-child{
+                    color: $color-T-Gray;
+                }
+                tr{
+                    padding-bottom: 40px;
+                }
+                .bg-gray{
+                    background-color: #f1f3f5;
+                }
+            }
+        }
+    }
+}

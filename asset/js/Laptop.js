@@ -51,5 +51,3 @@ function clickItemSelect() {
 // laptop - header_laptop
 
 clickItemSelect();
-
-// import {SlideShow_ShowRoom} from "./trang_chu.js";

@@ -101,33 +101,35 @@
         </div>
 
         <div class="info_mua_hang">
-            <div class="item mua_hang">
-                <div>
-                    <i class="bi bi-shield-check"></i>
-                    <span>Bảo hành toàn diện</span>
+            <div class="info_mua_hang_item">
+                <div class="item mua_hang">
+                    <div>
+                        <i class="bi bi-shield-check"></i>
+                        <span>Bảo hành toàn diện</span>
+                    </div>
+
+                    <button class="mua_ngay">
+                        <h3>MUA NGAY</h3>
+                        <p>( Giao tận nơi hoặc nhận tại cửa hàng )</p>
+                    </button>
                 </div>
 
-                <button class="mua_ngay">
-                    <h3>MUA NGAY</h3>
-                    <p>( Giao tận nơi hoặc nhận tại cửa hàng )</p>
-                </button>
-            </div>
+                <div class="item giaohang_toanquoc">
+                    <div>
+                        <i class="bi bi-truck"></i>
+                        <span>Trả góp</span>
+                    </div>
 
-            <div class="item giaohang_toanquoc">
-                <div>
-                    <i class="bi bi-truck"></i>
-                    <span>Trả góp</span>
+                    <button class="tra_gop">
+                        <h3>TRẢ GÓP</h3>
+                        <p>( Thủ tục nhanh chóng nhận máy ngay )</p>
+                    </button>
                 </div>
-
-                <button class="tra_gop">
-                    <h3>TRẢ GÓP</h3>
-                    <p>( Thủ tục nhanh chóng nhận máy ngay )</p>
-                </button>
             </div>
 
-            <div class="sosanh_tuvan">
-                <div>
-                    <button class="so_sanh">
+            <div class="info_mua_hang_item">
+                <div class="so_sanh">
+                    <button>
                         <h3>+ SO SÁNH</h3>
                     </button>
                 </div>
@@ -144,22 +146,38 @@
             <ul>
                 <li>
                     <input type="checkbox" name="" id="">
-                    <img src="<?= Url('asset/global/img/logo/tai-nghe-gaming-dareu-eh416-rgb-01.webp') ?>" alt="">
+                    <div class="image">
+                        <img src="<?= Url('asset/global/img/logo/tai-nghe-gaming-dareu-eh416-rgb-01.webp') ?>" alt="">
+                    </div>
                     <div>
                         <p>DAREU EH416 MIRROR | Tai nghe Gaming có dây LED RGB</p>
-                        <span>356.250 đ </span>
-                        <span>375.000 đ</span>
+                        <div class="gia_phukien">
+                            <span>356.250đ</span>
+                            <span>375.000đ</span>
+                        </div>
                     </div>
                 </li>
-                <li></li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <div class="image">
+                        <img src="<?= Url('asset/global/img/logo/ban_phim_ek75_pro_(1).webp') ?>" alt="">
+                    </div>
+                    <div>
+                        <p>DAREU EH416 MIRROR | Tai nghe Gaming có dây LED RGB</p>
+                        <div class="gia_phukien">
+                            <span>356.250đ</span>
+                            <span>375.000đ</span>
+                        </div>
+                    </div>
+                </li>
                 <li></li>
             </ul>
         </div>
 
         <div class="thanh_tien">
             <button>Thêm vào giỏ hàng </button>
-            <div>
-                <p>Thành tiền</p>
+            <div class="info_thanhtien">
+                <p>Thành tiền :</p>
                 <div>
                     <p>33.774.000đ</p>
                     <p>33.658.250đ</p>
