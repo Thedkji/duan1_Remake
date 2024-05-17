@@ -83,7 +83,9 @@
         </div>
     </div>
 </footer>
+<script src="<?=Url('asset/js/back_header_web.js?v=').time()?>"></script>
 <script src="<?=Url('asset/js/SlideShow_ShowRoom.js?v=').time()?>"></script>
+
 </body>
 </div>
 </html>

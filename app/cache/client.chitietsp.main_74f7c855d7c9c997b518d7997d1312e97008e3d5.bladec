@@ -1,0 +1,8 @@
+<main>
+ <?php echo $this->runChild('client.chitietsp.link'); ?>
+ <?php echo $this->runChild('client.chitietsp.chitietsp'); ?>
+ <?php echo $this->runChild('client.chitietsp.thongsochinh'); ?>
+ <?php echo $this->runChild('client.chitietsp.sanphamlienquan'); ?>    
+</main>
+<script src="<?=Url('asset/js/chitietsp.js?v=').time()?>"></script>
+<script src="<?=Url('asset/js/sanphamlienquan.js?v=').time()?>"></script>

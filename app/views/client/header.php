@@ -18,6 +18,8 @@
     <!-- font icon boostrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- jquery -->
+    <script src="<?= Url('asset/jquery-3.7.1.min.js/jquery-3.7.1.min.js?v=') . time() ?>"></script>
 
 </head>
 
@@ -51,30 +53,58 @@
             </div>
 
             <div class="header__grid__item">
-                <div>
+                <div class="menu_iconphu">
                     <a href="###">
                         <i class="far fa-heart"></i>
                     </a>
                     <a href="###">
                         <i class="bi bi-cart"></i>
                     </a>
-                    <a href="###">
-                        <i class="far fa-user"></i>
-                    </a>
+                    <?php if (!isset($_SESSION['user'])) { ?>
+                        <a href="<?= Url('client/dangnhap') ?>" class="icon_user" id="iconUserHeader">
+                            <i class="far fa-user"></i>
+                        </a>
+                    <?php } else { ?>
+                        <a href="<?= Url('client/dangnhap') ?>" class="icon_user icon_user_login" id="iconUserHeader">
+                            <img src="<?= Url('asset/global/img/slide_show/banner-footer-anh-trung_1683094141.webp') ?>" alt="" width="100%" height="100%">
+                        </a>
+                    <?php } ?>
 
-                    <a href="###" style="display:none">
+                    <?php if (!isset($_SESSION['user'])) { ?>
+                        <div class="menu" id="menuHeader">
+                            <ul>
+                                <li class="dangnhap active"><a href="<?= Url('client/dangnhap') ?>">Đăng nhập</a></li>
+                                <li class="dangky"><a href="<?= Url('client/dangky') ?>">Đăng ký</a></li>
+                            </ul>
+                        </div>
+
+                    <?php } else { ?>
+                        <div class="menu" id="menuHeader">
+                            <ul>
+                                <li class=" active"><a href="<?= Url('client/taikhoancuatoi/') . $_SESSION['user']['id_TaiKhoan'] ?>">Tài khoản của tôi</a></li>
+                                <?php if ($_SESSION['user']['role'] == 1) { ?>
+                                    <li class="dangky"><a href="<?= Url('client/dangky') ?>">Trang quản trị</a></li>
+                                <?php } ?>
+                                <li class="dangxuat"><a href="<?= Url('client/dangxuat') ?>">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    <?php } ?>
+
+                    <ahref="###" style="display:none">
                         <i class="bi bi-list"></i>
-                    </a>
+                        </ahref=>
 
                 </div>
             </div>
         </div>
 
     </header>
-    
+
     <div class="thongbao">
-       <div>
-         <div class="cirlce "></div>
-         <p>Ngày 30/04/2024 & 01/05/2024: Trung Trần Vẫn Làm Việc Bình Thường Phục Vụ Quý Khách Hàng !!!</p>
-       </div>
+        <div>
+            <div class="cirlce "></div>
+            <p>Ngày 30/04/2024 & 01/05/2024: Trung Trần Vẫn Làm Việc Bình Thường Phục Vụ Quý Khách Hàng !!!</p>
+        </div>
     </div>
+
+    <script src="<?= Url('asset/js/header.js?v=') . time() ?>"></script>

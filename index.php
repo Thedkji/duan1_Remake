@@ -10,4 +10,3 @@ require_once "./app/views/client/hethong_showroom.php";
 require_once "./app/views/client/lienhe.php";
 
 require_once "./app/views/client/footer.php";
-?>

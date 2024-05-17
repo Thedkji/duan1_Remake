@@ -87,12 +87,9 @@ function hienFormDanhGia() {
     let formDanhGia = document.querySelector('.thongsochinh .thongso_container .form_danhgia');
     let btn_danhgia = document.querySelector('.thongsochinh .thongso_container  .btn_danhgia');
     let btn_close = document.querySelector('.thongsochinh .thongso_container .form_danhgia div:first-child button');
-    let main = document.querySelector('main');
     document.addEventListener("DOMContentLoaded", () => {
         btn_danhgia.addEventListener('click', () => {
             formDanhGia.style.display = `block`;
-            main.style.opacity = `30%`;
-            formDanhGia.style.opacity = `100%`;
         });
 
         btn_close.addEventListener("click", () => {

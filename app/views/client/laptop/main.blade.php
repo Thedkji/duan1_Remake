@@ -1,6 +1,4 @@
 <main>
-    <?php
-    require_once "header_laptop.php";
-    ?>
+    @include('client.laptop.header_laptop')
 </main>
 <script src="<?=Url('asset/js/Laptop.js?v=').time()?>"></script>

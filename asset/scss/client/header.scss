@@ -94,14 +94,63 @@ header {
 
   //   header__grid__item cuối
   .header__grid__item:last-child {
-    align-content: center;
-
-    div {
+    .menu_iconphu {
       text-align: end;
-
+      // background-color: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(28%);
       i {
         font-size: 35px;
         margin-right: 32px;
+      }
+      .icon_user_login img{
+        width: 47px;
+        height: 47px;
+        border-radius: 30px;
+        object-fit: cover;
+      }
+      .menu {
+        display: none;
+        padding: 20px;
+        background-color: white;
+        @include Box_Shadow('s');
+        width: 130%;
+        text-align: center;
+        position: absolute;
+        right: -5%;
+        top: 120%;
+        border-radius: 10px;
+
+        li {
+          width: 80%;
+          margin: auto;
+          padding: 10px 10px;
+          border-radius: 5px;
+          background-color: $color-Light-Blue;
+          margin-bottom: 10px;
+
+        }
+
+        li.active {
+          background-color: $color-Light-Blue;
+
+          a {
+            color: $color-White;
+            font-weight: bold;
+          }
+        }
+
+        li {
+          background-color: white;
+          border: 1px solid $color-LightS-Blue;
+
+          a {
+            color: $color-Light-Blue;
+            font-weight: bold;
+          }
+        }
       }
     }
   }
@@ -110,11 +159,13 @@ header {
 
 .thongbao {
   padding: 0 180px;
+
   div {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:15px;
+    gap: 15px;
+
     .cirlce {
       width: 15px;
       height: 15px;
@@ -123,7 +174,8 @@ header {
       opacity: 90%;
       animation: circleAnimation 1s infinite alternate-reverse;
     }
-    p{
+
+    p {
       color: $color-T-LightOrange;
     }
 

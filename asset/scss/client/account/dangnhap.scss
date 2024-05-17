@@ -1,0 +1,81 @@
+#dangnhap {
+    background-color: white;
+    @include Box_Shadow("s");
+    width: 50%;
+    margin: 30px auto;
+    padding-block: 30px;
+    border-radius: 5px;
+    text-align: center;
+
+    a {
+        color: $color-T-Gray;
+    }
+
+    nav {
+        ul {
+            margin-bottom: 40px !important;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            width: 40%;
+            padding-bottom: 5px;
+            margin: auto;
+            font-size: $font-Size-L;
+            font-weight: bold;
+            color: $color-T-Gray;
+
+            li:hover {
+                color: $color-Light-Blue ;
+                cursor: pointer;
+            }
+
+            .active a {
+                color: $color-Light-Blue;
+                border-bottom: 2px solid $color-Light-Blue;
+            }
+        }
+    }
+
+    form {
+        width: 45%;
+        margin: auto;
+        margin-top: 20px;
+
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            font-size: $font-Size-XS;
+            transition: none;
+            &:focus{
+                border: 2px solid $color-T-LightYellow;
+            }
+        }
+
+        .quenmk {
+            text-align: end;
+            font-size: $font-Size-XS;
+            a{
+                color: $color-Light-Blue;
+            }
+        }
+
+        .camket {
+            font-size: $font-Size-XS;
+        }
+
+        button {
+            width: 80%;
+            margin-block: 30px;
+            padding: 10px;
+            font-size: $font-Size-M;
+            background-color: $color-Light-Blue;
+            border: none;
+            border-radius: 5px;
+            color: $color-T-White;
+        }
+    }
+}

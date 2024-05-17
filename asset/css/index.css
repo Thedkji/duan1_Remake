@@ -32,6 +32,32 @@ input[type=radio], input[type=checkbox], button {
   cursor: pointer;
 }
 
+input {
+  outline: none;
+}
+
+.err {
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #FFDDDD;
+  text-align: start;
+  position: relative;
+}
+.err p {
+  margin-left: 10px;
+  color: red;
+}
+.err::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2%;
+  height: 100%;
+  border-radius: 5px 0px 0px 5px;
+  background-color: red;
+}
+
 /* variable */
 /* màu chữ */
 /* cỡ chữ */
@@ -110,15 +136,57 @@ header .header__grid__item:nth-child(3) div .fa-solid {
   transform: translateY(-50%);
   font-size: 20px;
 }
-header .header__grid__item:last-child {
-  align-content: center;
-}
-header .header__grid__item:last-child div {
+header .header__grid__item:last-child .menu_iconphu {
   text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(28%);
 }
-header .header__grid__item:last-child div i {
+header .header__grid__item:last-child .menu_iconphu i {
   font-size: 35px;
   margin-right: 32px;
+}
+header .header__grid__item:last-child .menu_iconphu .icon_user_login img {
+  width: 47px;
+  height: 47px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+header .header__grid__item:last-child .menu_iconphu .menu {
+  display: none;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  width: 130%;
+  text-align: center;
+  position: absolute;
+  right: -5%;
+  top: 120%;
+  border-radius: 10px;
+}
+header .header__grid__item:last-child .menu_iconphu .menu li {
+  width: 80%;
+  margin: auto;
+  padding: 10px 10px;
+  border-radius: 5px;
+  background-color: #2874fe;
+  margin-bottom: 10px;
+}
+header .header__grid__item:last-child .menu_iconphu .menu li.active {
+  background-color: #2874fe;
+}
+header .header__grid__item:last-child .menu_iconphu .menu li.active a {
+  color: white;
+  font-weight: bold;
+}
+header .header__grid__item:last-child .menu_iconphu .menu li {
+  background-color: white;
+  border: 1px solid #13a7fd;
+}
+header .header__grid__item:last-child .menu_iconphu .menu li a {
+  color: #2874fe;
+  font-weight: bold;
 }
 
 .thongbao {
@@ -2146,6 +2214,229 @@ main {
 }
 #sanphamlienquan .slide_sanpham .nextpre button:last-child {
   margin-right: 10px;
+}
+
+#dangnhap {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  width: 50%;
+  margin: 30px auto;
+  padding-block: 30px;
+  border-radius: 5px;
+  text-align: center;
+}
+#dangnhap a {
+  color: gray;
+}
+#dangnhap nav ul {
+  margin-bottom: 40px !important;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 40%;
+  padding-bottom: 5px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+}
+#dangnhap nav ul li:hover {
+  color: #2874fe;
+  cursor: pointer;
+}
+#dangnhap nav ul .active a {
+  color: #2874fe;
+  border-bottom: 2px solid #2874fe;
+}
+#dangnhap form {
+  width: 45%;
+  margin: auto;
+  margin-top: 20px;
+}
+#dangnhap form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-size: 14px;
+  transition: none;
+}
+#dangnhap form input:focus {
+  border: 2px solid #FFC400;
+}
+#dangnhap form .quenmk {
+  text-align: end;
+  font-size: 14px;
+}
+#dangnhap form .quenmk a {
+  color: #2874fe;
+}
+#dangnhap form .camket {
+  font-size: 14px;
+}
+#dangnhap form button {
+  width: 80%;
+  margin-block: 30px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2874fe;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+#dangky {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  width: 50%;
+  margin: 30px auto;
+  padding-block: 30px;
+  border-radius: 5px;
+  text-align: center;
+}
+#dangky a {
+  color: gray;
+}
+#dangky nav ul {
+  margin-bottom: 40px !important;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 40%;
+  padding-bottom: 5px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+}
+#dangky nav ul li:hover {
+  color: #2874fe;
+  cursor: pointer;
+}
+#dangky nav ul .active a {
+  color: #2874fe;
+  border-bottom: 2px solid #2874fe;
+}
+#dangky form {
+  width: 45%;
+  margin: auto;
+  margin-top: 20px;
+}
+#dangky form div {
+  margin-block: 20px;
+}
+#dangky form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 10px;
+  font-size: 14px;
+  transition: none;
+}
+#dangky form input:focus {
+  border: 2px solid #FFC400;
+}
+#dangky form .quenmk {
+  text-align: end;
+  font-size: 14px;
+}
+#dangky form .quenmk a {
+  color: #2874fe;
+}
+#dangky form .camket {
+  font-size: 14px;
+}
+#dangky form button {
+  width: 80%;
+  margin-block: 30px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2874fe;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+#taikhoancuatoi {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  width: 50%;
+  padding: 30px;
+  border-radius: 5px;
+  margin: 50px auto;
+  text-align: center;
+}
+#taikhoancuatoi .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Làm mờ nền */
+  z-index: 10;
+}
+#taikhoancuatoi form {
+  width: 50%;
+  margin: auto;
+  position: relative;
+}
+#taikhoancuatoi form div:first-child {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#taikhoancuatoi form div:first-child .img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: 1px solid gray;
+}
+#taikhoancuatoi form div:first-child .img img {
+  border-radius: 50px;
+  object-fit: cover;
+}
+#taikhoancuatoi form input {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+#taikhoancuatoi form .btn_suathongtin {
+  width: 50%;
+  background-color: #2874fe;
+  padding: 10px !important;
+  height: 45px !important;
+  font-size: 18px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+#taikhoancuatoi form .modalEditAnh {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  width: 700px;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  z-index: 20;
+}
+#taikhoancuatoi form .modalEditAnh input {
+  padding: 0;
+  height: 100%;
+  width: 40%;
 }
 
 .hethong__showroom {

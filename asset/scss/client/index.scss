@@ -29,6 +29,30 @@ a{
 input[type='radio'],input[type='checkbox'],button{
   cursor: pointer;
 }
+input{
+  outline: none;
+}
+.err{
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #FFDDDD;
+  text-align: start;
+  position: relative;
+  p{
+      margin-left: 10px;
+      color: red;
+  }
+  &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2%;
+      height: 100%;
+      border-radius: 5px 0px 0px 5px;
+      background-color: red;
+  }
+}
 /* variable */
 $color-Bolder-Blue: #10419b;
 $color-Light-Blue: #2874fe;
@@ -112,6 +136,8 @@ $line-Heigth-L : 2.5;
 @import "laptop/main.scss";
 // Chitietsp
 @import "chitietsp/main.scss";
+// Account
+@import "account/main.scss";
 
 @import "hethong_showroom.scss";
 @import "lienhe.scss";
