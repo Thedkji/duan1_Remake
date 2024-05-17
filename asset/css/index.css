@@ -2432,6 +2432,7 @@ main {
   transform: translateX(-50%);
   display: none;
   z-index: 20;
+  transition: all 1s;
 }
 #taikhoancuatoi form .modalEditAnh input {
   padding: 0;

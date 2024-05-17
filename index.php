@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 require_once "./env.php";
 require_once "./app/views/client/header.php";

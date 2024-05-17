@@ -11,9 +11,10 @@ class TaiKhoanController extends BaseController
         return $this->render('client.account.dangnhap');
     }
 
-    function DangXuat(){
+    function DangXuat()
+    {
         unset($_SESSION['user']);
-        header("location:".Url('client/trang_chu'));
+        header("location:". Url('client/trang_chu'));
     }
     function DangNhap2()
     {
@@ -24,8 +25,7 @@ class TaiKhoanController extends BaseController
 
             if (is_array($check)) {
                 $_SESSION['user'] = $check;
-                header("location:".Url('client/trang_chu'));
-
+                header("location:" . Url('client/trang_chu'));
             } else {
                 $err = "Sai tài khoản hoặc mật khẩu";
                 return $this->render('client.account.dangnhap', ["err" => $err]);
@@ -107,9 +107,9 @@ class TaiKhoanController extends BaseController
         }
     }
 
-    function TaiKhoanCuaToi($id){
+    function TaiKhoanCuaToi($id)
+    {
         $listTK_ID = $this->modelTaiKhoan->getTaiKhoan($id);
-        return $this->render('client.account.taikhoancuatoi',["listTK_ID"=>$listTK_ID]);
-
+        return $this->render('client.account.taikhoancuatoi', ["listTK_ID" => $listTK_ID]);
     }
 }
