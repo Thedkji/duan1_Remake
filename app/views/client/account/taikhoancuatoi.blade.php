@@ -1,6 +1,12 @@
+@php
+    if (isset($_SESSION['success'])) {
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+@endphp
 <div id="taikhoancuatoi">
     <div class="overlay"></div>
-    <form action="###" method="post">
+    <form action="{{ Url('client/edittaikhoancuatoi/').$listTK_ID['id_TaiKhoan'] }}" method="post">
         <div>
             <h2>Tài khoản của tôi</h2>
             <div class="img">
@@ -9,6 +15,7 @@
             </div>
         </div>
         <div style="position:relative;">
+            <label for="">Họ tên</label>
             <input type="text" placeholder="Họ và tên" id="hoTen" name="hoTen"
                 value="{{ $listTK_ID['hoTen'] }}">
         </div>
@@ -24,6 +31,7 @@
         @endphp
 
         <div>
+            <label for="">Email</label>
             <input type="text" placeholder="Email" name="email" value="{{ $listTK_ID['email'] }}">
         </div>
 
@@ -38,7 +46,8 @@
         @endphp
 
         <div style="position:relative;">
-            <input type="text" placeholder="Số điện thoại" name="tel" value="{{ $listTK_ID['tel'] }}">
+            <label for="">Số điện thoại</label>
+            <input type="number" placeholder="Số điện thoại" name="tel" value="0{{ $listTK_ID['tel'] }}">
         </div>
 
         @php
@@ -52,7 +61,8 @@
         @endphp
 
         <div style="position:relative;">
-            <input type="text" placeholder="Địa chỉ" name="diaChi" value="{{ $listTK_ID['diaChi'] }}">
+            <label for="">Địa chỉ</label>
+            <textarea name="diaChi" id="" cols="50%" rows="5">{{ $listTK_ID['diaChi'] }}</textarea>
         </div>
 
         @php
@@ -65,41 +75,17 @@
             }
         @endphp
 
-        <div style="position:relative;">
-            <input type="password" id="" placeholder="Mật khẩu" name="matKhau"
-                value="{{ $listTK_ID['matKhau'] }}" readonly>
+        <div style="position:relative;" class="inputMatKhau">
+            <div class="doimatkhau">
+                <button><a href="{{ Url('client/doimatkhau/') . $listTK_ID['id_TaiKhoan'] }}">Đổi mật khẩu</a></button>
+            </div>
         </div>
 
-        @php
-            if (isset($err['matKhau'])) {
-                echo " <div class='err'>
-                            <p>" .
-                    $err['matKhau'] .
-                    "</p>
-                        </div>";
-            }
-        @endphp
-
-        {{-- <div style="position:relative;">
-                <input type="password" id="" placeholder="Nhập lại mật khẩu" name="matKhau2"
-                    value="{{ $_POST['matKhau2'] }}">
-            </div>
-
-            @php
-                if (isset($err['matKhau2'])) {
-                    echo " <div class='err'>
-                            <p>" .
-                        $err['matKhau2'] .
-                        "</p>
-                        </div>";
-                }
-            @endphp --}}
-
-        <div>
+        <div style="text-align: center">
             <button type="submit" name="btn_suathongtin" class="btn_suathongtin">Sửa thông tin</button>
         </div>
 
-        <div class="camket">
+        <div class="camket" style="text-align: center">
             <p>Trung Trần cam kết bảo mật và sẽ không bao giờ đăng hay chia sẻ thông tin mà chưa có được sự đồng ý
                 của
                 bạn.</p>
@@ -112,4 +98,5 @@
         </div>
     </form>
 </div>
-<script src="{{ Url('asset/js/taikhoancuatoi.js') }}"></script>
+<script src="{{  Url('asset/js/taikhoancuatoi.js?v=').time() }}"></script>
+

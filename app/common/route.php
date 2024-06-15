@@ -9,14 +9,14 @@ $route = new RouteCollector;
 // route
 $route->get('/', function () {
     // require_once "app/views/client/trang_chu/main.php";
-        header("Location:client/trang_chu");
+    header("Location:client/trang_chu");
 });
 
 // List client Trang chủ
 $route->get("client/trang_chu", [App\controllers\client\sanpham\SanPhamController::class, "ListTrangChu"]);
 
 // List client Laptop
-$route->get("client/laptop", [App\controllers\client\sanpham\SanPhamController::class, "Listlaptop"]);
+$route->get("client/laptop/{page}", [App\controllers\client\sanpham\SanPhamController::class, "Listlaptop"]);
 
 // List client chitietsp
 $route->get("client/chitietsp", [App\controllers\client\sanpham\SanPhamController::class, "ListChiTietSP"]);
@@ -26,6 +26,12 @@ $route->get("client/dangnhap", [App\controllers\client\taikhoan\TaiKhoanControll
 $route->post("client/dangnhap2", [App\controllers\client\taikhoan\TaiKhoanController::class, "DangNhap2"]);
 
 $route->get("client/taikhoancuatoi/{id}", [App\controllers\client\taikhoan\TaiKhoanController::class, "TaiKhoanCuaToi"]);
+$route->post("client/edittaikhoancuatoi/{id}", [App\controllers\client\taikhoan\TaiKhoanController::class, "EditTaiKhoanCuaToi"]);
+
+$route->get("client/doimatkhau/{id}", [App\controllers\client\taikhoan\TaiKhoanController::class, "DoiMatKhau"]);
+$route->post("client/doimatkhau2/{id}", [App\controllers\client\taikhoan\TaiKhoanController::class, "DoiMatKhau2"]);
+
+
 
 
 $route->get("client/dangxuat", [App\controllers\client\taikhoan\TaiKhoanController::class, "DangXuat"]);

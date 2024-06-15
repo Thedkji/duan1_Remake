@@ -10,4 +10,4 @@
     @include('client.trang_chu.mini_info')
     @include('client.trang_chu.video_shop')    
 </main>
-<script src="<?=Url('asset/js/trang_chu.js?v=').time()?>"></script>
+<script src="{{  Url('asset/js/trang_chu.js?v=').time() }}"></script>

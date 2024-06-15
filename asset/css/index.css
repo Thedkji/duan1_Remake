@@ -9,6 +9,8 @@
   line-height: 1.5;
   transition: all 0.25s linear;
   scroll-behavior: smooth;
+  outline: none;
+  resize: none;
 }
 
 body {
@@ -37,6 +39,7 @@ input {
 }
 
 .err {
+  margin: 5px 0;
   padding: 7px;
   border-radius: 5px;
   background-color: #FFDDDD;
@@ -129,7 +132,7 @@ header .header__grid__item:nth-child(3) div input {
 header .header__grid__item:nth-child(3) div input:focus {
   outline: none;
 }
-header .header__grid__item:nth-child(3) div .fa-solid {
+header .header__grid__item:nth-child(3) div .bi-search {
   position: absolute;
   right: 6%;
   top: 50%;
@@ -1366,11 +1369,11 @@ main {
 #header_laptop .filter_sanpham {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: 230px 2fr;
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
 }
 #header_laptop .filter_sanpham .filter {
-  max-height: 36%;
+  max-height: 63%;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 5px rgb(174, 173, 173);
@@ -1428,18 +1431,19 @@ main {
 }
 #header_laptop .filter_sanpham .sanpham {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 250px);
   max-height: auto;
   gap: 10px;
   background-color: white;
   row-gap: 30px;
 }
 #header_laptop .filter_sanpham .sanpham .list__products__container {
-  max-height: 296px;
+  max-height: 280px;
 }
 #header_laptop .filter_sanpham .sanpham .list__products__container .list__products__item {
   border-radius: 10px 10px;
   border: 1px solid #e7ebed;
+  text-align: center;
   padding: 20px;
 }
 #header_laptop .filter_sanpham .sanpham .list__products__container .list__products__item:hover {
@@ -1510,6 +1514,8 @@ main {
 }
 #header_laptop .filter_sanpham .sanpham .list__products__container .list__products__item .thongso__muahang {
   display: none;
+  max-width: 200px;
+  text-align: start;
 }
 #header_laptop .filter_sanpham .sanpham .list__products__container .list__products__item .thongso__muahang .muahang {
   margin-top: 20px;
@@ -1551,6 +1557,9 @@ main {
   color: rgb(124, 121, 121);
   align-content: center;
   text-align: center;
+}
+#header_laptop .phan-trang .active {
+  background-color: rgb(204, 198, 198);
 }
 
 #link a {
@@ -2360,16 +2369,16 @@ main {
   color: white;
 }
 
-#taikhoancuatoi {
+#taikhoancuatoi, #doimatkhau {
   background-color: white;
   box-shadow: 0 0 5px rgb(174, 173, 173);
   width: 50%;
   padding: 30px;
   border-radius: 5px;
   margin: 50px auto;
-  text-align: center;
+  text-align: start;
 }
-#taikhoancuatoi .overlay {
+#taikhoancuatoi .overlay, #doimatkhau .overlay {
   display: none;
   position: fixed;
   top: 0;
@@ -2380,36 +2389,57 @@ main {
   /* Làm mờ nền */
   z-index: 10;
 }
-#taikhoancuatoi form {
+#taikhoancuatoi form, #doimatkhau form {
   width: 50%;
   margin: auto;
   position: relative;
 }
-#taikhoancuatoi form div:first-child {
+#taikhoancuatoi form div:first-child, #doimatkhau form div:first-child {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 20px;
 }
-#taikhoancuatoi form div:first-child .img {
+#taikhoancuatoi form div:first-child h2, #doimatkhau form div:first-child h2 {
+  color: #13a7fd;
+}
+#taikhoancuatoi form div:first-child .img, #doimatkhau form div:first-child .img {
   width: 60px;
   height: 60px;
   border-radius: 50px;
   border: 1px solid gray;
 }
-#taikhoancuatoi form div:first-child .img img {
+#taikhoancuatoi form div:first-child .img img, #doimatkhau form div:first-child .img img {
   border-radius: 50px;
   object-fit: cover;
 }
-#taikhoancuatoi form input {
+#taikhoancuatoi form div:first-child .img:hover, #doimatkhau form div:first-child .img:hover {
+  cursor: pointer;
+}
+#taikhoancuatoi form label, #doimatkhau form label {
+  font-weight: bold;
+}
+#taikhoancuatoi form input, #doimatkhau form input {
   width: 100%;
   height: 45px;
   border-radius: 5px;
   border: 1px solid gray;
+  margin-top: 5px;
   margin-bottom: 20px;
   padding-left: 10px;
 }
-#taikhoancuatoi form .btn_suathongtin {
+#taikhoancuatoi form .inputMatKhau, #doimatkhau form .inputMatKhau {
+  position: relative;
+  height: 50px;
+}
+#taikhoancuatoi form .inputMatKhau .doimatkhau, #doimatkhau form .inputMatKhau .doimatkhau {
+  position: absolute;
+  right: 0;
+}
+#taikhoancuatoi form .inputMatKhau .doimatkhau button, #doimatkhau form .inputMatKhau .doimatkhau button {
+  padding: 2px;
+}
+#taikhoancuatoi form .btn_suathongtin, #doimatkhau form .btn_suathongtin {
   width: 50%;
   background-color: #2874fe;
   padding: 10px !important;
@@ -2420,7 +2450,7 @@ main {
   border-radius: 5px;
   margin-bottom: 20px;
 }
-#taikhoancuatoi form .modalEditAnh {
+#taikhoancuatoi form .modalEditAnh, #doimatkhau form .modalEditAnh {
   background-color: white;
   box-shadow: 0 0 5px rgb(174, 173, 173);
   padding: 20px;
@@ -2434,10 +2464,35 @@ main {
   z-index: 20;
   transition: all 1s;
 }
-#taikhoancuatoi form .modalEditAnh input {
+#taikhoancuatoi form .modalEditAnh input, #doimatkhau form .modalEditAnh input {
   padding: 0;
   height: 100%;
   width: 40%;
+}
+
+#doimatkhau h2 {
+  color: #13a7fd;
+  margin-bottom: 20px;
+}
+#doimatkhau button[type=submit] {
+  background: #13a7fd;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 3px 7px;
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+}
+#doimatkhau button {
+  border: none;
+  background-color: #f26522;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+#doimatkhau button a {
+  color: white;
 }
 
 .hethong__showroom {

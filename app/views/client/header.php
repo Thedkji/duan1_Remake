@@ -13,8 +13,6 @@
     <!-- css được biên dịch từ sass -->
     <link rel="stylesheet" href="<?= Url('asset/css/index.css?v=') . time() ?>">
 
-    <!-- font answe -->
-    <link rel="stylesheet" href="<?= Url('asset/global/font/fontawesome-free-6.5.2-web/css/all.css?v=') . time() ?>">
     <!-- font icon boostrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -36,7 +34,7 @@
                 <nav>
                     <ul class="nav__ul">
                         <li><a href="###">Giới thiệu</a></li>
-                        <li><a href="<?= Url('client/laptop') ?>">Laptop</a></li>
+                        <li><a href="<?= Url('client/laptop/1') ?>">Laptop</a></li>
                         <li><a href="###">Phụ kiện</a></li>
                         <li><a href="###">Khuyến mãi</a></li>
                     </ul>
@@ -47,7 +45,7 @@
                 <div>
                     <input type="text" placeholder="Tìm kiếm sản phẩm">
                     <button>
-                        <a href="###"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="###"><i class="bi bi-search"></i></a>
                     </button>
                 </div>
             </div>
@@ -55,14 +53,14 @@
             <div class="header__grid__item">
                 <div class="menu_iconphu">
                     <a href="###">
-                        <i class="far fa-heart"></i>
+                        <i class="bi bi-heart" style="font-size: 34px; position: relative;top: 1px;"></i>
                     </a>
                     <a href="###">
                         <i class="bi bi-cart"></i>
                     </a>
                     <?php if (!isset($_SESSION['user'])) { ?>
                         <a href="<?= Url('client/dangnhap') ?>" class="icon_user" id="iconUserHeader">
-                            <i class="far fa-user"></i>
+                            <i class="bi bi-person-circle"></i>
                         </a>
                     <?php } else { ?>
                         <a href="<?= Url('client/dangnhap') ?>" class="icon_user icon_user_login" id="iconUserHeader">
@@ -90,9 +88,9 @@
                         </div>
                     <?php } ?>
 
-                    <ahref="###" style="display:none">
+                    <a href="###" style="display:none">
                         <i class="bi bi-list"></i>
-                        </ahref=>
+                        </a>
 
                 </div>
             </div>

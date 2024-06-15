@@ -1,11 +1,12 @@
-#taikhoancuatoi {
+#taikhoancuatoi,#doimatkhau {
     background-color: white;
     @include Box_Shadow("s");
     width: 50%;
     padding: 30px;
     border-radius: 5px;
     margin: 50px auto;
-    text-align: center;
+    text-align: start;
+
     .overlay {
         display: none;
         position: fixed;
@@ -22,14 +23,15 @@
         width: 50%;
         margin: auto;
         position: relative;
-
         div:first-child {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             margin-bottom: 20px;
 
-            h2 {}
+            h2 {
+                color: $color-LightS-Blue;
+            }
 
             .img {
                 width: 60px;
@@ -41,7 +43,15 @@
                     border-radius: 50px;
                     object-fit: cover;
                 }
+                &:hover{
+                    cursor: pointer;
+                }
             }
+        }
+
+        label {
+            font-weight: bold;
+            // color: $color-LightS-Blue;
         }
 
         input {
@@ -49,8 +59,21 @@
             height: 45px;
             border-radius: 5px;
             border: 1px solid gray;
+            margin-top: 5px;
             margin-bottom: 20px;
             padding-left: 10px;
+        }
+
+        .inputMatKhau {
+            position: relative;
+            height: 50px;
+            .doimatkhau {
+                position: absolute;
+                right: 0;
+                button{
+                    padding: 2px;
+                }
+            }
         }
 
         .btn_suathongtin {
@@ -84,6 +107,33 @@
                 height: 100%;
                 width: 40%;
             }
+        }
+    }
+
+}
+#doimatkhau{
+    h2{
+        color: $color-LightS-Blue;
+        margin-bottom: 20px;
+    }
+    button[type=submit]{
+        background: $color-LightS-Blue;
+        font-size: $font-Size-L;
+        color: $color-White;
+        text-align: center;
+        padding: 3px 7px;
+        border: none;
+        border-radius: 5px;
+        width: 30%;
+    }
+    button{
+        border: none;
+        background-color: $color-T-LightOrange;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+        a{
+            color: $color-White;
         }
     }
 }

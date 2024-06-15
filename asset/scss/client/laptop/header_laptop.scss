@@ -27,13 +27,12 @@
     .filter_sanpham {
         margin-top: 30px;
         display: grid;
-        grid-template-columns: 230px 2fr;
+        grid-template-columns: 1fr 2fr;
         gap: 20px;
 
         .filter {
-            max-height: 36%;
-
             // transition: max-height 0.25s linear;
+            max-height: 63%;
             .boloc {
                 position: relative;
                 margin-bottom: 20px;
@@ -105,18 +104,19 @@
         // .sanpham
         .sanpham {
             display: grid;
-            grid-template-columns: repeat(4, auto);
+            grid-template-columns: repeat(4, 250px);
             max-height: auto;
             gap: 10px;
             background-color: $color-White;
             row-gap: 30px;
 
             .list__products__container {
-                max-height: 296px; //chiều cao tối thiểu của các item
+                max-height: 280px; //chiều cao tối thiểu của các item
 
                 .list__products__item {
                     border-radius: 10px 10px;
                     border: 1px solid #e7ebed;
+                    text-align: center;
 
                     &:hover {
                         position: relative;
@@ -203,6 +203,8 @@
                     // thongso__muahang
                     .thongso__muahang {
                         display: none;
+                        max-width: 200px;
+                        text-align: start;
 
                         //mua hàng
                         .muahang {
@@ -264,5 +266,8 @@
             text-align: center;
         }
 
+        .active {
+            background-color: rgb(204, 198, 198);
+        }
     }
 }

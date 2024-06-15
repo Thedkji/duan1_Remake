@@ -8,6 +8,8 @@
   line-height: 1.5;
   transition: all 0.25s linear;
   scroll-behavior: smooth;
+  outline: none;
+  resize: none;
 }
 
 
@@ -33,6 +35,7 @@ input{
   outline: none;
 }
 .err{
+  margin: 5px 0;
   padding: 7px;
   border-radius: 5px;
   background-color: #FFDDDD;
