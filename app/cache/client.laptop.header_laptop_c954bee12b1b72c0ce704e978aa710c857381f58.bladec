@@ -23,8 +23,8 @@
  </div>
  </div>
 
- <div class="filter_sanpham">
- <div class="filter">
+ <section id="box_Container">
+ <section class="filter">
  <div class="boloc">
  <i class="bi bi-funnel"></i>
  Bộ lọc
@@ -313,7 +313,7 @@
  </div>
  </div>
  </div>
- </div>
+ </section>
 
  <section class="sanpham">
  <!-- item1 -->
@@ -390,7 +390,10 @@
  <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
  <!--  -->
 
- </div>
+ </section>
+
+ <div></div>
+
  <div class="phan-trang">
  <!-- Nút Previous -->
  <?php if($numberPage > 1): ?>
@@ -414,5 +417,6 @@
  </div>
  <?php endif; ?>
  </div>
+ </section>
 
 </section>

@@ -23,8 +23,8 @@
         </div>
     </div>
 
-    <div class="filter_sanpham">
-        <div class="filter">
+    <section id="box_Container">
+        <section class="filter">
             <div class="boloc">
                 <i class="bi bi-funnel"></i>
                 Bộ lọc
@@ -313,7 +313,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <section class="sanpham">
             <!-- item1 -->
@@ -384,29 +384,33 @@
             @endforeach
             <!--  -->
 
-    </div>
-    <div class="phan-trang">
-        <!-- Nút Previous -->
-        @if ($numberPage > 1)
-            <div class="phan-trang-item">
-                <a href="{{ url('client/laptop/' . ($numberPage - 1)) }}"><i class="bi bi-chevron-left"></i></a>
-            </div>
-        @endif
+        </section>
 
-        <!-- Hiển thị các trang -->
-        @for ($i = 1; $i <= $tongSoTrang; $i++)
-            <div class="phan-trang-item  {{ $numberPage == $i ? 'active' : '' }}">
-                {{-- Nếu như numberPage tức số page trên url bằng với $i lựa chọn của ng dùng thì trả về class là active ngược lại thì ko --}}
-                <a href="{{ url('client/laptop/' . $i) }}">{{ $i }}</a>
-            </div>
-        @endfor
+        <div></div>
 
-        <!-- Nút Next -->
-        @if ($numberPage < $tongSoTrang)
-            <div class="phan-trang-item">
-                <a href="{{ url('client/laptop/' . ($numberPage + 1)) }}"><i class="bi bi-chevron-right"></i></a>
-            </div>
-        @endif
-    </div>
+        <div class="phan-trang">
+            <!-- Nút Previous -->
+            @if ($numberPage > 1)
+                <div class="phan-trang-item">
+                    <a href="{{ url('client/laptop/' . ($numberPage - 1)) }}"><i class="bi bi-chevron-left"></i></a>
+                </div>
+            @endif
+
+            <!-- Hiển thị các trang -->
+            @for ($i = 1; $i <= $tongSoTrang; $i++)
+                <div class="phan-trang-item  {{ $numberPage == $i ? 'active' : '' }}">
+                    {{-- Nếu như numberPage tức số page trên url bằng với $i lựa chọn của ng dùng thì trả về class là active ngược lại thì ko --}}
+                    <a href="{{ url('client/laptop/' . $i) }}">{{ $i }}</a>
+                </div>
+            @endfor
+
+            <!-- Nút Next -->
+            @if ($numberPage < $tongSoTrang)
+                <div class="phan-trang-item">
+                    <a href="{{ url('client/laptop/' . ($numberPage + 1)) }}"><i class="bi bi-chevron-right"></i></a>
+                </div>
+            @endif
+        </div>
+    </section>
 
 </section>

@@ -1,16 +1,16 @@
 // Hàm xử lý sự kiện click cho các mục lựa chọn
 function clickItemSelect() {
     // Lấy tất cả các phần tử có class .item trong #header_laptop .filter_sanpham .filter
-    let item = document.querySelectorAll('#header_laptop .filter_sanpham .filter .item');
-    let filter = document.querySelector('#header_laptop .filter_sanpham .filter');
-    // Lấy tất cả các phần tử có class .item_title trong #header_laptop .filter_sanpham .filter .item
-    let item_title = document.querySelectorAll('#header_laptop .filter_sanpham .filter .item .item_title');
+    let item = document.querySelectorAll('#header_laptop #box_Container .filter .item');
+    let filter = document.querySelector('#header_laptop #box_Container .filter');
+    // Lấy tất cả các phần tử có class .item_title trong #header_laptop #box_Container .filter .item
+    let item_title = document.querySelectorAll('#header_laptop #box_Container .filter .item .item_title');
 
-    // Lấy tất cả các phần tử có class .select trong #header_laptop .filter_sanpham .filter
-    let select = document.querySelectorAll('#header_laptop .filter_sanpham .filter .item .select');
+    // Lấy tất cả các phần tử có class .select trong #header_laptop #box_Container .filter
+    let select = document.querySelectorAll('#header_laptop #box_Container .filter .item .select');
 
-    // Lấy tất cả các phần tử có class .bi-chevron-down trong #header_laptop .filter_sanpham .filter
-    let icon = document.querySelectorAll('#header_laptop .filter_sanpham .filter .bi-chevron-down');
+    // Lấy tất cả các phần tử có class .bi-chevron-down trong #header_laptop #box_Container .filter
+    let icon = document.querySelectorAll('#header_laptop #box_Container .filter .bi-chevron-down');
 
     // Duyệt qua từng phần tử .item_title
     item_title.forEach((item_title, i) => {
