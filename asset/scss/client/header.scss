@@ -111,6 +111,28 @@ header {
         border-radius: 30px;
         object-fit: cover;
       }
+
+      .logo_cart{
+        position: relative;
+        &::before{
+          content: "1";
+          display: block;
+          width: 23px;
+          height: 25px;
+          background-color: $color-Light-Blue;
+          position: absolute;
+          text-align: center;
+          border-radius: 10px;
+          color: white;
+          right: 20px;
+        }
+
+        .mini-cart{
+          position: absolute;
+          
+        }
+      }
+
       .menu {
         display: none;
         padding: 20px;

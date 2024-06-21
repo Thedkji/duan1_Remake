@@ -19,7 +19,7 @@ $route->get("client/trang_chu", [App\controllers\client\sanpham\SanPhamControlle
 $route->get("client/laptop/{page}", [App\controllers\client\sanpham\SanPhamController::class, "Listlaptop"]);
 
 // List client chitietsp
-$route->get("client/chitietsp", [App\controllers\client\sanpham\SanPhamController::class, "ListChiTietSP"]);
+$route->get("client/chitietsp/{id}", [App\controllers\client\sanpham\SanPhamController::class, "ListChiTietSP"]);
 
 // List client account
 $route->get("client/dangnhap", [App\controllers\client\taikhoan\TaiKhoanController::class, "DangNhap"]);
@@ -39,6 +39,9 @@ $route->get("client/dangxuat", [App\controllers\client\taikhoan\TaiKhoanControll
 $route->get("client/dangky", [App\controllers\client\taikhoan\TaiKhoanController::class, "DangKy"]);
 $route->post("client/dangky_post", [App\controllers\client\taikhoan\TaiKhoanController::class, "DangKyPost"]);
 
+
+// List client giohang
+$route->get("client/giohang/{id}", [App\controllers\client\sanpham\SanPhamController::class, "GioHang"]);
 
 // Khởi tạo một đối tượng Dispatcher từ thư viện Phroute và sử dụng dữ liệu định tuyến từ đối tượng Route
 $dispatcher = new Phroute\Phroute\Dispatcher($route->getData());

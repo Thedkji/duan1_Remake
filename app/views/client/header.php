@@ -55,14 +55,22 @@
                     <a href="###">
                         <i class="bi bi-heart" style="font-size: 34px; position: relative;top: 1px;"></i>
                     </a>
-                    <a href="###">
-                        <i class="bi bi-cart"></i>
-                    </a>
+
                     <?php if (!isset($_SESSION['user'])) { ?>
+                        <a href="<?= url('client/giohang/0') ?>" class="logo_cart">
+                            <i class="bi bi-cart"></i>
+                        </a>
+
+
                         <a href="<?= Url('client/dangnhap') ?>" class="icon_user" id="iconUserHeader">
                             <i class="bi bi-person-circle"></i>
                         </a>
                     <?php } else { ?>
+                        <a href="<?= url('client/giohang/') . $_SESSION['user']['id_TaiKhoan'] ?>" class="logo_cart">
+                            <i class="bi bi-cart"></i>
+                        </a>
+
+
                         <a href="<?= Url('client/dangnhap') ?>" class="icon_user icon_user_login" id="iconUserHeader">
                             <img src="<?= Url('asset/global/img/slide_show/banner-footer-anh-trung_1683094141.webp') ?>" alt="" width="100%" height="100%">
                         </a>
@@ -90,7 +98,7 @@
 
                     <a href="###" style="display:none">
                         <i class="bi bi-list"></i>
-                        </a>
+                    </a>
 
                 </div>
             </div>

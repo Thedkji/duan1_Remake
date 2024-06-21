@@ -1,0 +1,4 @@
+<main id="gioHang">
+ <?php echo $this->runChild('client.giohang.thongtinkhachhang'); ?>
+ <?php echo $this->runChild('client.giohang.sanphamdachon'); ?>
+</main>

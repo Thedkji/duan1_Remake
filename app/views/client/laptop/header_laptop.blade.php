@@ -38,26 +38,13 @@
                 </div>
 
                 <div class="select">
-                    <div class="option">
-                        <input type="checkbox">
-                        <span>Game</span>
-                    </div>
-                    <div class="option">
-                        <input type="checkbox">
-                        <span>Đồ họa , kỹ thuật</span>
-                    </div>
-                    <div class="option">
-                        <input type="checkbox">
-                        <span>Lập trình</span>
-                    </div>
-                    <div class="option">
-                        <input type="checkbox">
-                        <span>Mỏng nhẹ</span>
-                    </div>
-                    <div class="option">
-                        <input type="checkbox">
-                        <span>Work station</span>
-                    </div>
+                    @foreach ($listDanhMuc as $item)
+                        <div class="option">
+                            <input type="checkbox">
+                            <span>{{ $item['ten_DanhMuc'] }}</span>                            
+
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <div class="item">
@@ -322,14 +309,14 @@
                 <div class="list__products__container">
                     <div class="list__products__item">
                         <div class="img__pro">
-                            <a href="###">
+                            <a href="{{ url("client/chitietsp/").$item['id_SanPham'] }}">
                                 <img src="./asset/global/img/sanpham/thinkbook_14_plus_2023_1-copy-copy.webp"
                                     alt="">
                             </a>
                         </div>
 
                         <div class="ten__pro">
-                            <a href="###">
+                            <a href="{{ url("client/>chitietsp/").$item['id_SanPham'] }}">
                                 {{ $item['ten_SanPham'] }}
                             </a>
                         </div>
@@ -384,33 +371,33 @@
             @endforeach
             <!--  -->
 
+            <div class="phan-trang">
+                <!-- Nút Previous -->
+                @if ($numberPage > 1)
+                    <div class="phan-trang-item">
+                        <a href="{{ url('client/laptop/' . ($numberPage - 1)) }}"><i class="bi bi-chevron-left"></i></a>
+                    </div>
+                @endif
+    
+                <!-- Hiển thị các trang -->
+                @for ($i = 1; $i <= $tongSoTrang; $i++)
+                    <div class="phan-trang-item  {{ $numberPage == $i ? 'active' : '' }}">
+                        {{-- Nếu như numberPage tức số page trên url bằng với $i lựa chọn của ng dùng thì trả về class là active ngược lại thì ko --}}
+                        <a href="{{ url('client/laptop/' . $i) }}">{{ $i }}</a>
+                    </div>
+                @endfor
+    
+                <!-- Nút Next -->
+                @if ($numberPage < $tongSoTrang)
+                    <div class="phan-trang-item">
+                        <a href="{{ url('client/laptop/' . ($numberPage + 1)) }}"><i class="bi bi-chevron-right"></i></a>
+                    </div>
+                @endif
+            </div>
         </section>
 
         <div></div>
 
-        <div class="phan-trang">
-            <!-- Nút Previous -->
-            @if ($numberPage > 1)
-                <div class="phan-trang-item">
-                    <a href="{{ url('client/laptop/' . ($numberPage - 1)) }}"><i class="bi bi-chevron-left"></i></a>
-                </div>
-            @endif
-
-            <!-- Hiển thị các trang -->
-            @for ($i = 1; $i <= $tongSoTrang; $i++)
-                <div class="phan-trang-item  {{ $numberPage == $i ? 'active' : '' }}">
-                    {{-- Nếu như numberPage tức số page trên url bằng với $i lựa chọn của ng dùng thì trả về class là active ngược lại thì ko --}}
-                    <a href="{{ url('client/laptop/' . $i) }}">{{ $i }}</a>
-                </div>
-            @endfor
-
-            <!-- Nút Next -->
-            @if ($numberPage < $tongSoTrang)
-                <div class="phan-trang-item">
-                    <a href="{{ url('client/laptop/' . ($numberPage + 1)) }}"><i class="bi bi-chevron-right"></i></a>
-                </div>
-            @endif
-        </div>
     </section>
 
 </section>

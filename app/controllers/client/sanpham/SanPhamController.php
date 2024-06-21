@@ -16,7 +16,6 @@ class SanPhamController extends BaseController
         $listLeonovo =  $this->modelSanPham->listSanPhamDanhMuc(0, 3);  //id_DanhMucCha = 1 == laptop, id_DanhMucCon = 3 ==leonovo,limit = 0->10 sản phẩm
         $listPhuKien =  $this->modelSanPham->listSanPhamDanhMuc(2, 0);  //id_DanhMucCha = 1 == laptop, id_DanhMucCon = 2 ==acer,limit = 0->10 sản phẩm
 
-
         return $this->render('client.trang_chu.main', [
             'lstSanPham' => $listSale,
             'listLaptop' => $listLaptop,
@@ -32,20 +31,32 @@ class SanPhamController extends BaseController
         $listSanPham = $this->modelSanPham->pagination($page); //hàm xử lý phân trang trong model sản phẩm
         $totalSanPham = $this->modelSanPham->getSanPham(); //lấy toàn bộ sản phẩm 
         $tongSP = count($totalSanPham); //tính toán tổng số trang bằng cách dùng hàm count 
-        $tongSoTrang = ceil($tongSP/16); //thực hiện phép tính phân trang với công thức = tổng số sản phẩm / số sản phẩm hiển thị
+        $tongSoTrang = ceil($tongSP / 16); //thực hiện phép tính phân trang với công thức = tổng số sản phẩm / số sản phẩm hiển thị
         //hàm ceil để làm tròn ví dụ 42 sản phẩm / 16 sản phẩm hiển thị = 2,625 trang , dùng hàm ceil sẽ = 3
         //* muốn sửa số sản phẩm hiển thị (16) thì vào model>sanpham>tìm hàm pagination và sửa tham số
-        return $this->render('client.laptop.main',[
-            "listSanPham"=>$listSanPham,
-            "totalSanPham"=>$totalSanPham,
-            "tongSoTrang"=>$tongSoTrang,
-            "numberPage"=>$numberPage,
+
+        $listDanhMuc = $this->modelSanPhamDanhMuc->getAllDanhMuc();
+
+        return $this->render('client.laptop.main', [
+            "listSanPham" => $listSanPham,
+            "totalSanPham" => $totalSanPham,
+            "tongSoTrang" => $tongSoTrang,
+            "numberPage" => $numberPage,
+            "listDanhMuc" => $listDanhMuc,
         ]);
     }
 
-    public function ListChiTietSP()
+    public function ListChiTietSP($id)
     {
-        // require_once "./app/views/client/chitietsp/main.php";
-        return $this->render('client.chitietsp.main');
+        $listSanPham = $this->modelSanPham->getSanPham($id);
+        return $this->render('client.chitietsp.main', [
+            "listSanPham" => $listSanPham,
+        ]);
+    }
+
+    public function GioHang($id)
+    {
+
+        return $this->render('client.giohang.main', []);
     }
 }

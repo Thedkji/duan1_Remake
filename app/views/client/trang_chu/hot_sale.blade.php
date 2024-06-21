@@ -29,8 +29,8 @@
             </div>
 
             <div class="price__sale">
-                <span>{{ number_format($lst['gia_SanPham']) }} VNĐ</span>
-                <span>{{ number_format($lst['gia_Sale'] )}} VNĐ</span>
+                <span>{{ number($lst['gia_SanPham']) }} VNĐ</span>
+                <span>{{ number($lst['gia_Sale'] )}} VNĐ</span>
             </div>
 
             <div class="phienban__sale">

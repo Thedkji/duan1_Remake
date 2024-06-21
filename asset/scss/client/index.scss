@@ -9,14 +9,17 @@
   transition: all 0.25s linear;
   scroll-behavior: smooth;
   outline: none;
-  resize: none;
+  resize: none; //tắt thay đổi thẻ texa
 }
 
 
 body {
   background-color: #F8FAFC;
 }
-
+main{
+  margin: 30px 0;
+  padding-inline: 100px;
+}
 .container {
   padding: 0 100px;
 }
@@ -141,6 +144,9 @@ $line-Heigth-L : 2.5;
 @import "chitietsp/main.scss";
 // Account
 @import "account/main.scss";
+//Giỏ hàng
+@import "giohang/main.scss";
+
 
 @import "hethong_showroom.scss";
 @import "lienhe.scss";

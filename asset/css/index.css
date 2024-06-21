@@ -17,6 +17,11 @@ body {
   background-color: #F8FAFC;
 }
 
+main {
+  margin: 30px 0;
+  padding-inline: 100px;
+}
+
 .container {
   padding: 0 100px;
 }
@@ -156,6 +161,24 @@ header .header__grid__item:last-child .menu_iconphu .icon_user_login img {
   border-radius: 30px;
   object-fit: cover;
 }
+header .header__grid__item:last-child .menu_iconphu .logo_cart {
+  position: relative;
+}
+header .header__grid__item:last-child .menu_iconphu .logo_cart::before {
+  content: "1";
+  display: block;
+  width: 23px;
+  height: 25px;
+  background-color: #2874fe;
+  position: absolute;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  right: 20px;
+}
+header .header__grid__item:last-child .menu_iconphu .logo_cart .mini-cart {
+  position: absolute;
+}
 header .header__grid__item:last-child .menu_iconphu .menu {
   display: none;
   padding: 20px;
@@ -216,11 +239,6 @@ header .header__grid__item:last-child .menu_iconphu .menu li a {
   from {
     box-shadow: 0 0 5px 3px #FFC400;
   }
-}
-
-main {
-  margin: 30px 0;
-  padding-inline: 100px;
 }
 
 .slide_show_tin_tuc {
@@ -1348,6 +1366,9 @@ main {
   overflow: hidden;
 }
 
+#header_laptop {
+  margin-bottom: 150px;
+}
 #header_laptop a {
   color: gray;
 }
@@ -1433,10 +1454,10 @@ main {
 #header_laptop #box_Container .sanpham {
   display: grid;
   grid-template-columns: repeat(4, 250px);
-  max-height: auto;
   gap: 10px;
   background-color: white;
   row-gap: 30px;
+  position: relative;
 }
 #header_laptop #box_Container .sanpham .list__products__container {
   max-height: 280px;
@@ -1541,13 +1562,17 @@ main {
 #header_laptop #box_Container .sanpham .list__products__container .list__products__item .thongso__muahang .muahang button:last-child a {
   color: white;
 }
-#header_laptop #box_Container .phan-trang {
+#header_laptop #box_Container .sanpham .phan-trang {
   display: flex;
   gap: 10px;
   padding-block: 30px;
   justify-content: center;
+  position: absolute;
+  bottom: -130px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#header_laptop #box_Container .phan-trang .phan-trang-item {
+#header_laptop #box_Container .sanpham .phan-trang .phan-trang-item {
   width: 40px;
   height: 40px;
   background-color: #EFEFEF;
@@ -1557,7 +1582,7 @@ main {
   align-content: center;
   text-align: center;
 }
-#header_laptop #box_Container .phan-trang .active {
+#header_laptop #box_Container .sanpham .phan-trang .active {
   background-color: rgb(204, 198, 198);
 }
 
@@ -1642,8 +1667,8 @@ main {
 #chitietsp .sanpham .slide-container .nextpre button:hover {
   background-color: gray;
 }
-#chitietsp .sanpham .slide-container .nextpre .fa-angle-left,
-#chitietsp .sanpham .slide-container .nextpre .fa-angle-right {
+#chitietsp .sanpham .slide-container .nextpre .bi-chevron-left,
+#chitietsp .sanpham .slide-container .nextpre .bi-chevron-right {
   color: white;
   font-size: 20px;
 }
@@ -2492,6 +2517,95 @@ main {
 }
 #doimatkhau button a {
   color: white;
+}
+
+#gioHang {
+  display: grid;
+  grid-template-columns: minmax(auto, 2fr) minmax(auto, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+#gioHang #thongtinkhachhang .form-thongtin {
+  padding: 10px 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  margin-bottom: 21px;
+}
+#gioHang #thongtinkhachhang .form-thongtin #cach_thuc_mua_hang {
+  margin: 20px 0;
+}
+#gioHang #thongtinkhachhang .form-thongtin #cach_thuc_mua_hang h4 {
+  color: rgb(124, 121, 121);
+  margin-bottom: 10px;
+}
+#gioHang #thongtinkhachhang .form-thongtin #cach_thuc_mua_hang .btn-diachinhan button {
+  background: none;
+  padding: 12px;
+  border: 1px solid #2874fe;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+#gioHang #thongtinkhachhang .form-thongtin #cach_thuc_mua_hang .btn-diachinhan button i {
+  margin-right: 5px;
+}
+#gioHang #thongtinkhachhang .form-thongtin #cach_thuc_mua_hang .btn-diachinhan button span {
+  font-weight: 500;
+}
+#gioHang #thongtinkhachhang .form-thongtin #gioitinh {
+  font-size: 17px;
+  font-weight: 500;
+}
+#gioHang #thongtinkhachhang .form-thongtin #gioitinh span {
+  margin-right: 20px;
+}
+#gioHang #thongtinkhachhang .form-thongtin #form-thong-tin-kh {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+}
+#gioHang #thongtinkhachhang .form-thongtin #form-thong-tin-kh input, #gioHang #thongtinkhachhang .form-thongtin #form-thong-tin-kh select {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: rgb(124, 121, 121);
+  margin-top: 10px;
+}
+#gioHang #thongtinkhachhang .form-thongtin #form-thong-tin-kh label {
+  color: gray;
+  font-weight: 500;
+}
+#gioHang #thongtinkhachhang .form-thongtin #loai-dia-chi {
+  margin-top: 20px;
+}
+#gioHang #thongtinkhachhang .form-thongtin #loai-dia-chi h4 {
+  color: gray;
+  margin-bottom: 10px;
+}
+#gioHang #thongtinkhachhang .form-thongtin #loai-dia-chi div:first-child span {
+  margin-right: 30px;
+}
+#gioHang #sanphamdachon {
+  padding: 10px 30px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
+  grid-column: 2/3;
+}
+#gioHang #phuongthucthanhtoan {
+  padding: 10px 30px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(174, 173, 173);
 }
 
 .hethong__showroom {

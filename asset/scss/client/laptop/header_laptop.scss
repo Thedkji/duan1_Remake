@@ -1,4 +1,6 @@
 #header_laptop {
+    // background-color: #e7ebed;
+    margin-bottom: 150px;
     a {
         color: gray;
     }
@@ -106,11 +108,10 @@
         .sanpham {
             display: grid;
             grid-template-columns: repeat(4, 250px);
-            max-height: auto;
             gap: 10px;
             background-color: $color-White;
             row-gap: 30px;
-    
+            position: relative;
             .list__products__container {
                 max-height: 280px; //chiều cao tối thiểu của các item
     
@@ -242,31 +243,33 @@
     
                 // 
             }            
+            .phan-trang {
+                display: flex;
+                gap: 10px;
+                padding-block: 30px;
+                justify-content: center;
+                // background-color: #f0d903;
+                position: absolute;
+                bottom: -130px;
+                left: 50%;
+                transform: translateX(-50%);
+                .phan-trang-item {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $color-LightGray;
+                    border-radius: 20px;
+                    font-size: 16px;
+                    color: $color-T-LigthGray;
+                    align-content: center;
+                    text-align: center;
+                }
+        
+                .active {
+                    background-color: rgb(204, 198, 198);
+                }
+            }
         }
         
-        .phan-trang {
-            // background-color: red;
-            display: flex;
-            gap: 10px;
-            padding-block: 30px;
-            justify-content: center;
-            // background-color: #f0d903;
-            
-            .phan-trang-item {
-                width: 40px;
-                height: 40px;
-                background-color: $color-LightGray;
-                border-radius: 20px;
-                font-size: 16px;
-                color: $color-T-LigthGray;
-                align-content: center;
-                text-align: center;
-            }
-    
-            .active {
-                background-color: rgb(204, 198, 198);
-            }
-        }
     }
 
 

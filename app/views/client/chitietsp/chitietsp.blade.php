@@ -1,6 +1,6 @@
 <section id="chitietsp">
     <section class="item-chitietsp sanpham">
-        <h3>Acer Predator Helios Neo 16 2024 i5 14500HX RAM 16GB SSD 1TB RTX 4060 2.5K 240Hz</h3>
+        <h3>{{ $listSanPham['ten_SanPham'] }}</h3>
         <p>New 100% - Bảo Hành 12 tháng tại Trung Trần</p>
         <div class="slide-container">
             <div class="slide-sanpham">
@@ -16,10 +16,10 @@
             </div>
             <div class="nextpre">
                 <div class="pre">
-                    <button><i class="fa fa-angle-left"></i></button>
+                    <button><i class="bi bi-chevron-left"></i></button>
                 </div>
                 <div class="next">
-                    <button><i class="fa fa-angle-right"></i></button>
+                    <button><i class="bi bi-chevron-right"></i></button>
                 </div>
             </div>
             <div class="dots">
@@ -52,8 +52,8 @@
     </section>
     <section class="item-chitietsp info-sanpham">
         <div class="info_gia">
-            <h2>31.500.000đ</h2>
-            <p>34.500.000đ</p>
+            <h2>{{ number($listSanPham['gia_Sale']) }}đ</h2>
+            <p>{{ number($listSanPham['gia_SanPham']) }}đ</p>
         </div>
 
         <div class="info_cauhinh">
@@ -179,8 +179,8 @@
             <div class="info_thanhtien">
                 <p>Thành tiền :</p>
                 <div>
-                    <p>33.774.000đ</p>
-                    <p>33.658.250đ</p>
+                    <p>{{ number_format($listSanPham['gia_Sale'] ) }}đ</p>
+                    <p>{{ number_format($listSanPham['gia_SanPham']) }}đ</p>
                 </div>
             </div>
         </div>

@@ -35,8 +35,8 @@
                     </div>
 
                     <div class="price__pro">
-                        <span>{{ number_format($item['gia_SanPham']) }} VNĐ</span>
-                        <span>{{ number_format($item['gia_Sale']) }} VNĐ</span>
+                        <span>{{ number($item['gia_SanPham']) }} VNĐ</span>
+                        <span>{{ number($item['gia_Sale']) }} VNĐ</span>
                     </div>
 
                     <div class="phienban__pro">
